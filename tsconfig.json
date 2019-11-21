@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "paths": {
+      "@src": ["src/index.ts"]
+    },
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2019"
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts", "ad-hocs/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

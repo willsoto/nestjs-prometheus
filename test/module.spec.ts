@@ -1,6 +1,6 @@
 import { Injectable, Module } from "@nestjs/common";
 import { expect } from "chai";
-import { PrometheusOptionsFactory } from "../src";
+import { PrometheusModule, PrometheusOptionsFactory } from "../src";
 import {
   Agent,
   App,
@@ -137,6 +137,26 @@ describe("PrometheusModule", function() {
           .to.have.property("text")
           .to.contain("process_cpu_user_seconds_total");
       });
+    });
+  });
+
+  describe("#createAsyncOptionsProvider", function() {
+    it("throws an error if useClass or useExisting are not provided", function() {
+      expect(() => {
+        PrometheusModule.createAsyncProviders({});
+      }).to.throw(
+        "Invalid configuration. Must provide useClass or useExisting",
+      );
+    });
+  });
+
+  describe("#createAsyncOptionsProvider", function() {
+    it("throws an error if useClass or useExisting are not provided", function() {
+      expect(() => {
+        PrometheusModule.createAsyncOptionsProvider({});
+      }).to.throw(
+        "Invalid configuration. Must provide useClass or useExisting",
+      );
     });
   });
 });

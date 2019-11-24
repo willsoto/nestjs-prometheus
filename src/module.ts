@@ -39,7 +39,9 @@ export class PrometheusModule {
     if (options.useExisting) {
       return [this.createAsyncOptionsProvider(options)];
     } else if (!options.useClass) {
-      throw new Error("Invalid configuration");
+      throw new Error(
+        "Invalid configuration. Must provide useClass or useExisting",
+      );
     }
 
     return [

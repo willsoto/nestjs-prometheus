@@ -1,5 +1,12 @@
+import { Injectable, Module } from "@nestjs/common";
 import { expect } from "chai";
-import { Agent, App, createTestingModule } from "./utils";
+import { PrometheusOptionsFactory } from "../src";
+import {
+  Agent,
+  App,
+  createAsyncPrometheusModule,
+  createPrometheusModule,
+} from "./utils";
 
 describe("PrometheusModule", function() {
   let agent: Agent;
@@ -14,7 +21,7 @@ describe("PrometheusModule", function() {
   describe("#forRoot", function() {
     describe("with all defaults", function() {
       beforeEach(async function() {
-        ({ agent, app } = await createTestingModule());
+        ({ agent, app } = await createPrometheusModule());
       });
 
       it("registers a /metrics endpoint", async function() {
@@ -36,7 +43,7 @@ describe("PrometheusModule", function() {
 
     describe("when overriding the default path", function() {
       beforeEach(async function() {
-        ({ agent, app } = await createTestingModule({
+        ({ agent, app } = await createPrometheusModule({
           path: "/my-custom-endpoint",
         }));
       });
@@ -59,6 +66,72 @@ describe("PrometheusModule", function() {
 
       it("collects default metrics", async function() {
         const response = await agent.get("/my-custom-endpoint");
+
+        expect(response)
+          .to.have.property("text")
+          .to.contain("process_cpu_user_seconds_total");
+      });
+    });
+  });
+
+  describe("#forRootAsync", function() {
+    @Injectable()
+    class OptionsService implements PrometheusOptionsFactory {
+      createPrometheusOptions() {
+        return {};
+      }
+    }
+
+    @Module({
+      providers: [OptionsService],
+      exports: [OptionsService],
+    })
+    class OptionsModule {}
+
+    describe("useExisting", function() {
+      beforeEach(async function() {
+        ({ agent, app } = await createAsyncPrometheusModule({
+          imports: [OptionsModule],
+          useExisting: OptionsService,
+          inject: [OptionsService],
+        }));
+      });
+
+      it("registers a /metrics endpoint", async function() {
+        const response = await agent.get("/metrics");
+
+        expect(response)
+          .to.have.property("status")
+          .to.eql(200);
+      });
+
+      it("collects default metrics", async function() {
+        const response = await agent.get("/metrics");
+
+        expect(response)
+          .to.have.property("text")
+          .to.contain("process_cpu_user_seconds_total");
+      });
+    });
+
+    describe("useClass", function() {
+      beforeEach(async function() {
+        ({ agent, app } = await createAsyncPrometheusModule({
+          useClass: OptionsService,
+          inject: [OptionsService],
+        }));
+      });
+
+      it("registers a /metrics endpoint", async function() {
+        const response = await agent.get("/metrics");
+
+        expect(response)
+          .to.have.property("status")
+          .to.eql(200);
+      });
+
+      it("collects default metrics", async function() {
+        const response = await agent.get("/metrics");
 
         expect(response)
           .to.have.property("text")

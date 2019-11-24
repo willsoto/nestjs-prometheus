@@ -6,6 +6,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
+    "lib": ["esnext"],
     "module": "commonjs",
     "outDir": "./dist",
     "paths": {

@@ -20,9 +20,8 @@ jobs:
           yarn run docs
 
       - name: Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@3.0.2
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: master # The branch the action should deploy from.
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
+        uses: peaceiris/actions-gh-pages@v2.5.1
+        env:
+          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          PUBLISH_BRANCH: gh-pages # The branch the action should deploy to.
+          PUBLISH_DIR: ./docs # The folder the action should deploy.

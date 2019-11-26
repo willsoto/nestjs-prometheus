@@ -27,7 +27,7 @@
     "clean": "rimraf dist typings coverage .nyc_output docs",
     "lint": "eslint src test ad-hocs --ext ts --fix",
     "prerelease": "yarn build",
-    "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
+    "release": "standard-version --sign",
     "test": "mocha",
     "pretest:cov": "rimraf coverage .nyc_output",
     "test:cov": "nyc mocha",

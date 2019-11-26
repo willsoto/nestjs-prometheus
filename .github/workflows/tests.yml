@@ -30,3 +30,18 @@ jobs:
           yarn lint
           yarn build
           yarn test:cov
+
+  publish:
+    runs-on: ubuntu-latest
+    if: success() && github.ref == 'master'
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - run: yarn install --frozen-lockfile
+      - run: yarn run build
+      - run: npm config set //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
+      - run: npm login --registry=https://npm.pkg.github.com
+      - run: npm run publish

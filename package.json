@@ -2,13 +2,21 @@
   "name": "@willsoto/nestjs-prometheus",
   "description": "",
   "license": "Apache-2.0",
-  "author": "Will Soto <willsoto@users.noreply.github.com>",
+  "author": {
+    "name": "Will Soto",
+    "email": "willsoto@users.noreply.github.com",
+    "url": "https://github.com/willsoto"
+  },
+  "repository": "git://github.com/willsoto/nestjs-prometheus.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "0.0.1",
   "main": "dist/nestjs-prometheus.umd.js",
   "module": "dist/nestjs-prometheus.esm.js",
   "files": [
     "dist",
-    "lib",
+    "src",
     "typings"
   ],
   "scripts": {
@@ -78,7 +86,7 @@
     "rxjs": "6.5.3",
     "sinon-chai": "3.3.0",
     "source-map-support": "0.5.16",
-    "standard-version": "7.0.0",
+    "standard-version": "7.0.1",
     "supertest": "4.0.2",
     "ts-node": "8.4.1",
     "tsconfig-paths": "3.9.0",

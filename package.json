@@ -111,6 +111,7 @@
     ],
     "README.md": [
       "markdown-toc -i",
+      "prettier --write",
       "git add"
     ]
   },

@@ -1,20 +1,22 @@
 # NestJS Prometheus
 
-![https://github.com/willsoto/nestjs-prometheus/actions?query=workflow%3Atests](https://github.com/willsoto/nestjs-prometheus/workflows/tests/badge.svg)
+![](https://github.com/willsoto/nestjs-prometheus/workflows/tests/badge.svg)
+![](https://github.com/willsoto/nestjs-prometheus/workflows/docs/badge.svg)
+![](https://github.com/willsoto/nestjs-prometheus/workflows/publish/badge.svg)
 
 <!-- toc -->
 
 - [Installation](#installation)
 - [Usage](#usage)
-  * [Changing the metrics http endpoint](#changing-the-metrics-http-endpoint)
-  * [Disabling default metrics collection](#disabling-default-metrics-collection)
-  * [Configuring the default metrics](#configuring-the-default-metrics)
+  - [Changing the metrics http endpoint](#changing-the-metrics-http-endpoint)
+  - [Disabling default metrics collection](#disabling-default-metrics-collection)
+  - [Configuring the default metrics](#configuring-the-default-metrics)
 - [Injecting individual metrics](#injecting-individual-metrics)
 - [Available metrics](#available-metrics)
-    + [Counter](#counter)
-    + [Gauge](#gauge)
-    + [Histogram](#histogram)
-    + [Summary](#summary)
+  - [Counter](#counter)
+  - [Gauge](#gauge)
+  - [Histogram](#histogram)
+  - [Summary](#summary)
 
 <!-- tocstop -->
 

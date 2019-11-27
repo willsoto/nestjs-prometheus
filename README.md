@@ -5,6 +5,16 @@
 <!-- toc -->
 
 - [Installation](#installation)
+- [Usage](#usage)
+  * [Changing the metrics http endpoint](#changing-the-metrics-http-endpoint)
+  * [Disabling default metrics collection](#disabling-default-metrics-collection)
+  * [Configuring the default metrics](#configuring-the-default-metrics)
+- [Injecting individual metrics](#injecting-individual-metrics)
+- [Available metrics](#available-metrics)
+    + [Counter](#counter)
+    + [Gauge](#gauge)
+    + [Histogram](#histogram)
+    + [Summary](#summary)
 
 <!-- tocstop -->
 

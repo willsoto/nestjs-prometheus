@@ -2,15 +2,8 @@
   "name": "@willsoto/nestjs-prometheus",
   "description": "",
   "license": "Apache-2.0",
-  "author": {
-    "name": "Will Soto",
-    "email": "willsoto@users.noreply.github.com",
-    "url": "https://github.com/willsoto"
-  },
+  "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "version": "0.0.3",
   "main": "dist/nestjs-prometheus.umd.js",
   "module": "dist/nestjs-prometheus.esm.js",
@@ -20,11 +13,11 @@
     "typings"
   ],
   "scripts": {
-    "docs": "compodoc -p tsconfig.json --output docs --theme stripe -n 'NestJS Prometheus'",
     "prebuild": "yarn clean",
     "build": "rollup --config rollup.config.js",
     "postbuild": "yarn typings",
     "clean": "rimraf dist typings coverage .nyc_output docs",
+    "docs": "compodoc -p tsconfig.json --output docs --theme stripe -n 'NestJS Prometheus'",
     "lint": "eslint src test ad-hocs --ext ts --fix",
     "prerelease": "yarn build",
     "release": "standard-version --sign",
@@ -92,6 +85,9 @@
     "tsconfig-paths": "3.9.0",
     "tslib": "1.10.0",
     "typescript": "3.7.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "husky": {
     "hooks": {

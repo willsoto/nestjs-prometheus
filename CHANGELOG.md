@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.5...v0.0.6) (2019-11-27)
+
+
+### Bug Fixes
+
+* **workflows/publish:** publish is not a script ([be01dfb](https://github.com/willsoto/nestjs-prometheus/commit/be01dfbcf2cbb29d982a045f75611cd5a19be21b))
+
 ### [0.0.5](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.4...v0.0.5) (2019-11-27)
 
 

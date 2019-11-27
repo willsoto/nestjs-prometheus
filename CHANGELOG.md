@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.2...v0.0.3) (2019-11-27)
+
+
+### Bug Fixes
+
+* **workflows:** interpolate github.ref ([a85aede](https://github.com/willsoto/nestjs-prometheus/commit/a85aede98e7900ddf7dcfc0d8daf65e1a435bd8d))
+* **workflows/publish:** login to the correct scope ([9854da3](https://github.com/willsoto/nestjs-prometheus/commit/9854da37c6556d12c93010c0ba77bec9773b3271))
+
 ### [0.0.2](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.1...v0.0.2) (2019-11-26)
 
 ### 0.0.1 (2019-11-26)

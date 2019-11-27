@@ -11,7 +11,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/nestjs-prometheus.umd.js",
   "module": "dist/nestjs-prometheus.esm.js",
   "files": [

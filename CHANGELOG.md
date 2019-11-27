@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.4...v0.0.5) (2019-11-27)
+
+
+### Bug Fixes
+
+* **workflows/publish:** remove login step ([7c27bc9](https://github.com/willsoto/nestjs-prometheus/commit/7c27bc99975ef38e8de1f2090d6f04ff41cea725))
+
 ### [0.0.4](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.3...v0.0.4) (2019-11-27)
 
 ### Bug Fixes

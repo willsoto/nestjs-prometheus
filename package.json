@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/nestjs-prometheus.umd.js",
   "module": "dist/nestjs-prometheus.esm.js",
   "files": [

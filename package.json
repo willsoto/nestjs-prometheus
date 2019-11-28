@@ -60,7 +60,7 @@
     "@willsoto/eslint-config-base": "2.0.0",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
-    "eslint": "6.6.0",
+    "eslint": "6.7.1",
     "eslint-config-prettier": "6.5.0",
     "husky": "3.0.9",
     "lint-staged": "9.4.2",

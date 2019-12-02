@@ -39,7 +39,7 @@
     "@istanbuljs/nyc-config-typescript": "0.1.3",
     "@nestjs/cli": "6.12.6",
     "@nestjs/common": "6.10.2",
-    "@nestjs/core": "6.10.2",
+    "@nestjs/core": "6.10.4",
     "@nestjs/platform-express": "6.10.4",
     "@nestjs/schematics": "6.7.4",
     "@nestjs/testing": "6.10.4",

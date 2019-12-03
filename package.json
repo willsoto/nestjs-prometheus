@@ -56,7 +56,7 @@
     "@types/source-map-support": "0.5.0",
     "@types/supertest": "2.0.8",
     "@typescript-eslint/eslint-plugin": "2.9.0",
-    "@typescript-eslint/parser": "2.9.0",
+    "@typescript-eslint/parser": "2.10.0",
     "@willsoto/eslint-config-base": "2.0.0",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",

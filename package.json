@@ -38,7 +38,7 @@
     "@compodoc/compodoc": "1.1.11",
     "@istanbuljs/nyc-config-typescript": "0.1.3",
     "@nestjs/cli": "6.12.9",
-    "@nestjs/common": "6.10.5",
+    "@nestjs/common": "6.10.7",
     "@nestjs/core": "6.10.7",
     "@nestjs/platform-express": "6.10.7",
     "@nestjs/schematics": "6.7.5",

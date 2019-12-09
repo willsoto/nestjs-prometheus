@@ -411,10 +411,10 @@
     ts-morph "^4.0.0"
     typescript "3.4.5"
 
-"@nestjs/testing@6.10.7":
-  version "6.10.7"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-6.10.7.tgz#0e7d782a951c5c8e9b39a8796eb645c831c9a2a6"
-  integrity sha512-ZlhcBTKmo9F+iw/v6fo60ZxnPqonE5XNY+lOhwpe1Dvq+jOFUmLq7b0tI8tInueeoFYnjToFPJUz4p+ErVMw1Q==
+"@nestjs/testing@6.10.8":
+  version "6.10.8"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-6.10.8.tgz#f7d15db8143c031bb2aef95cdabff109ab9716a1"
+  integrity sha512-Tz2wCZbtJF9Ra0wBMGtYMC2QuT3/4xtTA1k0TrzI/8RFxL9nLtTQMJVkC296vLjQ7suEMZeOdhasisHoB1rsIQ==
   dependencies:
     optional "0.1.4"
 

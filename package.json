@@ -84,7 +84,7 @@
     "ts-node": "8.5.4",
     "tsconfig-paths": "3.9.0",
     "tslib": "1.10.0",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

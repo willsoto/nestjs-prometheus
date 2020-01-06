@@ -37,7 +37,7 @@
     "@commitlint/config-conventional": "8.2.0",
     "@compodoc/compodoc": "1.1.11",
     "@istanbuljs/nyc-config-typescript": "1.0.1",
-    "@nestjs/cli": "6.12.9",
+    "@nestjs/cli": "6.13.1",
     "@nestjs/common": "6.10.14",
     "@nestjs/core": "6.10.13",
     "@nestjs/platform-express": "6.10.14",

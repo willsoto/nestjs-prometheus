@@ -65,7 +65,7 @@
     "husky": "4.0.0",
     "lint-staged": "9.5.0",
     "markdown-toc": "1.2.0",
-    "mocha": "6.2.2",
+    "mocha": "7.0.0",
     "nyc": "15.0.0",
     "prettier": "1.19.1",
     "prettier-package-json": "2.1.3",
@@ -116,10 +116,11 @@
     ]
   },
   "mocha": {
-    "watch-extensions": "ts",
+    "extension": [
+      "ts"
+    ],
     "file": "./ad-hocs/mocha/plugins.ts",
     "require": "ts-node/register/transpile-only,tsconfig-paths/register,source-map-support/register",
-    "opts": false,
     "watch-files": [
       "src/**/*.ts",
       "test/**/*.ts"

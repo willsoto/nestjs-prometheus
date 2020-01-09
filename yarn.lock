@@ -392,22 +392,22 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/cli@6.13.1":
-  version "6.13.1"
-  resolved "https://registry.npmjs.org/@nestjs/cli/-/cli-6.13.1.tgz#9d0503c68ccae2082aa091b6a43e1c0a424ab2b4"
-  integrity sha512-CYLtW85nZDJv9uLa3xnyNg1mmeEloX8X4Cxpph4ZDv9en4i0kaWuMPATvBNAca00REL4kGBAda6ZXUlo2ilaRA==
+"@nestjs/cli@6.13.2":
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-6.13.2.tgz#e20618511be3cb4259830c50916dae8306d21c8b"
+  integrity sha512-N4FEsA6WsKNWd3vS8xvLJMXq2CPpsdkI83r+7reDFhIkZLkRMigG4yz72gEJOI1QqCd6Y0s/QHyvRWmSxkGDvQ==
   dependencies:
     "@angular-devkit/core" "7.3.8"
     "@angular-devkit/schematics" "7.3.8"
     "@angular-devkit/schematics-cli" "0.13.8"
     "@nestjs/schematics" "^6.8.0"
-    "@types/webpack" "4.41.0"
+    "@types/webpack" "4.41.1"
     chalk "2.4.2"
     cli-table3 "0.5.1"
-    commander "4.0.1"
+    commander "4.1.0"
     copyfiles "2.1.1"
     fork-ts-checker-webpack-plugin "3.1.1"
-    inquirer "7.0.2"
+    inquirer "7.0.3"
     node-emoji "1.10.0"
     ora "4.0.3"
     os-name "3.1.0"
@@ -416,7 +416,7 @@
     tsconfig-paths "3.9.0"
     tsconfig-paths-webpack-plugin "3.2.0"
     typescript "3.6.4"
-    webpack "4.41.4"
+    webpack "4.41.5"
     webpack-node-externals "1.7.2"
 
 "@nestjs/common@6.10.14":
@@ -743,10 +743,10 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@types/webpack@4.41.0":
-  version "4.41.0"
-  resolved "https://registry.npmjs.org/@types/webpack/-/webpack-4.41.0.tgz#b813a044d8b0dec7dfcd7622fdbe327bde06eb9a"
-  integrity sha512-tWkdf9nO0zFgAY/EumUKwrDUhraHKDqCPhwfFR/R8l0qnPdgb9le0Gzhvb7uzVpouuDGBgiE//ZdY+5jcZy2TA==
+"@types/webpack@4.41.1":
+  version "4.41.1"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.1.tgz#571f0e137ce698710dd2637f7d222811eb83e274"
+  integrity sha512-n9fP8UrMxOi1wiM3oM+vMZHMJJ7WoQohqd63C20cmKOFkNEy9Q8hyZyDR6PWdvSYt3V3A7cwDq/kWxHlRYYZEg==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
@@ -2178,10 +2178,10 @@ combined-stream@^1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/commander/-/commander-4.0.1.tgz#b67622721785993182e807f4883633e6401ba53c"
-  integrity sha512-IPF4ouhCP+qdlcmCedhxX4xiGBPyigb8v5NeUp+0LyhwLgxMqyp3S0vl7TAPfS/hiP7FC3caI/PB9lTmP8r1NA==
+commander@4.1.0, commander@^4.0.1:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-4.1.0.tgz#545983a0603fe425bc672d66c9e3c89c42121a83"
+  integrity sha512-NIQrwvv9V39FHgGFm36+U9SMQzbiHvU79k+iADraJTpmrFFfx7Ds0IvDoAdZsDrknlkRk14OYoWXb57uTh7/sw==
 
 commander@^2.20.0, commander@~2.20.3:
   version "2.20.3"
@@ -2192,11 +2192,6 @@ commander@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/commander/-/commander-3.0.2.tgz#6837c3fb677ad9933d1cfba42dd14d5117d6b39e"
   integrity sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow==
-
-commander@^4.0.1:
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-4.1.0.tgz#545983a0603fe425bc672d66c9e3c89c42121a83"
-  integrity sha512-NIQrwvv9V39FHgGFm36+U9SMQzbiHvU79k+iADraJTpmrFFfx7Ds0IvDoAdZsDrknlkRk14OYoWXb57uTh7/sw==
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -4588,26 +4583,7 @@ inquirer@6.2.1:
     strip-ansi "^5.0.0"
     through "^2.3.6"
 
-inquirer@7.0.2:
-  version "7.0.2"
-  resolved "https://registry.npmjs.org/inquirer/-/inquirer-7.0.2.tgz#b39b205b95c9424839a1fd991d60426cf9bbc0e9"
-  integrity sha512-cZGvHaHwcR9E3xK9EGO5pHKELU+yaeJO7l2qGKIbqk4bCuDuAn15LCoUTS2nSkfv9JybFlnAGrOcVpCDZZOLhw==
-  dependencies:
-    ansi-escapes "^4.2.1"
-    chalk "^2.4.2"
-    cli-cursor "^3.1.0"
-    cli-width "^2.0.0"
-    external-editor "^3.0.3"
-    figures "^3.0.0"
-    lodash "^4.17.15"
-    mute-stream "0.0.8"
-    run-async "^2.2.0"
-    rxjs "^6.5.3"
-    string-width "^4.1.0"
-    strip-ansi "^5.1.0"
-    through "^2.3.6"
-
-inquirer@^7.0.0:
+inquirer@7.0.3, inquirer@^7.0.0:
   version "7.0.3"
   resolved "https://registry.npmjs.org/inquirer/-/inquirer-7.0.3.tgz#f9b4cd2dff58b9f73e8d43759436ace15bed4567"
   integrity sha512-+OiOVeVydu4hnCGLCSX+wedovR/Yzskv9BFqUNNKq9uU2qg7LCcCo3R86S2E7WLo0y/x2pnEZfZe1CoYnORUAw==
@@ -8501,10 +8477,10 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@4.41.4:
-  version "4.41.4"
-  resolved "https://registry.npmjs.org/webpack/-/webpack-4.41.4.tgz#4bec4125224bdf50efa8be6226c19047599cd034"
-  integrity sha512-Lc+2uB6NjpCWsHI3trkoISOI64h9QYIXenbEWj3bn3oyjfB1lEBXjWAfAyY2sM0rZn41oD5V91OLwKRwS6Wp8Q==
+webpack@4.41.5:
+  version "4.41.5"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.5.tgz#3210f1886bce5310e62bb97204d18c263341b77c"
+  integrity sha512-wp0Co4vpyumnp3KlkmpM5LWuzvZYayDwM2n17EHFr4qxBBbRokC7DJawPJC7TfSFZ9HZ6GsdH40EBj4UV0nmpw==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"

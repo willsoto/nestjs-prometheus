@@ -449,10 +449,10 @@
     express "4.17.1"
     multer "1.4.2"
 
-"@nestjs/schematics@6.8.0", "@nestjs/schematics@^6.8.0":
-  version "6.8.0"
-  resolved "https://registry.npmjs.org/@nestjs/schematics/-/schematics-6.8.0.tgz#9262ee1dc4613c6323b2efc3aa593847e631c198"
-  integrity sha512-AedxWllLNkUe1MVB7Stww390knhKmFJGYRnjhLIi1CxuDFj+WqG/KxRsQ9vFIla/dEoLQ79MrlzAT7zfAO1eEQ==
+"@nestjs/schematics@6.8.2", "@nestjs/schematics@^6.8.0":
+  version "6.8.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/schematics/-/schematics-6.8.2.tgz#0c4c6cc87dd28564bb52e6516deacad1d6ceb56c"
+  integrity sha512-NWfsDj8dBD9MjJtnusMpRTrXGwIaSYvOCzeV8iwLimQNfGEHQCRvmW/XVc95eLewCfA5Q2SkbbIE00Iea4dg5Q==
   dependencies:
     "@angular-devkit/core" "7.3.8"
     "@angular-devkit/schematics" "7.3.8"

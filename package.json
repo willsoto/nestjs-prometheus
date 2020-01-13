@@ -1,6 +1,6 @@
 {
   "name": "@willsoto/nestjs-prometheus",
-  "description": "",
+  "description": "NestJS module for Prometheus",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
@@ -85,9 +85,6 @@
     "tsconfig-paths": "3.9.0",
     "tslib": "1.10.0",
     "typescript": "3.7.4"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "husky": {
     "hooks": {

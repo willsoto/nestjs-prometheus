@@ -22,8 +22,6 @@
 
 ## Installation
 
-> Be sure to [configure npm for use with GitHub package registry](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages)
-
 ```bash
 yarn add @willsoto/nestjs-prometheus prom-client
 ```

@@ -392,16 +392,16 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/cli@6.13.2":
-  version "6.13.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-6.13.2.tgz#e20618511be3cb4259830c50916dae8306d21c8b"
-  integrity sha512-N4FEsA6WsKNWd3vS8xvLJMXq2CPpsdkI83r+7reDFhIkZLkRMigG4yz72gEJOI1QqCd6Y0s/QHyvRWmSxkGDvQ==
+"@nestjs/cli@6.13.3":
+  version "6.13.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-6.13.3.tgz#005de6be2ac55c07a4bdafd558c4d9e936c2b328"
+  integrity sha512-sOg3zoIzALlsHJRcF+ZALuDib8m+SqwiZzMOpT5akxWX6Es2U0pSPc6bWHMPLTtBnBAEU10vXG6t4ZbG6piF4w==
   dependencies:
     "@angular-devkit/core" "7.3.8"
     "@angular-devkit/schematics" "7.3.8"
     "@angular-devkit/schematics-cli" "0.13.8"
     "@nestjs/schematics" "^6.8.0"
-    "@types/webpack" "4.41.1"
+    "@types/webpack" "4.41.2"
     chalk "2.4.2"
     cli-table3 "0.5.1"
     commander "4.1.0"
@@ -415,7 +415,7 @@
     tree-kill "1.2.2"
     tsconfig-paths "3.9.0"
     tsconfig-paths-webpack-plugin "3.2.0"
-    typescript "3.6.4"
+    typescript "^3.6.4"
     webpack "4.41.5"
     webpack-node-externals "1.7.2"
 
@@ -743,10 +743,10 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@types/webpack@4.41.1":
-  version "4.41.1"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.1.tgz#571f0e137ce698710dd2637f7d222811eb83e274"
-  integrity sha512-n9fP8UrMxOi1wiM3oM+vMZHMJJ7WoQohqd63C20cmKOFkNEy9Q8hyZyDR6PWdvSYt3V3A7cwDq/kWxHlRYYZEg==
+"@types/webpack@4.41.2":
+  version "4.41.2"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.2.tgz#c6faf0111de27afdffe1158dac559e447c273516"
+  integrity sha512-DNMQOfEvwzWRRyp6Wy9QVCgJ3gkelZsuBE2KUD318dg95s9DKGiT5CszmmV58hq8jk89I9NClre48AEy1MWAJA==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
@@ -8237,12 +8237,7 @@ typescript@2.9.1:
   resolved "https://registry.npmjs.org/typescript/-/typescript-2.9.1.tgz#fdb19d2c67a15d11995fd15640e373e09ab09961"
   integrity sha512-h6pM2f/GDchCFlldnriOhs1QHuwbnmj6/v7499eMHqPeW4V2G0elua2eIc2nu8v2NdHV0Gm+tzX83Hr6nUFjQA==
 
-typescript@3.6.4:
-  version "3.6.4"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
-  integrity sha512-unoCll1+l+YK4i4F8f22TaNVPRHcD9PA3yCuZ8g5e0qGqlVlJ/8FSateOLLSagn+Yg5+ZwuPkL8LFUc0Jcvksg==
-
-typescript@3.7.4:
+typescript@3.7.4, typescript@^3.6.4:
   version "3.7.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz#1743a5ec5fef6a1fa9f3e4708e33c81c73876c19"
   integrity sha512-A25xv5XCtarLwXpcDNZzCGvW2D1S3/bACratYBx2sax8PefsFhlYmkQicKHvpYflFS8if4zne5zT5kpJ7pzuvw==

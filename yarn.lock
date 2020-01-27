@@ -437,15 +437,16 @@
     object-hash "2.0.1"
     uuid "3.3.3"
 
-"@nestjs/platform-express@6.10.14":
-  version "6.10.14"
-  resolved "https://registry.npmjs.org/@nestjs/platform-express/-/platform-express-6.10.14.tgz#1ae544c8668545c2707c094d2de7c4ca98c2ea48"
-  integrity sha512-0E31f9FeKhcbhNZaUh4IrkJt06uGR3PnWVBya8yewlsWBtpXORVOE5yJZnw5Q5QZhdUcN79gZeVZn2WOoViE3Q==
+"@nestjs/platform-express@6.11.1":
+  version "6.11.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-6.11.1.tgz#4b263c6a1e9e1319eccaedd060e060eb65f0e3cb"
+  integrity sha512-drU+T4uHpyysIBlDSu3qrgRCCRq/h0VYYM0wvJll2Ki++b7xcIoasZSU+cYKurdXRi7x6NNdFHbo8nozXoi7iQ==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
     express "4.17.1"
     multer "1.4.2"
+    tslib "1.10.0"
 
 "@nestjs/schematics@6.8.2", "@nestjs/schematics@^6.8.2":
   version "6.8.2"

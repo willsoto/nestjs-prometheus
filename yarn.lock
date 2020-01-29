@@ -440,10 +440,10 @@
     tslib "1.10.0"
     uuid "3.4.0"
 
-"@nestjs/platform-express@6.11.1":
-  version "6.11.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-6.11.1.tgz#4b263c6a1e9e1319eccaedd060e060eb65f0e3cb"
-  integrity sha512-drU+T4uHpyysIBlDSu3qrgRCCRq/h0VYYM0wvJll2Ki++b7xcIoasZSU+cYKurdXRi7x6NNdFHbo8nozXoi7iQ==
+"@nestjs/platform-express@6.11.4":
+  version "6.11.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-6.11.4.tgz#4887af6ef0f2391a001ba57e1737537e6dd93fee"
+  integrity sha512-kDCd4U3J2hxzhPr7L4SSjf+pTYt/Pu+CHm+lHCBcRAUuxChPvFgdZkzPBqJtfe5cUPZz+LdWqB1Q8ck8+qy3Ig==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"

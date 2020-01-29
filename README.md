@@ -2,7 +2,6 @@
 
 ![](https://github.com/willsoto/nestjs-prometheus/workflows/tests/badge.svg)
 ![](https://github.com/willsoto/nestjs-prometheus/workflows/docs/badge.svg)
-![](https://github.com/willsoto/nestjs-prometheus/workflows/publish/badge.svg)
 
 <!-- toc -->
 

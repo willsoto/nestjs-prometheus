@@ -40,7 +40,7 @@
     "@nestjs/cli": "6.14.2",
     "@nestjs/common": "6.11.5",
     "@nestjs/core": "6.11.6",
-    "@nestjs/platform-express": "6.11.5",
+    "@nestjs/platform-express": "6.11.6",
     "@nestjs/schematics": "6.9.3",
     "@nestjs/testing": "6.11.5",
     "@types/chai": "4.2.8",

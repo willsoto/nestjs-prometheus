@@ -42,7 +42,7 @@
     "@nestjs/core": "6.11.7",
     "@nestjs/platform-express": "6.11.7",
     "@nestjs/schematics": "6.9.4",
-    "@nestjs/testing": "6.11.7",
+    "@nestjs/testing": "6.11.8",
     "@types/chai": "4.2.9",
     "@types/chai-as-promised": "7.1.2",
     "@types/eslint": "6.1.8",

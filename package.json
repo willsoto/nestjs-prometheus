@@ -94,22 +94,18 @@
   },
   "lint-staged": {
     "*.{md,yaml,yml}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.ts": [
       "yarn lint",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "package.json": [
-      "prettier-package-json --write",
-      "git add"
+      "prettier-package-json --write"
     ],
     "README.md": [
       "markdown-toc -i",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "mocha": {

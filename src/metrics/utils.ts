@@ -2,15 +2,15 @@ import * as client from "prom-client";
 
 type Metrics = "Gauge" | "Summary" | "Histogram" | "Counter";
 type Options =
-  | client.GaugeConfiguration
-  | client.SummaryConfiguration
-  | client.CounterConfiguration
-  | client.HistogramConfiguration;
+  | client.GaugeConfiguration<string>
+  | client.SummaryConfiguration<string>
+  | client.CounterConfiguration<string>
+  | client.HistogramConfiguration<string>;
 
 export function getOrCreateMetric(
   type: Metrics,
   options: Options,
-): client.Metric {
+): client.Metric<string> {
   const existingMetric = client.register.getSingleMetric(options.name);
 
   if (existingMetric) {

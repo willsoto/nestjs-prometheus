@@ -1,5 +1,6 @@
 import { Injectable, Module } from "@nestjs/common";
 import { expect } from "chai";
+import { register } from "prom-client";
 import { PrometheusModule, PrometheusOptionsFactory } from "../src";
 import {
   Agent,
@@ -14,6 +15,7 @@ describe("PrometheusModule", function() {
 
   afterEach(async function() {
     if (app) {
+      register.clear();
       await app.close();
     }
   });

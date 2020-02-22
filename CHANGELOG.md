@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.7...v0.1.0) (2020-02-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* prom-client breaking changes
+include changes to types, so this is a major version to be safe.
+See https://github.com/siimon/prom-client/releases/tag/v12.0.0
+
+Signed-off-by: Will Soto <willsoto@users.noreply.github.com>
+
+### Features
+
+* upgrade prom-client to v12 ([75709d3](https://github.com/willsoto/nestjs-prometheus/commit/75709d3f634af0e4ae869ba548e5213316bedf39))
+
 ### [0.0.7](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.6...v0.0.7) (2020-01-13)
 
 ### [0.0.6](https://github.com/willsoto/nestjs-prometheus/compare/v0.0.5...v0.0.6) (2019-11-27)

@@ -427,18 +427,18 @@
     tslib "1.10.0"
     uuid "3.4.0"
 
-"@nestjs/core@6.11.8":
-  version "6.11.8"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-6.11.8.tgz#9c149d4aaf49fc94f0a61a58e9661b9aacd13cd7"
-  integrity sha512-QXsik+f0voaWmkMZhX3VDWB+q4jBBXwCJqJurK47h7ksTKJAcpHxV0SVOOrbWoZK0aHSMl3KMU/JNYL/p0mwNw==
+"@nestjs/core@6.11.9":
+  version "6.11.9"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-6.11.9.tgz#c0eb6c68bd9d4d7d3c12fc9fed1aa41574a820bb"
+  integrity sha512-6VTLkxPk1C3RTSKZBKSw0q8FJLv13OWMCIp2aF5FCjajWM9ODvF2r5SvbtszOsOKKKMahNHhGAaorSMQiruI1w==
   dependencies:
     "@nuxtjs/opencollective" "0.2.2"
     fast-safe-stringify "2.0.7"
     iterare "1.2.0"
     object-hash "2.0.3"
     path-to-regexp "3.2.0"
-    tslib "1.10.0"
-    uuid "3.4.0"
+    tslib "1.11.1"
+    uuid "7.0.1"
 
 "@nestjs/platform-express@6.11.8":
   version "6.11.8"
@@ -8303,6 +8303,11 @@ uuid@3.4.0, uuid@^3.0.0, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.1.tgz#95ed6ff3d8c881cbf85f0f05cc3915ef994818ef"
+  integrity sha512-yqjRXZzSJm9Dbl84H2VDHpM3zMjzSJQ+hn6C4zqd5ilW+7P4ZmLEEqwho9LjP+tGuZlF4xrHQXT0h9QZUS/pWA==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"

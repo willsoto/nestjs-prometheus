@@ -440,16 +440,16 @@
     tslib "1.11.1"
     uuid "7.0.1"
 
-"@nestjs/platform-express@6.11.8":
-  version "6.11.8"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-6.11.8.tgz#5444b92d9d31842457bab5da85d4d8c39f90f7dc"
-  integrity sha512-nLyZEOAAUSxHX2lL3fuDAjoE1iaFJphFYCx4H09JwScYnurOYYCB3VaXqAoeib4JS1LIGglqHxirjTvNOBXAcA==
+"@nestjs/platform-express@6.11.9":
+  version "6.11.9"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-6.11.9.tgz#79053c6ed9910b4c2707c102807b50778dacf604"
+  integrity sha512-mX+PqDhd+RVoKAkqOv8WeWrw4hUdtcezrl8SUlTNie1GPxha34L8pi1cm9nXzrIuY49VHc635kZhMqRraTsuuQ==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
     express "4.17.1"
     multer "1.4.2"
-    tslib "1.10.0"
+    tslib "1.11.1"
 
 "@nestjs/schematics@6.9.4", "@nestjs/schematics@^6.8.2":
   version "6.9.4"

@@ -427,10 +427,10 @@
     tslib "1.11.1"
     uuid "7.0.1"
 
-"@nestjs/core@6.11.9":
-  version "6.11.9"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-6.11.9.tgz#c0eb6c68bd9d4d7d3c12fc9fed1aa41574a820bb"
-  integrity sha512-6VTLkxPk1C3RTSKZBKSw0q8FJLv13OWMCIp2aF5FCjajWM9ODvF2r5SvbtszOsOKKKMahNHhGAaorSMQiruI1w==
+"@nestjs/core@6.11.11":
+  version "6.11.11"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-6.11.11.tgz#2b97a3e9c2a853f5693ed84daf81c1ee3b2782b4"
+  integrity sha512-ewUy2rjiRWi6SziI5gXZnlat7PfnVklL3tusnU1qqtUm74cPY1Zre+zDCJ27P/+B7sFJHbkFfpi0qQP2pQv9jQ==
   dependencies:
     "@nuxtjs/opencollective" "0.2.2"
     fast-safe-stringify "2.0.7"
@@ -8068,11 +8068,6 @@ tsconfig-paths@3.9.0, tsconfig-paths@^3.4.0:
     json5 "^1.0.1"
     minimist "^1.2.0"
     strip-bom "^3.0.0"
-
-tslib@1.10.0:
-  version "1.10.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
-  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
 tslib@1.11.1, tslib@^1.8.1, tslib@^1.9.0:
   version "1.11.1"

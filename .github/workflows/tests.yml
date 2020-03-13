@@ -10,19 +10,18 @@ on:
 
 jobs:
   test:
-    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: [10, 12]
+        node-version: [10, 12]
         os: [ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
+      - uses: volta-cli/action@v1
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: ${{ matrix.node-version }}
 
       - name: install, build and test
         run: |

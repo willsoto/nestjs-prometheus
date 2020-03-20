@@ -6,7 +6,12 @@ import * as client from "prom-client";
 export class PrometheusController {
   @Get()
   index(@Res() response: Response): void {
-    response.set("Content-Type", client.register.contentType);
-    response.end(client.register.metrics());
+    if (response.set) {
+      response.set("Content-Type", client.register.contentType);
+      response.end(client.register.metrics());
+    } else {
+      response.type(client.register.contentType);
+      response.send(client.register.metrics());
+    }
   }
 }

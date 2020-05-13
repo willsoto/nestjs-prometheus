@@ -55,7 +55,7 @@
     "@types/sinon-chai": "3.2.4",
     "@types/source-map-support": "0.5.1",
     "@types/supertest": "2.0.9",
-    "@typescript-eslint/eslint-plugin": "2.32.0",
+    "@typescript-eslint/eslint-plugin": "2.33.0",
     "@typescript-eslint/parser": "2.32.0",
     "@willsoto/eslint-config-base": "2.0.0",
     "chai": "4.2.0",

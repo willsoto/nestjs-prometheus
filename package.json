@@ -41,7 +41,7 @@
     "@nestjs/common": "6.11.11",
     "@nestjs/core": "6.11.11",
     "@nestjs/platform-express": "7.0.0",
-    "@nestjs/schematics": "7.0.0",
+    "@nestjs/schematics": "7.0.1",
     "@nestjs/testing": "7.0.0",
     "@types/chai": "4.2.11",
     "@types/chai-as-promised": "7.1.2",

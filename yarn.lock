@@ -714,10 +714,10 @@
   resolved "https://registry.npmjs.org/@types/prettier-package-json/-/prettier-package-json-2.1.0.tgz#519f894db58335a7e3d69592df7a7bf180d352b9"
   integrity sha512-zclgP76us7ldohAPPLvFuFkioGiEsAjCPcc1zwxcYLVbpgV0Oe3nYa1AY/lpkBvPIBk+jistSROBQlqm2M9Ltg==
 
-"@types/prettier@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.1.tgz#b6e98083f13faa1e5231bfa3bdb1b0feff536b6d"
-  integrity sha512-boy4xPNEtiw6N3abRhBi/e7hNvy3Tt8E9ZRAQrwAGzoCGZS/1wjo9KY7JHhnfnEsG5wSjDbymCozUM9a3ea7OQ==
+"@types/prettier@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.2.tgz#5bb52ee68d0f8efa9cc0099920e56be6cc4e37f3"
+  integrity sha512-IkVfat549ggtkZUthUzEX49562eGikhSYeVGX97SkMFn+sTZrgRewXjQ4tPKFPCykZHkX1Zfd9OoELGqKU2jJA==
 
 "@types/qs@*":
   version "6.9.1"

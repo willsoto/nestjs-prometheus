@@ -76,7 +76,7 @@
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-filesize": "9.0.2",
     "rollup-plugin-typescript": "1.0.1",
-    "rxjs": "6.6.0",
+    "rxjs": "6.6.2",
     "sinon-chai": "3.5.0",
     "source-map-support": "0.5.19",
     "standard-version": "8.0.2",

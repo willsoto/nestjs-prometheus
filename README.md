@@ -127,7 +127,7 @@ import { Counter } from "prom-client";
 
 @Injectable()
 export class Service {
-  constructor(@InjectMetric("metric_name") public counter: Counter) {}
+  constructor(@InjectMetric("metric_name") public counter: Counter<string>) {}
 }
 ```
 

@@ -3,11 +3,11 @@ import { getToken, makeCounterProvider } from "@src";
 import { expect } from "chai";
 import * as client from "prom-client";
 
-describe("Counter", function() {
+describe("Counter", function () {
   let testingModule: TestingModule;
-  let metric: client.Counter;
+  let metric: client.Counter<string>;
 
-  beforeEach(async function() {
+  beforeEach(async function () {
     testingModule = await Test.createTestingModule({
       providers: [
         makeCounterProvider({
@@ -20,15 +20,15 @@ describe("Counter", function() {
     metric = testingModule.get(getToken("controller_counter"));
   });
 
-  afterEach(async function() {
+  afterEach(async function () {
     await testingModule.close();
   });
 
-  it("creates a Counter", function() {
+  it("creates a Counter", function () {
     expect(metric).to.be.instanceOf(client.Counter);
   });
 
-  it("has the appropriate methods (inc)", function() {
+  it("has the appropriate methods (inc)", function () {
     expect(metric.inc).to.be.a("function");
   });
 });

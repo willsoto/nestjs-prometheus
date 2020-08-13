@@ -3,11 +3,11 @@ import { getToken, makeHistogramProvider } from "@src";
 import { expect } from "chai";
 import * as client from "prom-client";
 
-describe("Histogram", function() {
+describe("Histogram", function () {
   let testingModule: TestingModule;
-  let metric: client.Histogram;
+  let metric: client.Histogram<string>;
 
-  beforeEach(async function() {
+  beforeEach(async function () {
     testingModule = await Test.createTestingModule({
       providers: [
         makeHistogramProvider({
@@ -20,15 +20,15 @@ describe("Histogram", function() {
     metric = testingModule.get(getToken("controller_histogram"));
   });
 
-  afterEach(async function() {
+  afterEach(async function () {
     await testingModule.close();
   });
 
-  it("creates a Histogram", function() {
+  it("creates a Histogram", function () {
     expect(metric).to.be.instanceOf(client.Histogram);
   });
 
-  it("has the appropriate methods (observe)", function() {
+  it("has the appropriate methods (observe)", function () {
     expect(metric.observe).to.be.a("function");
   });
 });

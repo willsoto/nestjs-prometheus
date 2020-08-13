@@ -3,11 +3,11 @@ import { getToken, makeSummaryProvider } from "@src";
 import { expect } from "chai";
 import * as client from "prom-client";
 
-describe("Summary", function() {
+describe("Summary", function () {
   let testingModule: TestingModule;
-  let metric: client.Summary;
+  let metric: client.Summary<string>;
 
-  beforeEach(async function() {
+  beforeEach(async function () {
     testingModule = await Test.createTestingModule({
       providers: [
         makeSummaryProvider({
@@ -20,15 +20,15 @@ describe("Summary", function() {
     metric = testingModule.get(getToken("controller_summary"));
   });
 
-  afterEach(async function() {
+  afterEach(async function () {
     await testingModule.close();
   });
 
-  it("creates a Summary", function() {
+  it("creates a Summary", function () {
     expect(metric).to.be.instanceOf(client.Summary);
   });
 
-  it("has the appropriate methods (observe)", function() {
+  it("has the appropriate methods (observe)", function () {
     expect(metric.observe).to.be.a("function");
   });
 });

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/willsoto/nestjs-prometheus/compare/v0.1.2...v0.1.3) (2020-08-25)
+
+
+### Features
+
+* add support for fastify ([0ff55d9](https://github.com/willsoto/nestjs-prometheus/commit/0ff55d9d1b8e06e98d31027c7b2d30521976bcc9))
+
 ### [0.1.2](https://github.com/willsoto/nestjs-prometheus/compare/v0.1.1...v0.1.2) (2020-08-13)
 
 ### [0.1.1](https://github.com/willsoto/nestjs-prometheus/compare/v0.1.0...v0.1.1) (2020-03-07)

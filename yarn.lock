@@ -779,10 +779,10 @@
   resolved "https://registry.yarnpkg.com/@types/prettier-package-json/-/prettier-package-json-2.1.0.tgz#519f894db58335a7e3d69592df7a7bf180d352b9"
   integrity sha512-zclgP76us7ldohAPPLvFuFkioGiEsAjCPcc1zwxcYLVbpgV0Oe3nYa1AY/lpkBvPIBk+jistSROBQlqm2M9Ltg==
 
-"@types/prettier@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.2.tgz#5bb52ee68d0f8efa9cc0099920e56be6cc4e37f3"
-  integrity sha512-IkVfat549ggtkZUthUzEX49562eGikhSYeVGX97SkMFn+sTZrgRewXjQ4tPKFPCykZHkX1Zfd9OoELGqKU2jJA==
+"@types/prettier@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.0.tgz#5f96562c1075ee715a5b138f0b7f591c1f40f6b8"
+  integrity sha512-hiYA88aHiEIgDmeKlsyVsuQdcFn3Z2VuFd/Xm/HCnGnPD8UFU5BM128uzzRVVGEzKDKYUrRsRH9S2o+NUy/3IA==
 
 "@types/qs@*":
   version "6.9.4"

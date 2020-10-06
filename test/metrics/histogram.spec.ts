@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import { getToken, makeHistogramProvider } from "@src";
 import { expect } from "chai";
-import * as client from "prom-client";
+import client from "prom-client";
+import { getToken, makeHistogramProvider } from "../../src";
 
 describe("Histogram", function () {
   let testingModule: TestingModule;

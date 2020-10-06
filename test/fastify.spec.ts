@@ -1,11 +1,11 @@
-import { expect } from "chai";
-import { register } from "prom-client";
 import {
   FastifyAdapter,
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 import { Test } from "@nestjs/testing";
-import { PrometheusModule } from "@src";
+import { expect } from "chai";
+import { register } from "prom-client";
+import { PrometheusModule } from "../src";
 
 describe("PrometheusModuleWithFastify", () => {
   let app: NestFastifyApplication;

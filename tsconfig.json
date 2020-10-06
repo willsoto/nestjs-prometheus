@@ -1,23 +1,18 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "declaration": true,
+    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "incremental": true,
     "lib": ["esnext"],
     "module": "commonjs",
-    "outDir": "./dist",
-    "paths": {
-      "@src": ["src/index.ts"]
-    },
     "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "es2019"
   },
-  "include": ["src/**/*.ts", "test/**/*.ts", "ad-hocs/**/*.ts"],
+  "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

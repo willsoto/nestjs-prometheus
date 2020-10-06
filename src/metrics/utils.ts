@@ -1,4 +1,4 @@
-import * as client from "prom-client";
+import client from "prom-client";
 
 type Metrics = "Gauge" | "Summary" | "Histogram" | "Counter";
 type Options =
@@ -27,6 +27,7 @@ export function getOrCreateMetric(
     case "Summary":
       return new client.Summary(options);
     default:
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Unknown type: ${type}`);
   }
 }

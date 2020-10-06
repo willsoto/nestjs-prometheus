@@ -1,11 +1,11 @@
 import { INestApplication } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
+import request from "supertest";
 import {
   PrometheusAsyncOptions,
   PrometheusModule,
   PrometheusOptions,
-} from "@src";
-import * as request from "supertest";
+} from "../src";
 
 export type Agent = request.SuperTest<request.Test>;
 export type App = INestApplication;

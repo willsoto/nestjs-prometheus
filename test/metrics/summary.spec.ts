@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import { getToken, makeSummaryProvider } from "@src";
 import { expect } from "chai";
-import * as client from "prom-client";
+import client from "prom-client";
+import { getToken, makeSummaryProvider } from "../../src";
 
 describe("Summary", function () {
   let testingModule: TestingModule;

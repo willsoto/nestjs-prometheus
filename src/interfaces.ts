@@ -1,6 +1,6 @@
 import { Type } from "@nestjs/common";
 import { ModuleMetadata } from "@nestjs/common/interfaces";
-import * as client from "prom-client";
+import client from "prom-client";
 
 /**
  * Options for the Prometheus Module

@@ -1,37 +1,33 @@
-import { eslint } from "rollup-plugin-eslint";
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import typescript from "@rollup/plugin-typescript";
+import slugify from "@sindresorhus/slugify";
 import filesize from "rollup-plugin-filesize";
-import typescript from "rollup-plugin-typescript";
 import pkg from "./package.json";
 
-const formats = ["umd", "esm"];
-const globals = {
-  "@nestjs/common": "nestjsCommon",
-  "@nestjs/common/constants": "nestjsCommonConstants",
-  "prom-client": "promClient",
-};
+const formats = ["cjs", "esm"];
+const globals = Object.keys(pkg.peerDependencies || {}).reduce(
+  (obj, dependency) => {
+    obj[dependency] = slugify(dependency);
+
+    return obj;
+  },
+  {},
+);
+const [, pkgName] = pkg.name.split("/");
 
 export default {
   input: "src/index.ts",
   output: formats.map((format) => ({
-    file: `dist/nestjs-prometheus.${format}.js`,
+    file: `dist/${format}.js`,
     format,
-    name: "NestJSPrometheus",
+    name: pkgName,
     sourcemap: true,
     globals,
-    banner: `
-      /**
-       *
-       * ${pkg.name}@${pkg.version}
-       * ${pkg.license}
-       *
-       */`,
   })),
   external: Object.keys(globals),
   plugins: [
-    eslint({
-      throwOnWarning: true,
-      throwOnError: true,
-    }),
     typescript({
       tsconfig: "./tsconfig.build.json",
     }),

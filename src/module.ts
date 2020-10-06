@@ -1,5 +1,4 @@
 import { DynamicModule, Module, Provider } from "@nestjs/common";
-import { PATH_METADATA } from "@nestjs/common/constants";
 import { collectDefaultMetrics } from "prom-client";
 import { PROMETHEUS_OPTIONS } from "./constants";
 import { PrometheusController } from "./controller";
@@ -97,7 +96,7 @@ export class PrometheusModule {
       collectDefaultMetrics(options.defaultMetrics.config);
     }
 
-    Reflect.defineMetadata(PATH_METADATA, options.path, PrometheusController);
+    Reflect.defineMetadata("path", options.path, PrometheusController);
   }
 
   private static makeDefaultOptions(

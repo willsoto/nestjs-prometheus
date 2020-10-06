@@ -1,5 +1,5 @@
 import { Provider } from "@nestjs/common";
-import * as client from "prom-client";
+import client from "prom-client";
 import { getOrCreateMetric, getToken } from "./utils";
 
 export function makeHistogramProvider(

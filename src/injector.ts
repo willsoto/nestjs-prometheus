@@ -1,6 +1,9 @@
 import { Inject } from "@nestjs/common";
 import { getToken } from "./metrics";
 
+/**
+ * @public
+ */
 export function InjectMetric(
   name: string,
 ): (

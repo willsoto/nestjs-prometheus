@@ -7,6 +7,9 @@ type Options =
   | client.CounterConfiguration<string>
   | client.HistogramConfiguration<string>;
 
+/**
+ * @internal
+ */
 export function getOrCreateMetric(
   type: Metrics,
   options: Options,
@@ -32,6 +35,9 @@ export function getOrCreateMetric(
   }
 }
 
+/**
+ * @public
+ */
 export function getToken(name: string): string {
   return `PROM_METRIC_${name.toUpperCase()}`;
 }

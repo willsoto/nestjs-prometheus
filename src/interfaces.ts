@@ -4,6 +4,8 @@ import client from "prom-client";
 
 /**
  * Options for the Prometheus Module
+ *
+ * @public
  */
 export interface PrometheusOptions {
   /**
@@ -30,7 +32,8 @@ export interface PrometheusOptions {
   controller?: Type<unknown>;
   /**
    * The URL at which Prometheus metrics will be available
-   * @default /metrics
+   *
+   * @defaultValue /metrics
    */
   path?: string;
   /**
@@ -39,21 +42,27 @@ export interface PrometheusOptions {
   defaultMetrics?: {
     /**
      * Whether or not default metrics are collected.
-     * @default true
+     *
+     * @defaultValue true
      */
     enabled: boolean;
     /**
-     * @see https://github.com/siimon/prom-client#default-metrics
-     * @default {}
+     * {@link https://github.com/siimon/prom-client#default-metrics | Default Metrics}
      */
     config?: client.DefaultMetricsCollectorConfiguration;
   };
 }
 
+/**
+ * @internal
+ */
 export interface PrometheusOptionsFactory {
   createPrometheusOptions(): Promise<PrometheusOptions> | PrometheusOptions;
 }
 
+/**
+ * @public
+ */
 export interface PrometheusAsyncOptions
   extends Pick<ModuleMetadata, "imports"> {
   useExisting?: Type<PrometheusOptionsFactory>;

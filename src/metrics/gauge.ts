@@ -2,6 +2,9 @@ import { Provider } from "@nestjs/common";
 import client from "prom-client";
 import { getOrCreateMetric, getToken } from "./utils";
 
+/**
+ * @public
+ */
 export function makeGaugeProvider(
   options: client.GaugeConfiguration<string>,
 ): Provider {

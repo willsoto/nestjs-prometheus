@@ -2,6 +2,9 @@ import { Provider } from "@nestjs/common";
 import client from "prom-client";
 import { getOrCreateMetric, getToken } from "./utils";
 
+/**
+ * @public
+ */
 export function makeSummaryProvider(
   options: client.SummaryConfiguration<string>,
 ): Provider {

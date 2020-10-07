@@ -8,6 +8,9 @@ import {
   PrometheusOptionsFactory,
 } from "./interfaces";
 
+/**
+ * @public
+ */
 @Module({})
 export class PrometheusModule {
   public static register(options?: PrometheusOptions): DynamicModule {

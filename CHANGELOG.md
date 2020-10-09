@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v1.0.0...v1.1.0) (2020-10-09)
+
+
+### Features
+
+* add support for custom controllers ([92b1f8a](https://github.com/willsoto/nestjs-prometheus/commit/92b1f8a087332978ad09bbd624a9953fa9056ad0)), closes [#507](https://github.com/willsoto/nestjs-prometheus/issues/507)
+
 ## [1.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v0.1.3...v1.0.0) (2020-10-06)
 
 ### [0.1.3](https://github.com/willsoto/nestjs-prometheus/compare/v0.1.2...v0.1.3) (2020-08-25)

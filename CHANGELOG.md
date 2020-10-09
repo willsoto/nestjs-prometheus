@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v1.1.0...v2.0.0) (2020-10-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* shouldn't affect anybody, but if people relied on there being an ESM version
+it is gone now
+
+Signed-off-by: Will Soto <willsoto@users.noreply.github.com>
+
+### Bug Fixes
+
+* remove esm version ([a6c7545](https://github.com/willsoto/nestjs-prometheus/commit/a6c7545df30cac94c7fea2ff434093cf929ff57b))
+
 ## [1.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v1.0.0...v1.1.0) (2020-10-09)
 
 

@@ -6,7 +6,7 @@ import slugify from "@sindresorhus/slugify";
 import filesize from "rollup-plugin-filesize";
 import pkg from "./package.json";
 
-const formats = ["cjs", "esm"];
+const formats = ["cjs"];
 const globals = Object.keys(pkg.peerDependencies || {}).reduce(
   (obj, dependency) => {
     obj[dependency] = slugify(dependency);

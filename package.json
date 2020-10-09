@@ -5,7 +5,6 @@
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
-  "exports": "./dist/esm.js",
   "main": "./dist/cjs.js",
   "typings": "./typings/index.d.ts",
   "files": [

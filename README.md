@@ -161,7 +161,9 @@ import { makeSummaryProvider } from "@willsoto/nestjs-prometheus";
 ## Providing a custom controller
 
 If you need to implement any special logic or have access to the controller (e.g., to customize [Swagger](https://docs.nestjs.com/openapi/introduction)),
-you can provide you own controller (or subclass) of the default controller. Here is a basic example which should be enough to extend or customize in any way you might need.
+you can provide your own controller (or subclass) of the default controller.
+
+Here is a basic example which should be enough to extend or customize in any way you might need.
 
 ```typescript
 // my-custom-controller.ts

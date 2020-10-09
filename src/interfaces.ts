@@ -7,6 +7,28 @@ import client from "prom-client";
  */
 export interface PrometheusOptions {
   /**
+   * A custom controller to be used instead of the default one. Only needs to be
+   * provided if you need to do any kind of customization on the route, eg Swagger.
+   *
+   * You can use the {@link PrometheusController} as a base class.
+   *
+   * @example
+   * ```
+   * import { PrometheusController } from "@willsoto/nestjs-prometheus";
+   * import { Controller, Get, Res } from "@nestjs/common";
+   * import { Response } from "express";
+   *
+   * @Controller()
+   * class MyCustomController extends PrometheusController {
+   *   @Get()
+   *   index(@Res() response: Response) {
+   *     super(response);
+   *   }
+   * }
+   * ```
+   */
+  controller?: Type<unknown>;
+  /**
    * The URL at which Prometheus metrics will be available
    * @default /metrics
    */
@@ -38,6 +60,8 @@ export interface PrometheusAsyncOptions
   useClass?: Type<PrometheusOptionsFactory>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   inject?: any[];
+
+  controller?: PrometheusOptions["controller"];
   /**
    * Not currently supported since there doesn't seem to be a way to get
    * the result of the function during configuration.

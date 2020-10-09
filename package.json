@@ -56,7 +56,8 @@
     "recursive": true,
     "require": [
       "ts-node/register",
-      "source-map-support/register"
+      "source-map-support/register",
+      "./ad-hocs/mocha/hooks.ts"
     ],
     "sort": true,
     "watch-files": [
@@ -148,6 +149,7 @@
     "rollup": "~2.29.0",
     "rollup-plugin-filesize": "~9.0.2",
     "rxjs": "~6.6.3",
+    "sinon": "~9.2.0",
     "sinon-chai": "~3.5.0",
     "source-map-support": "~0.5.19",
     "standard-version": "~9.0.0",

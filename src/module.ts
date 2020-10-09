@@ -17,16 +17,17 @@ export class PrometheusModule {
 
     return {
       module: PrometheusModule,
-      controllers: [PrometheusController],
+      controllers: [opts.controller],
     };
   }
 
   public static registerAsync(options: PrometheusAsyncOptions): DynamicModule {
     const asyncProviders = this.createAsyncProviders(options);
+    const controller = options.controller ?? PrometheusController;
 
     return {
       module: PrometheusModule,
-      controllers: [PrometheusController],
+      controllers: [controller],
       imports: options.imports,
       providers: [...asyncProviders],
     };
@@ -96,7 +97,7 @@ export class PrometheusModule {
       collectDefaultMetrics(options.defaultMetrics.config);
     }
 
-    Reflect.defineMetadata("path", options.path, PrometheusController);
+    Reflect.defineMetadata("path", options.path, options.controller);
   }
 
   private static makeDefaultOptions(
@@ -108,6 +109,7 @@ export class PrometheusModule {
         enabled: true,
         config: {},
       },
+      controller: PrometheusController,
       ...options,
     };
   }

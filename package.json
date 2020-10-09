@@ -5,8 +5,8 @@
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
-  "main": "./dist/cjs.js",
-  "typings": "./typings/index.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist",
     "src",
@@ -14,9 +14,8 @@
   ],
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "rollup --config rollup.config.js",
-    "postbuild": "npm run typings",
-    "clean": "rimraf dist typings coverage .nyc_output docs",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf dist coverage .nyc_output docs",
     "docs": "compodoc -p tsconfig.json --output docs --theme stripe -n 'NestJS Prometheus'",
     "lint": "eslint . --ext ts,js --fix",
     "prerelease": "npm run build",
@@ -24,9 +23,7 @@
     "test": "mocha",
     "pretest:cov": "rimraf coverage .nyc_output",
     "test:cov": "nyc mocha",
-    "test:watch": "mocha --watch",
-    "pretypings": "rimraf typings",
-    "typings": "tsc --project tsconfig.build.json --declaration --declarationDir typings --emitDeclarationOnly"
+    "test:watch": "mocha --watch"
   },
   "husky": {
     "hooks": {
@@ -113,7 +110,6 @@
     "@nestjs/platform-fastify": "~7.4.4",
     "@nestjs/schematics": "~7.1.2",
     "@nestjs/testing": "~7.4.4",
-    "@rollup/plugin-typescript": "~6.0.0",
     "@sindresorhus/slugify": "~1.1.0",
     "@types/chai": "~4.2.13",
     "@types/chai-as-promised": "~7.1.3",
@@ -145,8 +141,6 @@
     "prom-client": "~12.0.0",
     "reflect-metadata": "~0.1.13",
     "rimraf": "~3.0.2",
-    "rollup": "~2.29.0",
-    "rollup-plugin-filesize": "~9.0.2",
     "rxjs": "~6.6.3",
     "sinon": "~9.2.0",
     "sinon-chai": "~3.5.0",
@@ -154,7 +148,6 @@
     "standard-version": "~9.0.0",
     "supertest": "~5.0.0",
     "ts-node": "~9.0.0",
-    "tslib": "~2.0.2",
     "typescript": "~4.0.3"
   },
   "peerDependencies": {

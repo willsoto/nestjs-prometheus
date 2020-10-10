@@ -103,7 +103,6 @@
   "devDependencies": {
     "@commitlint/cli": "~11.0.0",
     "@commitlint/config-conventional": "~11.0.0",
-    "@compodoc/compodoc": "~1.1.11",
     "@istanbuljs/nyc-config-typescript": "~1.0.1",
     "@microsoft/api-documenter": "~7.9.8",
     "@microsoft/api-extractor": "~7.10.4",

@@ -9,6 +9,8 @@ import {
 } from "./interfaces";
 
 /**
+ * The primary entrypoint. This should be registered once in the root application module.
+ *
  * @public
  */
 @Module({})

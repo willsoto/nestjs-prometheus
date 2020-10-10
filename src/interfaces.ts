@@ -3,7 +3,25 @@ import { ModuleMetadata } from "@nestjs/common/interfaces";
 import client from "prom-client";
 
 /**
- * Options for the Prometheus Module
+ * Configuration for the defaultMetrics collected by `prom-client`.
+ *
+ * @public
+ */
+export interface PrometheusDefaultMetrics {
+  /**
+   * Whether or not default metrics are collected.
+   *
+   * @defaultValue true
+   */
+  enabled: boolean;
+  /**
+   * {@link https://github.com/siimon/prom-client#default-metrics | Default Metrics}
+   */
+  config?: client.DefaultMetricsCollectorConfiguration;
+}
+
+/**
+ * Options for the Prometheus Module.
  *
  * @public
  */
@@ -36,21 +54,8 @@ export interface PrometheusOptions {
    * @defaultValue /metrics
    */
   path?: string;
-  /**
-   * Configuration for the defaultMetrics collected by `prom-client`.
-   */
-  defaultMetrics?: {
-    /**
-     * Whether or not default metrics are collected.
-     *
-     * @defaultValue true
-     */
-    enabled: boolean;
-    /**
-     * {@link https://github.com/siimon/prom-client#default-metrics | Default Metrics}
-     */
-    config?: client.DefaultMetricsCollectorConfiguration;
-  };
+  /** {@inheritDoc PrometheusDefaultMetrics} */
+  defaultMetrics?: PrometheusDefaultMetrics;
 }
 
 /**
@@ -61,6 +66,8 @@ export interface PrometheusOptionsFactory {
 }
 
 /**
+ * Options for configuring a dynamic provider
+ *
  * @public
  */
 export interface PrometheusAsyncOptions
@@ -70,6 +77,7 @@ export interface PrometheusAsyncOptions
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   inject?: any[];
 
+  /** {@inheritDoc PrometheusOptions.controller} */
   controller?: PrometheusOptions["controller"];
   /**
    * Not currently supported since there doesn't seem to be a way to get

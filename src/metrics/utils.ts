@@ -1,7 +1,14 @@
 import client from "prom-client";
 
-type Metrics = "Gauge" | "Summary" | "Histogram" | "Counter";
-type Options =
+/**
+ * @internal
+ */
+export type Metrics = "Gauge" | "Summary" | "Histogram" | "Counter";
+
+/**
+ * @internal
+ */
+export type Options =
   | client.GaugeConfiguration<string>
   | client.SummaryConfiguration<string>
   | client.CounterConfiguration<string>

@@ -3,9 +3,9 @@ import { Response } from "express";
 import client from "prom-client";
 
 /**
- * PrometheusController is used to expose the Prometheus metrics via http
- *
  * @public
+ *
+ * {@inheritDoc PrometheusOptions.controller}
  */
 @Controller()
 export class PrometheusController {

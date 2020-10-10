@@ -330,14 +330,12 @@
       "default": {
         "logLevel": "warning"
         // "addToApiReportFile": false
-      }
+      },
 
-      // "ae-extra-release-tag": {
-      //   "logLevel": "warning",
-      //   "addToApiReportFile": true
-      // },
-      //
-      // . . .
+      "ae-internal-missing-underscore": {
+        "logLevel": "none",
+        "addToApiReportFile": false
+      }
     },
 
     /**

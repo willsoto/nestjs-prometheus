@@ -11,17 +11,13 @@ import { Provider } from '@nestjs/common';
 import { Response as Response_2 } from 'express';
 import { Type } from '@nestjs/common';
 
-// Warning: (ae-forgotten-export) The symbol "Metrics" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "Options" needs to be exported by the entry point index.d.ts
-// Warning: (ae-internal-missing-underscore) The name "getOrCreateMetric" should be prefixed with an underscore because the declaration is marked as @internal
-//
 // @internal (undocumented)
 export function getOrCreateMetric(type: Metrics, options: Options): client.Metric<string>;
 
 // @public (undocumented)
 export function getToken(name: string): string;
 
-// @public (undocumented)
+// @public
 export function InjectMetric(name: string): (target: Record<string, unknown>, key: string | symbol, index?: number | undefined) => void;
 
 // @public (undocumented)
@@ -36,9 +32,14 @@ export function makeHistogramProvider(options: client.HistogramConfiguration<str
 // @public (undocumented)
 export function makeSummaryProvider(options: client.SummaryConfiguration<string>): Provider;
 
-// @public (undocumented)
+// @internal (undocumented)
+export type Metrics = "Gauge" | "Summary" | "Histogram" | "Counter";
+
+// @internal (undocumented)
+export type Options = client.GaugeConfiguration<string> | client.SummaryConfiguration<string> | client.CounterConfiguration<string> | client.HistogramConfiguration<string>;
+
+// @public
 export interface PrometheusAsyncOptions extends Pick<ModuleMetadata, "imports"> {
-    // (undocumented)
     controller?: PrometheusOptions["controller"];
     // (undocumented)
     inject?: any[];
@@ -58,7 +59,13 @@ export class PrometheusController {
     index(response: Response_2): void;
 }
 
-// @public (undocumented)
+// @public
+export interface PrometheusDefaultMetrics {
+    config?: client.DefaultMetricsCollectorConfiguration;
+    enabled: boolean;
+}
+
+// @public
 export class PrometheusModule {
     // (undocumented)
     static createAsyncOptionsProvider(options: PrometheusAsyncOptions): Provider;
@@ -73,15 +80,10 @@ export class PrometheusModule {
 // @public
 export interface PrometheusOptions {
     controller?: Type<unknown>;
-    defaultMetrics?: {
-        enabled: boolean;
-        config?: client.DefaultMetricsCollectorConfiguration;
-    };
+    defaultMetrics?: PrometheusDefaultMetrics;
     path?: string;
 }
 
-// Warning: (ae-internal-missing-underscore) The name "PrometheusOptionsFactory" should be prefixed with an underscore because the declaration is marked as @internal
-//
 // @internal (undocumented)
 export interface PrometheusOptionsFactory {
     // (undocumented)

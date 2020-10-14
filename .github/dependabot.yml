@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "01:00"
+      timezone: America/New_York
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 99
+    target-branch: "main"
+    allow:
+      - dependency-type: direct
+    labels:
+      - "automerge"

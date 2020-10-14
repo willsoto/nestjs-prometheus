@@ -8,13 +8,16 @@ on:
     branches:
       - main
 
+env:
+  NODE_ENV: "ci"
+
 jobs:
   test:
     name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node-version: [10, 12, 14]
+        node-version: [12, 14]
         os: [ubuntu-latest]
 
     steps:
@@ -24,5 +27,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run lint
-      - run: npm run build
       - run: npm run test:cov
+      - run: npm run build

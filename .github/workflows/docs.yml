@@ -16,8 +16,8 @@ jobs:
       - run: npm run docs
 
       - name: Deploy to GitHub pages
-        uses: peaceiris/actions-gh-pages@v2.5.1
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages # The branch the action should deploy to.
-          PUBLISH_DIR: ./docs # The folder the action should deploy.
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./docs # The folder the action should deploy.
+          enable_jekyll: true

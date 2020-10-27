@@ -128,7 +128,7 @@
     "@types/source-map-support": "~0.5.3",
     "@types/supertest": "~2.0.10",
     "@typescript-eslint/eslint-plugin": "~4.5.0",
-    "@typescript-eslint/parser": "~4.5.0",
+    "@typescript-eslint/parser": "~4.6.0",
     "chai": "~4.2.0",
     "chai-as-promised": "~7.1.1",
     "eslint": "~7.12.0",

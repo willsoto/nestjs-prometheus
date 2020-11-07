@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/willsoto/nestjs-prometheus/compare/v2.0.0...v2.0.1) (2020-11-07)
+
+
+### Bug Fixes
+
+* **controller:** don't include Express types ([e4a022c](https://github.com/willsoto/nestjs-prometheus/commit/e4a022cde8e0e9aae84ec2be098442217f9f8849)), closes [#530](https://github.com/willsoto/nestjs-prometheus/issues/530)
+
 ## [2.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v1.1.0...v2.0.0) (2020-10-09)
 
 

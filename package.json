@@ -9,7 +9,6 @@
   "typings": "./dist/index.d.ts",
   "files": [
     "dist",
-    "src",
     "typings"
   ],
   "scripts": {

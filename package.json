@@ -131,7 +131,7 @@
     "chai": "~4.2.0",
     "chai-as-promised": "~7.1.1",
     "eslint": "~7.14.0",
-    "eslint-config-prettier": "~6.15.0",
+    "eslint-config-prettier": "~7.0.0",
     "husky": "~4.3.0",
     "lint-staged": "~10.5.0",
     "markdown-toc": "~1.2.0",

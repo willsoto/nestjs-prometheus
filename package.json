@@ -111,7 +111,7 @@
     "@nestjs/platform-express": "~7.5.1",
     "@nestjs/platform-fastify": "~7.6.1",
     "@nestjs/schematics": "~7.2.1",
-    "@nestjs/testing": "~7.5.1",
+    "@nestjs/testing": "~7.6.1",
     "@sindresorhus/slugify": "~1.1.0",
     "@types/chai": "~4.2.13",
     "@types/chai-as-promised": "~7.1.3",

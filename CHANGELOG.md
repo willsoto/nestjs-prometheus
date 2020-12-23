@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v2.0.1...v3.0.0) (2020-12-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* many methods are now async due to upstream changes
+* esModuleInterop has been disabled due to #671
+
+### Features
+
+* upgrade to prom-client v13 ([cb04088](https://github.com/willsoto/nestjs-prometheus/commit/cb04088c5780ab2cf851aed19945ddcc8832f2df)), closes [#671](https://github.com/willsoto/nestjs-prometheus/issues/671)
+
 ### [2.0.1](https://github.com/willsoto/nestjs-prometheus/compare/v2.0.0...v2.0.1) (2020-11-07)
 
 

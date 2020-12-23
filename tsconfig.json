@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist",
-    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
@@ -11,7 +10,6 @@
     "lib": ["es2018"],
     "module": "commonjs",
     "removeComments": false,
-    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "es2018"

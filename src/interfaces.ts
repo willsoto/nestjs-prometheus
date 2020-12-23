@@ -1,6 +1,6 @@
 import { Type } from "@nestjs/common";
 import { ModuleMetadata } from "@nestjs/common/interfaces";
-import client from "prom-client";
+import * as client from "prom-client";
 
 /**
  * Configuration for the defaultMetrics collected by `prom-client`.

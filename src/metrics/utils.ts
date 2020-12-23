@@ -1,4 +1,4 @@
-import client from "prom-client";
+import * as client from "prom-client";
 
 /**
  * @internal
@@ -29,13 +29,15 @@ export function getOrCreateMetric(
 
   switch (type) {
     case "Gauge":
-      return new client.Gauge(options);
+      return new client.Gauge(options as client.GaugeConfiguration<string>);
     case "Counter":
-      return new client.Counter(options);
+      return new client.Counter(options as client.CounterConfiguration<string>);
     case "Histogram":
-      return new client.Histogram(options);
+      return new client.Histogram(
+        options as client.HistogramConfiguration<string>,
+      );
     case "Summary":
-      return new client.Summary(options);
+      return new client.Summary(options as client.SummaryConfiguration<string>);
     default:
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Unknown type: ${type}`);

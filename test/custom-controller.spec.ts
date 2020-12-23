@@ -2,7 +2,7 @@ import { Get, Res } from "@nestjs/common";
 import { expect } from "chai";
 import { Response } from "express";
 import { register } from "prom-client";
-import sinon from "sinon";
+import * as sinon from "sinon";
 import { PrometheusController } from "../src";
 import { Agent, App, createPrometheusModule } from "./utils";
 
@@ -16,8 +16,8 @@ describe("PrometheusModule with a custom controller", function () {
 
     class CustomController extends PrometheusController {
       @Get()
-      index(@Res() response: Response) {
-        super.index(response);
+      async index(@Res() response: Response) {
+        await super.index(response);
 
         fake();
       }

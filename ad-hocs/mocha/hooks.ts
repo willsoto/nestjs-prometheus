@@ -1,5 +1,5 @@
 import { RootHookObject } from "mocha";
-import sinon from "sinon";
+import * as sinon from "sinon";
 
 export const mochaHooks: () => RootHookObject = () => {
   return {

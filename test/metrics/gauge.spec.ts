@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
-import client from "prom-client";
+import * as client from "prom-client";
 import { getToken, makeGaugeProvider } from "../../src";
 
 describe("Gauge", function () {

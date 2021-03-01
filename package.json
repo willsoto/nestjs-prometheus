@@ -132,7 +132,7 @@
     "chai-as-promised": "~7.1.1",
     "eslint": "~7.21.0",
     "eslint-config-prettier": "~8.1.0",
-    "husky": "~5.1.0",
+    "husky": "4",
     "lint-staged": "~10.5.0",
     "markdown-toc": "~1.2.0",
     "mocha": "~8.3.0",
@@ -159,6 +159,6 @@
   },
   "volta": {
     "node": "14.15.3",
-    "npm": "6.14.10"
+    "npm": "7.6.0"
   }
 }

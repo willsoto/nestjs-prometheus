@@ -14,3 +14,5 @@ updates:
       - dependency-type: direct
     labels:
       - "automerge"
+    ignore:
+      - dependency-name: "husky"

@@ -146,7 +146,7 @@
     "rimraf": "~3.0.2",
     "rxjs": "~6.6.6",
     "sinon": "~9.2.4",
-    "sinon-chai": "~3.5.0",
+    "sinon-chai": "~3.6.0",
     "source-map-support": "~0.5.19",
     "standard-version": "~9.1.1",
     "supertest": "~6.1.3",

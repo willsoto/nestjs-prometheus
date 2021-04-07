@@ -148,7 +148,7 @@
     "sinon": "~9.2.4",
     "sinon-chai": "~3.6.0",
     "source-map-support": "~0.5.19",
-    "standard-version": "~9.1.1",
+    "standard-version": "~9.2.0",
     "supertest": "~6.1.3",
     "ts-node": "~9.1.1",
     "typescript": "~4.2.3"

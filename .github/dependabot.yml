@@ -12,7 +12,3 @@ updates:
     target-branch: "main"
     allow:
       - dependency-type: direct
-    labels:
-      - "automerge"
-    ignore:
-      - dependency-name: "husky"

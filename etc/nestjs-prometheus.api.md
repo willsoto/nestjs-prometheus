@@ -4,11 +4,10 @@
 
 ```ts
 
-import client from 'prom-client';
+import * as client from 'prom-client';
 import { DynamicModule } from '@nestjs/common';
 import { ModuleMetadata } from '@nestjs/common/interfaces';
 import { Provider } from '@nestjs/common';
-import { Response as Response_2 } from 'express';
 import { Type } from '@nestjs/common';
 
 // @internal (undocumented)
@@ -56,7 +55,7 @@ export interface PrometheusAsyncOptions extends Pick<ModuleMetadata, "imports"> 
 // @public
 export class PrometheusController {
     // (undocumented)
-    index(response: Response_2): void;
+    index(response: unknown): Promise<void>;
 }
 
 // @public

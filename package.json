@@ -99,7 +99,7 @@
     "@commitlint/config-conventional": "~12.1.1",
     "@istanbuljs/nyc-config-typescript": "~1.0.1",
     "@microsoft/api-documenter": "~7.13.0",
-    "@microsoft/api-extractor": "~7.13.3",
+    "@microsoft/api-extractor": "~7.14.0",
     "@nestjs/cli": "~7.6.0",
     "@nestjs/common": "~7.6.15",
     "@nestjs/core": "~7.6.15",

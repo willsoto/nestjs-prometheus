@@ -14,10 +14,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc --project tsconfig.build.json",
-    "clean": "rimraf dist coverage .nyc_output docs",
-    "predocs": "npm run build",
-    "docs": "api-extractor run --local --verbose",
-    "postdocs": "api-documenter markdown --input-folder temp --output-folder docs",
+    "clean": "rimraf dist coverage .nyc_output",
     "lint": "eslint . --ext ts,js --fix",
     "prerelease": "npm run build",
     "release": "standard-version --sign",
@@ -26,6 +23,11 @@
     "test:cov": "nyc mocha",
     "test:watch": "mocha --watch",
     "prepare": "husky install"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
     "*.{md,yaml,yml,json}": [
@@ -39,6 +41,12 @@
       "markdown-toc -i",
       "prettier --write"
     ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "all"
   },
   "mocha": {
     "extension": [
@@ -74,32 +82,12 @@
       "text-summary",
       "html"
     ],
-    "statements": 90,
-    "watermarks": {
-      "lines": [
-        80,
-        90
-      ],
-      "functions": [
-        80,
-        90
-      ],
-      "branches": [
-        80,
-        90
-      ],
-      "statements": [
-        80,
-        90
-      ]
-    }
+    "statements": 90
   },
   "devDependencies": {
     "@commitlint/cli": "~12.1.1",
     "@commitlint/config-conventional": "~12.1.1",
     "@istanbuljs/nyc-config-typescript": "~1.0.1",
-    "@microsoft/api-documenter": "~7.13.0",
-    "@microsoft/api-extractor": "~7.15.0",
     "@nestjs/cli": "~7.6.0",
     "@nestjs/common": "~7.6.15",
     "@nestjs/core": "~7.6.15",
@@ -107,13 +95,12 @@
     "@nestjs/platform-fastify": "~7.6.15",
     "@nestjs/schematics": "~7.3.1",
     "@nestjs/testing": "~7.6.15",
-    "@sindresorhus/slugify": "~2.0.0",
-    "@types/chai": "~4.2.16",
+    "@types/chai": "~4.2.17",
     "@types/chai-as-promised": "~7.1.3",
-    "@types/eslint": "~7.2.8",
+    "@types/eslint": "~7.2.10",
     "@types/express": "~4.17.11",
     "@types/mocha": "~8.2.2",
-    "@types/node": "~15.0.0",
+    "@types/node": "~15.0.2",
     "@types/prettier": "~2.2.3",
     "@types/prettier-package-json": "~2.1.0",
     "@types/rimraf": "~3.0.0",
@@ -121,8 +108,8 @@
     "@types/sinon-chai": "~3.2.5",
     "@types/source-map-support": "~0.5.3",
     "@types/supertest": "~2.0.11",
-    "@typescript-eslint/eslint-plugin": "~4.22.0",
-    "@typescript-eslint/parser": "~4.22.0",
+    "@typescript-eslint/eslint-plugin": "~4.22.1",
+    "@typescript-eslint/parser": "~4.22.1",
     "chai": "~4.3.4",
     "chai-as-promised": "~7.1.1",
     "eslint": "~7.25.0",
@@ -135,7 +122,7 @@
     "prettier": "~2.2.1",
     "prettier-package-json": "~2.1.3",
     "prettier-plugin-organize-imports": "~1.1.1",
-    "prettier-plugin-packagejson": "~2.2.10",
+    "prettier-plugin-packagejson": "~2.2.11",
     "prom-client": "~13.1.0",
     "reflect-metadata": "~0.1.13",
     "rimraf": "~3.0.2",
@@ -143,7 +130,7 @@
     "sinon": "~10.0.0",
     "sinon-chai": "~3.6.0",
     "source-map-support": "~0.5.19",
-    "standard-version": "~9.2.0",
+    "standard-version": "~9.3.0",
     "supertest": "~6.1.3",
     "ts-node": "~9.1.1",
     "typescript": "~4.2.4"

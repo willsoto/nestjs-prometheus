@@ -117,7 +117,7 @@
     "husky": "^6.0.0",
     "lint-staged": "~11.0.0",
     "markdown-toc": "~1.2.0",
-    "mocha": "~8.3.2",
+    "mocha": "~8.4.0",
     "nyc": "~15.1.0",
     "prettier": "~2.2.1",
     "prettier-package-json": "~2.5.0",

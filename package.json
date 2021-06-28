@@ -100,7 +100,7 @@
     "@types/eslint": "~7.2.10",
     "@types/express": "~4.17.11",
     "@types/mocha": "~8.2.2",
-    "@types/node": "~15.6.0",
+    "@types/node": "~15.12.5",
     "@types/prettier": "~2.3.0",
     "@types/prettier-package-json": "~2.1.0",
     "@types/rimraf": "~3.0.0",

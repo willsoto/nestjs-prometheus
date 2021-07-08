@@ -88,7 +88,7 @@
     "@commitlint/cli": "~12.1.4",
     "@commitlint/config-conventional": "~12.1.4",
     "@istanbuljs/nyc-config-typescript": "~1.0.1",
-    "@nestjs/cli": "~7.6.0",
+    "@nestjs/cli": "~8.0.2",
     "@nestjs/common": "~7.6.15",
     "@nestjs/core": "~7.6.18",
     "@nestjs/platform-express": "~7.6.18",

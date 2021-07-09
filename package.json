@@ -101,7 +101,7 @@
     "@types/express": "~4.17.12",
     "@types/express-serve-static-core": "~4.17.22",
     "@types/mocha": "~8.2.2",
-    "@types/node": "~16.0.0",
+    "@types/node": "~16.3.0",
     "@types/prettier": "~2.3.1",
     "@types/prettier-package-json": "~2.1.0",
     "@types/rimraf": "~3.0.0",

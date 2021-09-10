@@ -29,3 +29,20 @@ jobs:
       - run: npm run lint
       - run: npm run test:cov
       - run: npm run build
+  release:
+    if: "github.ref == 'refs/heads/main'"
+    runs-on: ubuntu-latest
+    needs:
+      - "test"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: volta-cli/action@v1
+      - run: npm ci
+      - run: npm run release
+        env:
+          # https://github.com/semantic-release/github#github-authentication
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # https://docs.npmjs.com/creating-and-viewing-access-tokens
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

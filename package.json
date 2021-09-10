@@ -120,7 +120,7 @@
     "markdown-toc": "~1.2.0",
     "mocha": "~9.1.0",
     "nyc": "~15.1.0",
-    "prettier": "~2.3.2",
+    "prettier": "~2.4.0",
     "prettier-package-json": "~2.6.0",
     "prettier-plugin-organize-imports": "~2.3.2",
     "prettier-plugin-packagejson": "~2.2.11",

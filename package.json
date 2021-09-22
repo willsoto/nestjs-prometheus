@@ -95,7 +95,7 @@
     "@nestjs/platform-fastify": "~7.6.18",
     "@nestjs/schematics": "~8.0.0",
     "@nestjs/testing": "~7.6.18",
-    "@semantic-release/changelog": "~5.0.1",
+    "@semantic-release/changelog": "~6.0.0",
     "@types/chai": "~4.2.19",
     "@types/chai-as-promised": "~7.1.4",
     "@types/eslint": "~7.28.0",

@@ -102,7 +102,7 @@
     "@types/express": "~4.17.12",
     "@types/express-serve-static-core": "~4.17.22",
     "@types/mocha": "~9.0.0",
-    "@types/node": "~16.9.0",
+    "@types/node": "~16.10.1",
     "@types/prettier": "~2.3.1",
     "@types/rimraf": "~3.0.0",
     "@types/sinon": "~10.0.2",

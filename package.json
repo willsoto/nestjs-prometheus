@@ -109,7 +109,7 @@
     "@types/sinon-chai": "~3.2.5",
     "@types/source-map-support": "~0.5.3",
     "@types/supertest": "~2.0.11",
-    "@typescript-eslint/eslint-plugin": "~4.31.0",
+    "@typescript-eslint/eslint-plugin": "~4.32.0",
     "@typescript-eslint/parser": "~4.32.0",
     "chai": "~4.3.4",
     "chai-as-promised": "~7.1.1",

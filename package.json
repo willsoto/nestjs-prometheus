@@ -139,7 +139,7 @@
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0",
-    "prom-client": "^13.0.0"
+    "prom-client": "^13.0.0 || ^14.0.0"
   },
   "release": {
     "branches": [

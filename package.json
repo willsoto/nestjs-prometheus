@@ -20,9 +20,10 @@
     "prerelease": "npm run build",
     "release": "semantic-release",
     "test": "mocha",
-    "pretest:cov": "rimraf coverage .nyc_output",
-    "test:cov": "nyc mocha",
-    "test:watch": "mocha --watch"
+    "pretest:coverage": "rimraf coverage .nyc_output",
+    "test:coverage": "nyc mocha",
+    "test:watch": "mocha --watch",
+    "typecheck": "tsc --project tsconfig.lint.json --noEmit"
   },
   "commitlint": {
     "extends": [
@@ -154,7 +155,7 @@
     ]
   },
   "volta": {
-    "node": "16.8.0",
-    "npm": "7.21.1"
+    "node": "16.13.0",
+    "npm": "8.1.1"
   }
 }

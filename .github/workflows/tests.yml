@@ -13,21 +13,14 @@ env:
 
 jobs:
   test:
-    name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node-version: [14, 16]
-        os: [ubuntu-latest]
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: volta-cli/action@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       - run: npm ci
+      - run: npm run typecheck
       - run: npm run lint
-      - run: npm run test:cov
+      - run: npm run test:coverage
       - run: npm run build
   release:
     if: "github.ref == 'refs/heads/main'"

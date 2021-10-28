@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     schedule:
-      interval: daily
+      interval: "weekly"
       time: "01:00"
       timezone: America/New_York
     pull-request-branch-name:

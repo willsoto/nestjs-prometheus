@@ -31,11 +31,16 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          persist-credentials: false
       - uses: volta-cli/action@v1
-      - run: npm ci
+      - run: "npm ci --ignore-scripts"
       - run: npm run release
         env:
           # https://github.com/semantic-release/github#github-authentication
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           # https://docs.npmjs.com/creating-and-viewing-access-tokens
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_COMMITTER_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}

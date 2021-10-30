@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.1.0...v4.2.0) (2021-10-30)
+
+
+### Features
+
+* **releases:** add changelog to releases ([bc95220](https://github.com/willsoto/nestjs-prometheus/commit/bc9522007058c74a11ce727f48e85ba7202a0e8e))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

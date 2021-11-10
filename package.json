@@ -131,7 +131,7 @@
     "rimraf": "~3.0.2",
     "rxjs": "~7.4.0",
     "semantic-release": "~18.0.0",
-    "sinon": "~11.1.2",
+    "sinon": "~12.0.1",
     "sinon-chai": "~3.7.0",
     "source-map-support": "~0.5.20",
     "standard-version": "~9.3.2",

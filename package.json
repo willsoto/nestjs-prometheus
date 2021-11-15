@@ -92,7 +92,7 @@
     "@nestjs/cli": "~8.1.4",
     "@nestjs/common": "~8.1.1",
     "@nestjs/core": "~8.1.1",
-    "@nestjs/platform-express": "~8.1.1",
+    "@nestjs/platform-express": "~8.2.0",
     "@nestjs/platform-fastify": "~8.1.1",
     "@nestjs/schematics": "~8.0.4",
     "@nestjs/testing": "~8.1.1",

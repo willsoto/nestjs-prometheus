@@ -90,7 +90,7 @@
     "@commitlint/config-conventional": "~14.1.0",
     "@istanbuljs/nyc-config-typescript": "~1.0.1",
     "@nestjs/cli": "~8.1.4",
-    "@nestjs/common": "~8.1.1",
+    "@nestjs/common": "~8.2.0",
     "@nestjs/core": "~8.1.1",
     "@nestjs/platform-express": "~8.2.0",
     "@nestjs/platform-fastify": "~8.1.1",

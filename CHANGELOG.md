@@ -1,3 +1,10 @@
+# [4.4.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.3.0...v4.4.0) (2021-11-30)
+
+
+### Features
+
+* add node-tests reusable workflow ([efd3c89](https://github.com/willsoto/nestjs-prometheus/commit/efd3c89f3ad9b5462b84ecd20c2106d766c083e9))
+
 # [4.3.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.2.0...v4.3.0) (2021-11-28)
 
 

@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    uses: "willsoto/actions/.github/workflows/node-ci.yml@main"
+    secrets:
+      GitHubToken: ${{ secrets.GH_TOKEN }}
+      NPMToken: ${{ secrets.NPM_TOKEN }}

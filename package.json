@@ -86,7 +86,7 @@
   "devDependencies": {
     "@commitlint/cli": "~16.0.0",
     "@commitlint/config-conventional": "~16.0.0",
-    "@nestjs/cli": "~8.1.5",
+    "@nestjs/cli": "~8.2.0",
     "@nestjs/common": "~8.2.3",
     "@nestjs/core": "~8.2.3",
     "@nestjs/platform-express": "~8.2.3",

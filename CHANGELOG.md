@@ -1,3 +1,10 @@
+# [4.5.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.4.0...v4.5.0) (2022-02-28)
+
+
+### Features
+
+* upgrade packages ([662ec6c](https://github.com/willsoto/nestjs-prometheus/commit/662ec6c2245816ab9f7ba69d101f406a815d94c3))
+
 # [4.4.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.3.0...v4.4.0) (2021-11-30)
 
 

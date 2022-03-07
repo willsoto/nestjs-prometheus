@@ -132,7 +132,7 @@
     "standard-version": "~9.3.2",
     "supertest": "~6.2.2",
     "ts-node": "~10.5.0",
-    "typescript": "~4.5.5"
+    "typescript": "~4.6.2"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0",

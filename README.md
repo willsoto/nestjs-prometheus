@@ -10,6 +10,7 @@
   - [Disabling default metrics collection](#disabling-default-metrics-collection)
   - [Configuring the default metrics](#configuring-the-default-metrics)
 - [Injecting individual metrics](#injecting-individual-metrics)
+- [Setting default labels](#setting-default-labels)
 - [Available metrics](#available-metrics)
   - [Counter](#counter)
   - [Gauge](#gauge)
@@ -131,6 +132,26 @@ export class Service {
   constructor(@InjectMetric("metric_name") public counter: Counter<string>) {}
 }
 ```
+
+## Setting default labels
+
+```typescript
+import { Module } from "@nestjs/common";
+import { PrometheusModule } from "@willsoto/nestjs-prometheus";
+
+@Module({
+  imports: [
+    PrometheusModule.register({
+      defaultLabels: {
+        app: "My app",
+      },
+    }),
+  ],
+})
+export class AppModule {}
+```
+
+See the [docs](https://github.com/siimon/prom-client#default-labels-segmented-by-registry) for more information.
 
 ## Available metrics
 

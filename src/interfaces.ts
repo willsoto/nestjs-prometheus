@@ -56,6 +56,14 @@ export interface PrometheusOptions {
   path?: string;
   /** {@inheritDoc PrometheusDefaultMetrics} */
   defaultMetrics?: PrometheusDefaultMetrics;
+  /**
+   * Will be passed into `setDefaultLabels`
+   *
+   * {@link https://github.com/siimon/prom-client#default-labels-segmented-by-registry}
+   */
+  // Using this type to match what prom-client specifies.
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  defaultLabels?: Object;
 }
 
 /**

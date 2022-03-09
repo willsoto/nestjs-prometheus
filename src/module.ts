@@ -1,5 +1,5 @@
 import { DynamicModule, Module, Provider } from "@nestjs/common";
-import { collectDefaultMetrics } from "prom-client";
+import * as promClient from "prom-client";
 import { PROMETHEUS_OPTIONS } from "./constants";
 import { PrometheusController } from "./controller";
 import {
@@ -99,7 +99,11 @@ export class PrometheusModule {
 
   private static configureServer(options: Required<PrometheusOptions>): void {
     if (options.defaultMetrics.enabled) {
-      collectDefaultMetrics(options.defaultMetrics.config);
+      promClient.collectDefaultMetrics(options.defaultMetrics.config);
+    }
+
+    if (Object.keys(options.defaultLabels).length > 0) {
+      promClient.register.setDefaultLabels(options.defaultLabels);
     }
 
     Reflect.defineMetadata("path", options.path, options.controller);
@@ -115,6 +119,7 @@ export class PrometheusModule {
         config: {},
       },
       controller: PrometheusController,
+      defaultLabels: {},
       ...options,
     };
   }

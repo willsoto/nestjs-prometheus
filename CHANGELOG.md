@@ -1,3 +1,11 @@
+# [4.6.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.5.0...v4.6.0) (2022-03-09)
+
+
+### Features
+
+* ability to set defaultLabels ([7fd289a](https://github.com/willsoto/nestjs-prometheus/commit/7fd289abd35f13a3ddd802e4c519d43210808858)), closes [#1209](https://github.com/willsoto/nestjs-prometheus/issues/1209)
+* upgrade packages ([79a67f1](https://github.com/willsoto/nestjs-prometheus/commit/79a67f1508a155c1ee8684d7ea6cd2625265ac9f))
+
 # [4.5.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.4.0...v4.5.0) (2022-02-28)
 
 

@@ -120,7 +120,7 @@
     "mocha": "~10.0.0",
     "prettier": "~2.7.1",
     "prettier-package-json": "~2.6.3",
-    "prettier-plugin-organize-imports": "~2.3.4",
+    "prettier-plugin-organize-imports": "~3.0.0",
     "prettier-plugin-packagejson": "~2.2.15",
     "prom-client": "~14.0.1",
     "reflect-metadata": "~0.1.13",

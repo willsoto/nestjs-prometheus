@@ -1,3 +1,10 @@
+# [4.7.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.6.0...v4.7.0) (2022-07-10)
+
+
+### Features
+
+* **nestjs:** support v9 ([5bb4711](https://github.com/willsoto/nestjs-prometheus/commit/5bb4711957b4d347732314ed38e115f429b829f7)), closes [#1475](https://github.com/willsoto/nestjs-prometheus/issues/1475)
+
 # [4.6.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.5.0...v4.6.0) (2022-03-09)
 
 

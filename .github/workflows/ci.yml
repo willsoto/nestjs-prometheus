@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    uses: "willsoto/actions/.github/workflows/node-ci.yml@main"
+    uses: "willsoto/actions/.github/workflows/node-ci.yml@v2.1.0"
     secrets:
       GitHubToken: ${{ secrets.GH_TOKEN }}
       NPMToken: ${{ secrets.NPM_TOKEN }}

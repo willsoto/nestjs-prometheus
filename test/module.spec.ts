@@ -9,32 +9,30 @@ import {
   createPrometheusModule,
 } from "./utils";
 
-describe("PrometheusModule", function() {
+describe("PrometheusModule", function () {
   let agent: Agent;
   let app: App;
 
-  afterEach(async function() {
+  afterEach(async function () {
     if (app) {
       register.clear();
       await app.close();
     }
   });
 
-  describe("#forRoot", function() {
-    describe("with all defaults", function() {
-      beforeEach(async function() {
+  describe("#forRoot", function () {
+    describe("with all defaults", function () {
+      beforeEach(async function () {
         ({ agent, app } = await createPrometheusModule());
       });
 
-      it("registers a /metrics endpoint", async function() {
+      it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response)
-          .to.have.property("status")
-          .to.eql(200);
+        expect(response).to.have.property("status").to.eql(200);
       });
 
-      it("collects default metrics", async function() {
+      it("collects default metrics", async function () {
         const response = await agent.get("/metrics");
 
         expect(response)
@@ -43,30 +41,26 @@ describe("PrometheusModule", function() {
       });
     });
 
-    describe("when overriding the default path", function() {
-      beforeEach(async function() {
+    describe("when overriding the default path", function () {
+      beforeEach(async function () {
         ({ agent, app } = await createPrometheusModule({
           path: "/my-custom-endpoint",
         }));
       });
 
-      it("does not register the default endpoint", async function() {
+      it("does not register the default endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response)
-          .to.have.property("status")
-          .to.eql(404);
+        expect(response).to.have.property("status").to.eql(404);
       });
 
-      it("registers the custom endpoint", async function() {
+      it("registers the custom endpoint", async function () {
         const response = await agent.get("/my-custom-endpoint");
 
-        expect(response)
-          .to.have.property("status")
-          .to.eql(200);
+        expect(response).to.have.property("status").to.eql(200);
       });
 
-      it("collects default metrics", async function() {
+      it("collects default metrics", async function () {
         const response = await agent.get("/my-custom-endpoint");
 
         expect(response)
@@ -76,7 +70,7 @@ describe("PrometheusModule", function() {
     });
   });
 
-  describe("#forRootAsync", function() {
+  describe("#forRootAsync", function () {
     @Injectable()
     class OptionsService implements PrometheusOptionsFactory {
       createPrometheusOptions() {
@@ -90,8 +84,8 @@ describe("PrometheusModule", function() {
     })
     class OptionsModule {}
 
-    describe("useExisting", function() {
-      beforeEach(async function() {
+    describe("useExisting", function () {
+      beforeEach(async function () {
         ({ agent, app } = await createAsyncPrometheusModule({
           imports: [OptionsModule],
           useExisting: OptionsService,
@@ -99,15 +93,13 @@ describe("PrometheusModule", function() {
         }));
       });
 
-      it("registers a /metrics endpoint", async function() {
+      it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response)
-          .to.have.property("status")
-          .to.eql(200);
+        expect(response).to.have.property("status").to.eql(200);
       });
 
-      it("collects default metrics", async function() {
+      it("collects default metrics", async function () {
         const response = await agent.get("/metrics");
 
         expect(response)
@@ -116,23 +108,21 @@ describe("PrometheusModule", function() {
       });
     });
 
-    describe("useClass", function() {
-      beforeEach(async function() {
+    describe("useClass", function () {
+      beforeEach(async function () {
         ({ agent, app } = await createAsyncPrometheusModule({
           useClass: OptionsService,
           inject: [OptionsService],
         }));
       });
 
-      it("registers a /metrics endpoint", async function() {
+      it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response)
-          .to.have.property("status")
-          .to.eql(200);
+        expect(response).to.have.property("status").to.eql(200);
       });
 
-      it("collects default metrics", async function() {
+      it("collects default metrics", async function () {
         const response = await agent.get("/metrics");
 
         expect(response)
@@ -142,8 +132,8 @@ describe("PrometheusModule", function() {
     });
   });
 
-  describe("#createAsyncOptionsProvider", function() {
-    it("throws an error if useClass or useExisting are not provided", function() {
+  describe("#createAsyncOptionsProvider", function () {
+    it("throws an error if useClass or useExisting are not provided", function () {
       expect(() => {
         PrometheusModule.createAsyncProviders({});
       }).to.throw(
@@ -152,8 +142,8 @@ describe("PrometheusModule", function() {
     });
   });
 
-  describe("#createAsyncOptionsProvider", function() {
-    it("throws an error if useClass or useExisting are not provided", function() {
+  describe("#createAsyncOptionsProvider", function () {
+    it("throws an error if useClass or useExisting are not provided", function () {
       expect(() => {
         PrometheusModule.createAsyncOptionsProvider({});
       }).to.throw(

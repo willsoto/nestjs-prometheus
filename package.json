@@ -42,12 +42,6 @@
       "prettier --write"
     ]
   },
-  "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": false,
-    "trailingComma": "all"
-  },
   "release": {
     "branches": [
       "main"
@@ -138,8 +132,8 @@
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0",
     "prom-client": "^13.0.0 || ^14.0.0"
   },
+  "packageManager": "pnpm@7.6.0",
   "volta": {
-    "node": "16.13.0",
-    "npm": "8.1.2"
+    "node": "18.6.0"
   }
 }

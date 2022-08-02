@@ -97,7 +97,7 @@
     "@types/express-serve-static-core": "4.17.30",
     "@types/mocha": "9.1.1",
     "@types/node": "18.6.1",
-    "@types/prettier": "2.6.3",
+    "@types/prettier": "2.6.4",
     "@types/rimraf": "3.0.2",
     "@types/sinon": "10.0.13",
     "@types/sinon-chai": "3.2.8",

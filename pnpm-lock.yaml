@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
-  '@fastify/compress': 6.1.0
+  '@fastify/compress': 6.1.1
   '@nestjs/cli': 9.0.0
   '@nestjs/common': 9.0.11
   '@nestjs/core': 9.0.11
@@ -55,7 +55,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.0.3
   '@commitlint/config-conventional': 17.0.3
-  '@fastify/compress': 6.1.0
+  '@fastify/compress': 6.1.1
   '@nestjs/cli': 9.0.0
   '@nestjs/common': 9.0.11_j5hagqx4mwzscud4kyjdvubauy
   '@nestjs/core': 9.0.11_psficsz3mqirqwo2ujbfhdr2aa
@@ -365,6 +365,11 @@ packages:
       - supports-color
     dev: true
 
+  /@fastify/accept-negotiator/1.0.0:
+    resolution: {integrity: sha512-4R/N2KfYeld7A5LGkai+iUFMahXcxxYbDp+XS2B1yuL3cdmZLJ9TlCnNzT3q5xFTqsYm0GPpinLUwfSwjcVjyA==}
+    engines: {node: '>=14'}
+    dev: true
+
   /@fastify/ajv-compiler/3.1.2:
     resolution: {integrity: sha512-m2nzzQJeuVmeGOB9rnII9sZiY8AZ02a9WMQfMBfK1jxdFnxm3FPYKGbYpPjODj4halNogwpolyugbTNpnDCi0A==}
     dependencies:
@@ -373,11 +378,11 @@ packages:
       fast-uri: 2.1.0
     dev: true
 
-  /@fastify/compress/6.1.0:
-    resolution: {integrity: sha512-8VEabunOqSAh0+o42a9GaAqRriiH4VHVpsR6eVOpss733nfWRDoSQ74Fa88J22u9BJlRU1EFyCCscoS55be6hg==}
+  /@fastify/compress/6.1.1:
+    resolution: {integrity: sha512-uwgomk59nAWKR2WqXugyn3tXzRJqlBaGCzXHb4ZnKA3sxA9G/JWZSAd6GEF29mJucTLi32iZaFZRAwf7O8bJMg==}
     dependencies:
-      encoding-negotiator: 2.0.1
-      fastify-plugin: 3.0.1
+      '@fastify/accept-negotiator': 1.0.0
+      fastify-plugin: 4.2.0
       into-stream: 6.0.0
       mime-db: 1.52.0
       minipass: 3.3.4
@@ -2586,11 +2591,6 @@ packages:
   /encodeurl/1.0.2:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
-    dev: true
-
-  /encoding-negotiator/2.0.1:
-    resolution: {integrity: sha512-GSK7qphNR4iPcejfAlZxKDoz3xMhnspwImK+Af5WhePS9jUpK/Oh7rUdyENWu+9rgDflOCTmAojBsgsvM8neAQ==}
-    engines: {node: '>=10.13.0'}
     dev: true
 
   /end-of-stream/1.4.4:

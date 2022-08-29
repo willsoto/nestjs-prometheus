@@ -80,7 +80,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@fastify/compress": "6.1.0",
+    "@fastify/compress": "6.1.1",
     "@nestjs/cli": "9.0.0",
     "@nestjs/common": "9.0.11",
     "@nestjs/core": "9.0.11",

@@ -40,7 +40,7 @@ specifiers:
   prettier-package-json: 2.6.4
   prettier-plugin-organize-imports: 3.1.0
   prettier-plugin-packagejson: 2.2.18
-  prom-client: 14.0.1
+  prom-client: 14.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.6
@@ -92,7 +92,7 @@ devDependencies:
   prettier-package-json: 2.6.4
   prettier-plugin-organize-imports: 3.1.0_gd3y7r3s3evy6b2vthd7dmacga
   prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
-  prom-client: 14.0.1
+  prom-client: 14.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.6
@@ -5194,8 +5194,8 @@ packages:
     resolution: {integrity: sha512-+MmoAXoUX+VTHAlwns0h+kFUWFs/3FZy+ZuchkgjyOu3oioLAo2LB5aCfKPh2+P9O18i3m43tUEv3YqttSy0Ww==}
     dev: true
 
-  /prom-client/14.0.1:
-    resolution: {integrity: sha512-HxTArb6fkOntQHoRGvv4qd/BkorjliiuO2uSWC2KC17MUTKYttWdDoXX/vxOhQdkoECEM9BBH0pj2l8G8kev6w==}
+  /prom-client/14.1.0:
+    resolution: {integrity: sha512-iFWCchQmi4170omLpFXbzz62SQTmPhtBL35v0qGEVRHKcqIeiexaoYeP0vfZTujxEq3tA87iqOdRbC9svS1B9A==}
     engines: {node: '>=10'}
     dependencies:
       tdigest: 0.1.2

@@ -38,7 +38,7 @@ specifiers:
   mocha: 10.0.0
   prettier: 2.7.1
   prettier-package-json: 2.6.4
-  prettier-plugin-organize-imports: 3.1.0
+  prettier-plugin-organize-imports: 3.1.1
   prettier-plugin-packagejson: 2.2.18
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
@@ -90,7 +90,7 @@ devDependencies:
   mocha: 10.0.0
   prettier: 2.7.1
   prettier-package-json: 2.6.4
-  prettier-plugin-organize-imports: 3.1.0_3izbkkkilozjwunt7rvlqzc6b4
+  prettier-plugin-organize-imports: 3.1.1_3izbkkkilozjwunt7rvlqzc6b4
   prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
@@ -5173,10 +5173,10 @@ packages:
       sort-order: 1.0.1
     dev: true
 
-  /prettier-plugin-organize-imports/3.1.0_3izbkkkilozjwunt7rvlqzc6b4:
-    resolution: {integrity: sha512-eufD78FKdkDTyyY9oKxuwEMrfz4/AXrGeyeyjqiRtSBr01DAdGFTq4SgIKvLeqlLkq+ZPJ2H0+BK0e6flRUwJQ==}
+  /prettier-plugin-organize-imports/3.1.1_3izbkkkilozjwunt7rvlqzc6b4:
+    resolution: {integrity: sha512-6bHIQzybqA644h0WGUW3gpWEVbMBvzui5wCMRBi7qA++d5ov2xjjfDk8pxJJ/ardfZrGAwizKMq/fQMFdJ+0Zw==}
     peerDependencies:
-      '@volar/vue-typescript': '>=0.39.0'
+      '@volar/vue-typescript': '>=0.40.2'
       prettier: '>=2.0'
       typescript: '>=2.9'
     peerDependenciesMeta:

@@ -37,7 +37,7 @@ specifiers:
   markdown-toc: 1.2.0
   mocha: 10.0.0
   prettier: 2.7.1
-  prettier-package-json: 2.6.4
+  prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.1.1
   prettier-plugin-packagejson: 2.2.18
   prom-client: 14.1.0
@@ -89,7 +89,7 @@ devDependencies:
   markdown-toc: 1.2.0
   mocha: 10.0.0
   prettier: 2.7.1
-  prettier-package-json: 2.6.4
+  prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.1.1_igyrqqmkb7dgjptxnntravt2kq
   prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
   prom-client: 14.1.0
@@ -5189,8 +5189,9 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-package-json/2.6.4:
-    resolution: {integrity: sha512-aNZvEf0yy0UeqLdTHsFZiYjOEM9kACO02CGUR5XIHdqj3jrpHNlLkmfTaj1V/rvB4vYHHTH0i3qMf2FZ2Qtr/g==}
+  /prettier-package-json/2.7.0:
+    resolution: {integrity: sha512-51I3/fYpBTLDXQDQK7+dfNlJzh5wdKhK8QteSZTZMppQd6aGpr1wqpwlKKZF1KdWA+91rwfpHUBrKwd2PXdXag==}
+    hasBin: true
     dependencies:
       '@types/parse-author': 2.0.1
       commander: 4.1.1

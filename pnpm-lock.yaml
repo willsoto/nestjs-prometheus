@@ -48,7 +48,7 @@ specifiers:
   sinon: 14.0.1
   sinon-chai: 3.7.0
   standard-version: 9.5.0
-  supertest: 6.2.4
+  supertest: 6.3.0
   ts-node: 10.9.1
   typescript: 4.8.4
 
@@ -100,7 +100,7 @@ devDependencies:
   sinon: 14.0.1
   sinon-chai: 3.7.0
   standard-version: 9.5.0
-  supertest: 6.2.4
+  supertest: 6.3.0
   ts-node: 10.9.1_t6iukbiom2jlsbp4uv3roalcz4
   typescript: 4.8.4
 
@@ -2583,7 +2583,7 @@ packages:
     dev: true
 
   /dezalgo/1.0.3:
-    resolution: {integrity: sha1-f3Qt4Gb8dIvI24IFad3c5Jvw1FY=}
+    resolution: {integrity: sha512-K7i4zNfT2kgQz3GylDw40ot9GAE47sFZ9EXHFSPP6zONLgH6kWXE0KWJchkbQJLBkRazq4APwZ4OwiFFlT95OQ==}
     dependencies:
       asap: 2.0.6
       wrappy: 1.0.2
@@ -6076,8 +6076,8 @@ packages:
       - supports-color
     dev: true
 
-  /supertest/6.2.4:
-    resolution: {integrity: sha512-M8xVnCNv+q2T2WXVzxDECvL2695Uv2uUj2O0utxsld/HRyJvOU8W9f1gvsYxSNU4wmIe0/L/ItnpU4iKq0emDA==}
+  /supertest/6.3.0:
+    resolution: {integrity: sha512-QgWju1cNoacP81Rv88NKkQ4oXTzGg0eNZtOoxp1ROpbS4OHY/eK5b8meShuFtdni161o5X0VQvgo7ErVyKK+Ow==}
     engines: {node: '>=6.4.0'}
     dependencies:
       methods: 1.1.2

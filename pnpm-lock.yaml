@@ -39,7 +39,7 @@ specifiers:
   prettier: 2.7.1
   prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.1.1
-  prettier-plugin-packagejson: 2.2.18
+  prettier-plugin-packagejson: 2.3.0
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -91,7 +91,7 @@ devDependencies:
   prettier: 2.7.1
   prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.1.1_dmjzcauo3cshxeipj7bv64ktgm
-  prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
+  prettier-plugin-packagejson: 2.3.0_prettier@2.7.1
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -5199,10 +5199,13 @@ packages:
       typescript: 4.8.4
     dev: true
 
-  /prettier-plugin-packagejson/2.2.18_prettier@2.7.1:
-    resolution: {integrity: sha512-iBjQ3IY6IayFrQHhXvg+YvKprPUUiIJ04Vr9+EbeQPfwGajznArIqrN33c5bi4JcIvmLHGROIMOm9aYakJj/CA==}
+  /prettier-plugin-packagejson/2.3.0_prettier@2.7.1:
+    resolution: {integrity: sha512-2SAPMMk1UDkqsB7DifWKcwCm6VC52JXMrzLHfbcQHJRWhRCj9zziOy+s+2XOyPBeyqFqS+A/1IKzOrxKFTo6pw==}
     peerDependencies:
       prettier: '>= 1.16.0'
+    peerDependenciesMeta:
+      prettier:
+        optional: true
     dependencies:
       prettier: 2.7.1
       sort-package-json: 1.57.0
@@ -5839,6 +5842,7 @@ packages:
 
   /sort-package-json/1.57.0:
     resolution: {integrity: sha512-FYsjYn2dHTRb41wqnv+uEqCUvBpK3jZcTp9rbz2qDTmel7Pmdtf+i2rLaaPMRZeSVM60V3Se31GyWFpmKs4Q5Q==}
+    hasBin: true
     dependencies:
       detect-indent: 6.1.0
       detect-newline: 3.1.0

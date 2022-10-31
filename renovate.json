@@ -3,5 +3,6 @@
   "extends": ["config:base"],
   "automerge": true,
   "semanticCommits": "enabled",
-  "schedule": ["before 3am on Monday"]
+  "timezone": "America/New_York",
+  "schedule": ["before 7am"]
 }

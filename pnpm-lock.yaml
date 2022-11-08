@@ -23,7 +23,7 @@ specifiers:
   '@types/prettier': 2.7.1
   '@types/rimraf': 3.0.2
   '@types/sinon': 10.0.13
-  '@types/sinon-chai': 3.2.8
+  '@types/sinon-chai': 3.2.9
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.42.0
   '@typescript-eslint/parser': 5.42.0
@@ -75,7 +75,7 @@ devDependencies:
   '@types/prettier': 2.7.1
   '@types/rimraf': 3.0.2
   '@types/sinon': 10.0.13
-  '@types/sinon-chai': 3.2.8
+  '@types/sinon-chai': 3.2.9
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.42.0_ofgjrzjuekeo7s3hdyz2yuzw34
   '@typescript-eslint/parser': 5.42.0_rmayb2veg2btbq6mbmnyivgasy
@@ -1233,8 +1233,8 @@ packages:
       '@types/node': 18.11.9
     dev: true
 
-  /@types/sinon-chai/3.2.8:
-    resolution: {integrity: sha512-d4ImIQbT/rKMG8+AXpmcan5T2/PNeSjrYhvkwet6z0p8kzYtfgA32xzOBlbU0yqJfq+/0Ml805iFoODO0LP5/g==}
+  /@types/sinon-chai/3.2.9:
+    resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
     dependencies:
       '@types/chai': 4.3.3
       '@types/sinon': 10.0.13

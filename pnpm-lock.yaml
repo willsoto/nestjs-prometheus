@@ -38,7 +38,7 @@ specifiers:
   mocha: 10.1.0
   prettier: 2.7.1
   prettier-package-json: 2.7.0
-  prettier-plugin-organize-imports: 3.1.1
+  prettier-plugin-organize-imports: 3.2.0
   prettier-plugin-packagejson: 2.3.0
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
@@ -90,7 +90,7 @@ devDependencies:
   mocha: 10.1.0
   prettier: 2.7.1
   prettier-package-json: 2.7.0
-  prettier-plugin-organize-imports: 3.1.1_dmjzcauo3cshxeipj7bv64ktgm
+  prettier-plugin-organize-imports: 3.2.0_dmjzcauo3cshxeipj7bv64ktgm
   prettier-plugin-packagejson: 2.3.0_prettier@2.7.1
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
@@ -5241,13 +5241,16 @@ packages:
       sort-order: 1.0.1
     dev: true
 
-  /prettier-plugin-organize-imports/3.1.1_dmjzcauo3cshxeipj7bv64ktgm:
-    resolution: {integrity: sha512-6bHIQzybqA644h0WGUW3gpWEVbMBvzui5wCMRBi7qA++d5ov2xjjfDk8pxJJ/ardfZrGAwizKMq/fQMFdJ+0Zw==}
+  /prettier-plugin-organize-imports/3.2.0_dmjzcauo3cshxeipj7bv64ktgm:
+    resolution: {integrity: sha512-jeZ13YVKgXYCzkuwnoR6saKxJmdRYWMxS2G/su1V3qDWqTo1Q5iSoTblBxsXXAmomXfPqa/uA7YCK0/S86KLOQ==}
     peerDependencies:
-      '@volar/vue-typescript': '>=0.40.2'
+      '@volar/vue-language-plugin-pug': ^1.0.4
+      '@volar/vue-typescript': ^1.0.4
       prettier: '>=2.0'
       typescript: '>=2.9'
     peerDependenciesMeta:
+      '@volar/vue-language-plugin-pug':
+        optional: true
       '@volar/vue-typescript':
         optional: true
     dependencies:

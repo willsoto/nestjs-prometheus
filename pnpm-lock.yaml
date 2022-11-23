@@ -36,7 +36,7 @@ specifiers:
   lint-staged: 13.0.3
   markdown-toc: 1.2.0
   mocha: 10.1.0
-  prettier: 2.7.1
+  prettier: 2.8.0
   prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.2.0
   prettier-plugin-packagejson: 2.3.0
@@ -88,10 +88,10 @@ devDependencies:
   lint-staged: 13.0.3
   markdown-toc: 1.2.0
   mocha: 10.1.0
-  prettier: 2.7.1
+  prettier: 2.8.0
   prettier-package-json: 2.7.0
-  prettier-plugin-organize-imports: 3.2.0_wbcyan4knibwiqrg7345gyo3qi
-  prettier-plugin-packagejson: 2.3.0_prettier@2.7.1
+  prettier-plugin-organize-imports: 3.2.0_brpckf4sz23pco3jyty2eys3iq
+  prettier-plugin-packagejson: 2.3.0_prettier@2.8.0
   prom-client: 14.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -5279,7 +5279,7 @@ packages:
       sort-order: 1.0.1
     dev: true
 
-  /prettier-plugin-organize-imports/3.2.0_wbcyan4knibwiqrg7345gyo3qi:
+  /prettier-plugin-organize-imports/3.2.0_brpckf4sz23pco3jyty2eys3iq:
     resolution: {integrity: sha512-jeZ13YVKgXYCzkuwnoR6saKxJmdRYWMxS2G/su1V3qDWqTo1Q5iSoTblBxsXXAmomXfPqa/uA7YCK0/S86KLOQ==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -5292,11 +5292,11 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 2.7.1
+      prettier: 2.8.0
       typescript: 4.9.3
     dev: true
 
-  /prettier-plugin-packagejson/2.3.0_prettier@2.7.1:
+  /prettier-plugin-packagejson/2.3.0_prettier@2.8.0:
     resolution: {integrity: sha512-2SAPMMk1UDkqsB7DifWKcwCm6VC52JXMrzLHfbcQHJRWhRCj9zziOy+s+2XOyPBeyqFqS+A/1IKzOrxKFTo6pw==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -5304,13 +5304,14 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 2.7.1
+      prettier: 2.8.0
       sort-package-json: 1.57.0
     dev: true
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+  /prettier/2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /process-nextick-args/2.0.1:

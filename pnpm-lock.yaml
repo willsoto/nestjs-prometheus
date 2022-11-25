@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@fastify/compress': 6.1.1
+  '@fastify/compress': 6.2.0
   '@nestjs/cli': 9.1.5
   '@nestjs/common': 9.2.0
   '@nestjs/core': 9.2.0
@@ -55,7 +55,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
-  '@fastify/compress': 6.1.1
+  '@fastify/compress': 6.2.0
   '@nestjs/cli': 9.1.5
   '@nestjs/common': 9.2.0_yzt46al3aifnexifjjdb4dxxja
   '@nestjs/core': 9.2.0_jfowmhmgk7kwjudosrpv7e7liy
@@ -447,8 +447,8 @@ packages:
       fast-uri: 2.1.0
     dev: true
 
-  /@fastify/compress/6.1.1:
-    resolution: {integrity: sha512-uwgomk59nAWKR2WqXugyn3tXzRJqlBaGCzXHb4ZnKA3sxA9G/JWZSAd6GEF29mJucTLi32iZaFZRAwf7O8bJMg==}
+  /@fastify/compress/6.2.0:
+    resolution: {integrity: sha512-ldFaNHurMNpypkt1AlI3HDXcdIVqkuhPeYHvlVsfIzM+1YHM0qrdWgrBESuwUCxohSCJNZmyXp4FBCxVJX8zaA==}
     dependencies:
       '@fastify/accept-negotiator': 1.0.0
       fastify-plugin: 4.2.0

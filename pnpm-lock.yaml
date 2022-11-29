@@ -18,7 +18,7 @@ specifiers:
   '@types/eslint': 8.4.10
   '@types/express': 4.17.14
   '@types/express-serve-static-core': 4.17.31
-  '@types/mocha': 10.0.0
+  '@types/mocha': 10.0.1
   '@types/node': 18.11.9
   '@types/prettier': 2.7.1
   '@types/rimraf': 3.0.2
@@ -70,7 +70,7 @@ devDependencies:
   '@types/eslint': 8.4.10
   '@types/express': 4.17.14
   '@types/express-serve-static-core': 4.17.31
-  '@types/mocha': 10.0.0
+  '@types/mocha': 10.0.1
   '@types/node': 18.11.9
   '@types/prettier': 2.7.1
   '@types/rimraf': 3.0.2
@@ -1201,8 +1201,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/mocha/10.0.0:
-    resolution: {integrity: sha512-rADY+HtTOA52l9VZWtgQfn4p+UDVM2eDVkMZT1I6syp0YKxW2F9v+0pbRZLsvskhQv/vMb6ZfCay81GHbz5SHg==}
+  /@types/mocha/10.0.1:
+    resolution: {integrity: sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==}
     dev: true
 
   /@types/node/14.18.26:

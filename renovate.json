@@ -4,5 +4,5 @@
   "automerge": true,
   "semanticCommits": "enabled",
   "timezone": "America/New_York",
-  "schedule": ["before 7am"]
+  "schedule": ["every 48 hours before 7am"]
 }

@@ -35,7 +35,7 @@ specifiers:
   husky: 8.0.2
   lint-staged: 13.1.0
   markdown-toc: 1.2.0
-  mocha: 10.1.0
+  mocha: 10.2.0
   prettier: 2.8.1
   prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.2.1
@@ -87,7 +87,7 @@ devDependencies:
   husky: 8.0.2
   lint-staged: 13.1.0
   markdown-toc: 1.2.0
-  mocha: 10.1.0
+  mocha: 10.2.0
   prettier: 2.8.1
   prettier-package-json: 2.7.0
   prettier-plugin-organize-imports: 3.2.1_2gbcgqmzq2pxiocqw2qs7hdeqe
@@ -4639,8 +4639,8 @@ packages:
       obliterator: 2.0.4
     dev: true
 
-  /mocha/10.1.0:
-    resolution: {integrity: sha512-vUF7IYxEoN7XhQpFLxQAEMtE4W91acW4B6En9l97MwE9stL1A9gusXfoHZCLVHDUJ/7V5+lbCM6yMqzo5vNymg==}
+  /mocha/10.2.0:
+    resolution: {integrity: sha512-IDY7fl/BecMwFHzoqF2sg/SHHANeBoMMXFlS9r0OXKDssYE1M5O43wUY/9BVPeIvfH2zmEbBfseqN9gBQZzXkg==}
     engines: {node: '>= 14.0.0'}
     hasBin: true
     dependencies:

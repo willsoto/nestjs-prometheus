@@ -16,10 +16,9 @@ describe("PrometheusModule with a custom controller", function () {
 
     class CustomController extends PrometheusController {
       @Get()
-      async index(@Res() response: Response) {
-        await super.index(response);
-
+      async index(@Res() response: Response): Promise<string> {
         fake();
+        return super.index(response);
       }
     }
 

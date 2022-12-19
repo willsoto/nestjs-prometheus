@@ -196,7 +196,7 @@ import { Response } from "express";
 class MyCustomController extends PrometheusController {
   @Get()
   async index(@Res() response: Response) {
-    await super.index(response);
+    return super.index(response);
   }
 }
 ```

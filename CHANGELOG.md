@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.7.0...v5.0.0) (2022-12-19)
+
+
+### Bug Fixes
+
+* **controller:** removes response.send from route handler ([#1622](https://github.com/willsoto/nestjs-prometheus/issues/1622)) ([bfa6c70](https://github.com/willsoto/nestjs-prometheus/commit/bfa6c7095368bd463e3fdf32f9cc7560c58a682a))
+
+
+### BREAKING CHANGES
+
+* **controller:** For users that have a custom subclass, you will need to adjust the method to `return super.index(response);` as the base class no longer sends a response.
+
 # [4.7.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.6.0...v4.7.0) (2022-07-10)
 
 

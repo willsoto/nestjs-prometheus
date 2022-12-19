@@ -11,7 +11,7 @@ import * as client from "prom-client";
 @Controller()
 export class PrometheusController {
   @Get()
-  async index(@Res() response: unknown): Promise<void> {
+  async index(@Res({ passthrough: true }) response: unknown): Promise<string> {
     // See this issue for why we type this as `unknown`
     // https://github.com/willsoto/nestjs-prometheus/issues/530
     // I currently don't know of any type from NestJS that captures the
@@ -19,7 +19,6 @@ export class PrometheusController {
     // download types for a framework they aren't using.
     // @ts-expect-error
     response.header("Content-Type", client.register.contentType);
-    // @ts-expect-error
-    response.send(await client.register.metrics());
+    return client.register.metrics();
   }
 }

@@ -20,7 +20,7 @@ specifiers:
   '@types/express-serve-static-core': 4.17.31
   '@types/mocha': 10.0.1
   '@types/node': 18.11.17
-  '@types/prettier': 2.7.1
+  '@types/prettier': 2.7.2
   '@types/rimraf': 3.0.2
   '@types/sinon': 10.0.13
   '@types/sinon-chai': 3.2.9
@@ -72,7 +72,7 @@ devDependencies:
   '@types/express-serve-static-core': 4.17.31
   '@types/mocha': 10.0.1
   '@types/node': 18.11.17
-  '@types/prettier': 2.7.1
+  '@types/prettier': 2.7.2
   '@types/rimraf': 3.0.2
   '@types/sinon': 10.0.13
   '@types/sinon-chai': 3.2.9
@@ -1248,8 +1248,8 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
-  /@types/prettier/2.7.1:
-    resolution: {integrity: sha512-ri0UmynRRvZiiUJdiz38MmIblKK+oH30MztdBVR95dv/Ubw6neWSb8u1XpRb72L4qsZOhz+L+z9JD40SJmfWow==}
+  /@types/prettier/2.7.2:
+    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
     dev: true
 
   /@types/qs/6.9.7:

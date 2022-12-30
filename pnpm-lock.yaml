@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
   '@fastify/compress': 6.2.0
-  '@nestjs/cli': 9.1.7
+  '@nestjs/cli': 9.1.8
   '@nestjs/common': 9.2.1
   '@nestjs/core': 9.2.1
   '@nestjs/platform-express': 9.2.1
@@ -56,7 +56,7 @@ devDependencies:
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
   '@fastify/compress': 6.2.0
-  '@nestjs/cli': 9.1.7
+  '@nestjs/cli': 9.1.8
   '@nestjs/common': 9.2.1_whg6pvy6vwu66ypq7idiq2suxq
   '@nestjs/core': 9.2.1_ajc4cvdydchgvxyi4xnoij5t4i
   '@nestjs/platform-express': 9.2.1_hjcqpoaebdr7gdo5hgc22hthbe
@@ -598,8 +598,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@nestjs/cli/9.1.7:
-    resolution: {integrity: sha512-l0+vWXr571JcQ2LnQU3otxsvF5KUXqcAWCjnjMZH7ALVxcYi7BTif8q9YX0QHUETd9xPbH2YWkqV8SvlwgqEVg==}
+  /@nestjs/cli/9.1.8:
+    resolution: {integrity: sha512-53laCMoPLAkjyz3405FlMSrHnbr3DGeoaQjY963bEroezLlm/qfQhwj6oGJwtgA28eNFgx68mvQV2f1VZNUJtw==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
     dependencies:

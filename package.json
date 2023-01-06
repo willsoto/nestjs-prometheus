@@ -94,7 +94,7 @@
     "@types/chai-as-promised": "7.1.5",
     "@types/eslint": "8.4.10",
     "@types/express": "4.17.15",
-    "@types/express-serve-static-core": "4.17.31",
+    "@types/express-serve-static-core": "4.17.32",
     "@types/mocha": "10.0.1",
     "@types/node": "18.11.17",
     "@types/prettier": "2.7.2",

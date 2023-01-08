@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.0.0...v5.1.0) (2023-01-08)
+
+
+### Features
+
+* **pushgateway:** add support for Pushgateway ([f797636](https://github.com/willsoto/nestjs-prometheus/commit/f7976360436d3c02ccafe1590ab7ddc23f633bfe)), closes [#1628](https://github.com/willsoto/nestjs-prometheus/issues/1628)
+
 # [5.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v4.7.0...v5.0.0) (2022-12-19)
 
 

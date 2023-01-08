@@ -20,7 +20,7 @@ describe("PrometheusModule", function () {
     }
   });
 
-  describe("#forRoot", function () {
+  describe("#register", function () {
     describe("with all defaults", function () {
       beforeEach(async function () {
         ({ agent, app } = await createPrometheusModule());
@@ -70,7 +70,7 @@ describe("PrometheusModule", function () {
     });
   });
 
-  describe("#forRootAsync", function () {
+  describe("#registerAsync", function () {
     @Injectable()
     class OptionsService implements PrometheusOptionsFactory {
       createPrometheusOptions() {

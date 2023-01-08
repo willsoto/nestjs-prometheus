@@ -64,7 +64,16 @@ export interface PrometheusOptions {
   // Using this type to match what prom-client specifies.
   // eslint-disable-next-line @typescript-eslint/ban-types
   defaultLabels?: Object;
+  pushgateway?: {
+    url: string;
+    options?: unknown;
+    registry?: client.Registry;
+  };
 }
+
+export type PrometheusOptionsWithDefaults = Required<
+  Omit<PrometheusOptions, "pushgateway">
+>;
 
 /**
  * @internal

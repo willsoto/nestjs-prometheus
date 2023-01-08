@@ -17,6 +17,7 @@
   - [Histogram](#histogram)
   - [Summary](#summary)
 - [Providing a custom controller](#providing-a-custom-controller)
+- [Pushgateway](#pushgateway)
 
 <!-- tocstop -->
 
@@ -214,4 +215,38 @@ import { MyCustomController } from "./my-custom-controller";
   ],
 })
 export class AppModule {}
+```
+
+## Pushgateway
+
+In order to enable Pushgateway for injection, provide the configuration under the `pushgateway` key.
+
+```typescript
+import { Module } from "@nestjs/common";
+import { PrometheusModule } from "@willsoto/nestjs-prometheus";
+
+@Module({
+  imports: [
+    PrometheusModule.register({
+      pushgateway: {
+        url: "http://127.0.0.1:9091",
+      },
+    }),
+  ],
+})
+export class AppModule {}
+```
+
+```typescript
+import { Injectable, Inject } from "@nestjs/common";
+import * as client from "prom-client";
+import {
+  PrometheusModule,
+  PROMETHEUS_PUSH_GATEWAY,
+} from "@willsoto/nestjs-prometheus";
+
+@Injectable()
+export class Service {
+  constructor(private readonly pushgateway: client.Pushgateway) {}
+}
 ```

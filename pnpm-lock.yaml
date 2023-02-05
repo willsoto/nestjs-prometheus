@@ -16,7 +16,7 @@ specifiers:
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
   '@types/eslint': 8.4.10
-  '@types/express': 4.17.16
+  '@types/express': 4.17.17
   '@types/express-serve-static-core': 4.17.33
   '@types/mocha': 10.0.1
   '@types/node': 18.11.17
@@ -68,7 +68,7 @@ devDependencies:
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
   '@types/eslint': 8.4.10
-  '@types/express': 4.17.16
+  '@types/express': 4.17.17
   '@types/express-serve-static-core': 4.17.33
   '@types/mocha': 10.0.1
   '@types/node': 18.11.17
@@ -1130,8 +1130,8 @@ packages:
       '@types/range-parser': 1.2.4
     dev: true
 
-  /@types/express/4.17.16:
-    resolution: {integrity: sha512-LkKpqRZ7zqXJuvoELakaFYuETHjZkSol8EV6cNnyishutDBCCdv6+dsKPbKkCcIk57qRphOLY5sEgClw1bO3gA==}
+  /@types/express/4.17.17:
+    resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==}
     dependencies:
       '@types/body-parser': 1.19.2
       '@types/express-serve-static-core': 4.17.33

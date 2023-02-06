@@ -15,7 +15,7 @@ specifiers:
   '@semantic-release/git': 10.0.1
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
-  '@types/eslint': 8.4.10
+  '@types/eslint': 8.21.0
   '@types/express': 4.17.17
   '@types/express-serve-static-core': 4.17.33
   '@types/mocha': 10.0.1
@@ -67,7 +67,7 @@ devDependencies:
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
-  '@types/eslint': 8.4.10
+  '@types/eslint': 8.21.0
   '@types/express': 4.17.17
   '@types/express-serve-static-core': 4.17.33
   '@types/mocha': 10.0.1
@@ -1133,12 +1133,12 @@ packages:
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
-      '@types/eslint': 8.4.10
+      '@types/eslint': 8.21.0
       '@types/estree': 1.0.0
     dev: true
 
-  /@types/eslint/8.4.10:
-    resolution: {integrity: sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==}
+  /@types/eslint/8.21.0:
+    resolution: {integrity: sha512-35EhHNOXgxnUgh4XCJsGhE7zdlDhYDN/aMG6UbkByCFFNgQ7b3U+uVoqBpicFydR8JEfgdjCF7SJ7MiJfzuiTA==}
     dependencies:
       '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11

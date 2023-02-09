@@ -240,10 +240,6 @@ export class AppModule {}
 ```typescript
 import { Injectable, Inject } from "@nestjs/common";
 import * as client from "prom-client";
-import {
-  PrometheusModule,
-  PROMETHEUS_PUSH_GATEWAY,
-} from "@willsoto/nestjs-prometheus";
 
 @Injectable()
 export class Service {

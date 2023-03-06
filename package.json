@@ -120,7 +120,7 @@
     "prom-client": "14.1.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
-    "rxjs": "7.6.0",
+    "rxjs": "7.8.0",
     "semantic-release": "19.0.5",
     "sinon": "15.0.1",
     "sinon-chai": "3.7.0",

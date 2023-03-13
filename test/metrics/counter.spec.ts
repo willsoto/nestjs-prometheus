@@ -1,15 +1,31 @@
+import { Injectable } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
-import { getToken, makeCounterProvider } from "../../src";
+import { Counter, register } from "prom-client";
+import {
+  getToken,
+  InjectMetric,
+  makeCounterProvider,
+  PrometheusModule,
+} from "../../src";
 
 describe("Counter", function () {
   let testingModule: TestingModule;
   let metric: client.Counter<string>;
 
+  @Injectable()
+  class MyService {
+    constructor(
+      @InjectMetric("controller_counter") public counter: Counter<string>,
+    ) {}
+  }
+
   beforeEach(async function () {
     testingModule = await Test.createTestingModule({
+      imports: [PrometheusModule.register()],
       providers: [
+        MyService,
         makeCounterProvider({
           name: "controller_counter",
           help: "controller_counter_help",
@@ -21,6 +37,7 @@ describe("Counter", function () {
   });
 
   afterEach(async function () {
+    register.clear();
     await testingModule.close();
   });
 
@@ -30,5 +47,13 @@ describe("Counter", function () {
 
   it("has the appropriate methods (inc)", function () {
     expect(metric.inc).to.be.a("function");
+  });
+
+  it("should be injectable into the service", function () {
+    expect(testingModule.get(MyService)).to.be.instanceOf(MyService);
+
+    const service = testingModule.get(MyService);
+
+    expect(service.counter).to.be.instanceOf(Counter);
   });
 });

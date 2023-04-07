@@ -23,7 +23,7 @@ import { getToken } from "./metrics";
 export function InjectMetric(
   name: string,
 ): (
-  target: Record<string, unknown>,
+  target: object,
   key: string | symbol | undefined,
   index?: number | undefined,
 ) => void {

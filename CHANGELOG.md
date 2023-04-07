@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.0...v5.1.1) (2023-04-07)
+
+
+### Bug Fixes
+
+* decorator types ([#1685](https://github.com/willsoto/nestjs-prometheus/issues/1685)) ([6f8a52e](https://github.com/willsoto/nestjs-prometheus/commit/6f8a52eed0efe1e0af1e1c764e32ee67b22e0f67)), closes [#1667](https://github.com/willsoto/nestjs-prometheus/issues/1667)
+
 # [5.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.0.0...v5.1.0) (2023-01-08)
 
 

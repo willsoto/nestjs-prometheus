@@ -22,7 +22,7 @@ specifiers:
   '@types/node': 18.15.11
   '@types/prettier': 2.7.2
   '@types/rimraf': 3.0.2
-  '@types/sinon': 10.0.13
+  '@types/sinon': 10.0.14
   '@types/sinon-chai': 3.2.9
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.46.1
@@ -74,7 +74,7 @@ devDependencies:
   '@types/node': 18.15.11
   '@types/prettier': 2.7.2
   '@types/rimraf': 3.0.2
-  '@types/sinon': 10.0.13
+  '@types/sinon': 10.0.14
   '@types/sinon-chai': 3.2.9
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.46.1_7eog2z5eyjeaqpgarzk7qt4cdy
@@ -1272,11 +1272,11 @@ packages:
     resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
     dependencies:
       '@types/chai': 4.3.4
-      '@types/sinon': 10.0.13
+      '@types/sinon': 10.0.14
     dev: true
 
-  /@types/sinon/10.0.13:
-    resolution: {integrity: sha512-UVjDqJblVNQYvVNUsj0PuYYw0ELRmgt1Nt5Vk0pT5f16ROGfcKJY8o1HVuMOJOpD727RrGB9EGvoaTQE5tgxZQ==}
+  /@types/sinon/10.0.14:
+    resolution: {integrity: sha512-mn72up6cjaMyMuaPaa/AwKf6WtsSRysQC7wxFkCm1XcOKXPM1z+5Y4H5wjIVBz4gdAkjvZxVVfjA6ba1nHr5WQ==}
     dependencies:
       '@types/sinonjs__fake-timers': 8.1.2
     dev: true

@@ -4,7 +4,7 @@ specifiers:
   '@commitlint/cli': 17.6.1
   '@commitlint/config-conventional': 17.6.1
   '@fastify/compress': 6.2.1
-  '@nestjs/cli': 9.4.0
+  '@nestjs/cli': 9.4.1
   '@nestjs/common': 9.4.0
   '@nestjs/core': 9.4.0
   '@nestjs/platform-express': 9.4.0
@@ -56,7 +56,7 @@ devDependencies:
   '@commitlint/cli': 17.6.1
   '@commitlint/config-conventional': 17.6.1
   '@fastify/compress': 6.2.1
-  '@nestjs/cli': 9.4.0
+  '@nestjs/cli': 9.4.1
   '@nestjs/common': 9.4.0_mnr6j2del53muneqly5h4y27ai
   '@nestjs/core': 9.4.0_qfvkcqqlilywzuwwu2xqitbr3m
   '@nestjs/platform-express': 9.4.0_gqkob5jndcfeb3wjw72wbdwyne
@@ -602,8 +602,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@nestjs/cli/9.4.0:
-    resolution: {integrity: sha512-mATM41qS/YYzYbpAeyWnrhtfmIevmlBvvppP5h0i1w0uRWewRbtOZ+Ow8MmcvrfdnYGHMjLmhMjReV77YXBa8w==}
+  /@nestjs/cli/9.4.1:
+    resolution: {integrity: sha512-m58dYogFRjFqxe0/U6J9J877z/9opdtrRlxrjcsv1mEO9ZlQ07hEuub9um1Vleu+i6iG11lW+G464kn85rUsNw==}
     engines: {node: '>= 12.9.0'}
     hasBin: true
     dependencies:

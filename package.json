@@ -81,7 +81,7 @@
     "@commitlint/cli": "17.6.1",
     "@commitlint/config-conventional": "17.6.1",
     "@fastify/compress": "6.2.1",
-    "@nestjs/cli": "9.4.1",
+    "@nestjs/cli": "9.4.2",
     "@nestjs/common": "9.4.0",
     "@nestjs/core": "9.4.0",
     "@nestjs/platform-express": "9.4.0",

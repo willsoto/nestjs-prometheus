@@ -2,7 +2,5 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "automerge": true,
-  "semanticCommits": "enabled",
-  "timezone": "America/New_York",
-  "schedule": ["every 48 hours before 7am"]
+  "semanticCommits": "enabled"
 }

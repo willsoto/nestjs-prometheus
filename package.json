@@ -119,7 +119,7 @@
     "prettier-plugin-packagejson": "2.4.3",
     "prom-client": "14.2.0",
     "reflect-metadata": "0.1.13",
-    "rimraf": "3.0.2",
+    "rimraf": "5.0.0",
     "rxjs": "7.8.1",
     "semantic-release": "19.0.5",
     "sinon": "15.0.4",

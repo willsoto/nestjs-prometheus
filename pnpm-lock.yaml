@@ -13,7 +13,7 @@ specifiers:
   '@nestjs/testing': 9.4.0
   '@semantic-release/changelog': 6.0.3
   '@semantic-release/git': 10.0.1
-  '@types/chai': 4.3.4
+  '@types/chai': 4.3.5
   '@types/chai-as-promised': 7.1.5
   '@types/eslint': 8.37.0
   '@types/express': 4.17.17
@@ -65,7 +65,7 @@ devDependencies:
   '@nestjs/testing': 9.4.0_adbpomi7iuzlxxwntv6inkfmju
   '@semantic-release/changelog': 6.0.3_semantic-release@21.0.2
   '@semantic-release/git': 10.0.1_semantic-release@21.0.2
-  '@types/chai': 4.3.4
+  '@types/chai': 4.3.5
   '@types/chai-as-promised': 7.1.5
   '@types/eslint': 8.37.0
   '@types/express': 4.17.17
@@ -1168,11 +1168,11 @@ packages:
   /@types/chai-as-promised/7.1.5:
     resolution: {integrity: sha512-jStwss93SITGBwt/niYrkf2C+/1KTeZCZl1LaeezTlqppAKeoQC7jxyqYuP72sxBGKCIbw7oHgbYssIRzT5FCQ==}
     dependencies:
-      '@types/chai': 4.3.4
+      '@types/chai': 4.3.5
     dev: true
 
-  /@types/chai/4.3.4:
-    resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
+  /@types/chai/4.3.5:
+    resolution: {integrity: sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==}
     dev: true
 
   /@types/connect/3.4.35:
@@ -1312,7 +1312,7 @@ packages:
   /@types/sinon-chai/3.2.9:
     resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
     dependencies:
-      '@types/chai': 4.3.4
+      '@types/chai': 4.3.5
       '@types/sinon': 10.0.14
     dev: true
 

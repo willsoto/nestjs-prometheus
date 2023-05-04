@@ -78,8 +78,8 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.1",
-    "@commitlint/config-conventional": "17.6.1",
+    "@commitlint/cli": "17.6.3",
+    "@commitlint/config-conventional": "17.6.3",
     "@fastify/compress": "6.2.1",
     "@nestjs/cli": "9.4.2",
     "@nestjs/common": "9.4.0",

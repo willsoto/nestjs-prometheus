@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': 17.6.3
   '@commitlint/config-conventional': 17.6.3
-  '@fastify/compress': 6.2.1
+  '@fastify/compress': 6.3.0
   '@nestjs/cli': 9.4.2
   '@nestjs/common': 9.4.0
   '@nestjs/core': 9.4.0
@@ -55,7 +55,7 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.6.3
   '@commitlint/config-conventional': 17.6.3
-  '@fastify/compress': 6.2.1
+  '@fastify/compress': 6.3.0
   '@nestjs/cli': 9.4.2
   '@nestjs/common': 9.4.0_atc7tu2sld2m3nk4hmwkqn6qde
   '@nestjs/core': 9.4.0_s52inwjga72fw7w7ilq4rk5hru
@@ -474,14 +474,14 @@ packages:
       fast-uri: 2.1.0
     dev: true
 
-  /@fastify/compress/6.2.1:
-    resolution: {integrity: sha512-ZmdAz0AOevAJijJHVkG2JqdCuf8jb8MQhtBl8tZUz/UtQvDXNSPXRyieXoCHZ6mkETZiq72DfOA8oljC54EGjQ==}
+  /@fastify/compress/6.3.0:
+    resolution: {integrity: sha512-lTvR7X1Fg+fDRkg2v3rfW9Mg1laK0UwB9Gi1M07HATE/hv5+7QI18B2vNfXp/5P4UXhrjiNumztdr9DeMS623w==}
     dependencies:
       '@fastify/accept-negotiator': 1.0.0
       fastify-plugin: 4.2.0
       into-stream: 6.0.0
       mime-db: 1.52.0
-      minipass: 4.2.5
+      minipass: 5.0.0
       peek-stream: 1.1.3
       pump: 3.0.0
       pumpify: 2.0.1

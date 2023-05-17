@@ -42,7 +42,7 @@ specifiers:
   prettier-plugin-packagejson: 2.4.3
   prom-client: 14.2.0
   reflect-metadata: 0.1.13
-  rimraf: 5.0.0
+  rimraf: 5.0.1
   rxjs: 7.8.1
   semantic-release: 21.0.2
   sinon: 15.0.4
@@ -94,7 +94,7 @@ devDependencies:
   prettier-plugin-packagejson: 2.4.3_prettier@2.8.8
   prom-client: 14.2.0
   reflect-metadata: 0.1.13
-  rimraf: 5.0.0
+  rimraf: 5.0.1
   rxjs: 7.8.1
   semantic-release: 21.0.2
   sinon: 15.0.4
@@ -3540,8 +3540,8 @@ packages:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
     dev: true
 
-  /glob/10.2.2:
-    resolution: {integrity: sha512-Xsa0BcxIC6th9UwNjZkhrMtNo/MnyRL8jGCP+uEwhA5oFOCY1f2s1/oNKY47xQ0Bg5nkjsfAEIej1VeH62bDDQ==}
+  /glob/10.2.5:
+    resolution: {integrity: sha512-Gj+dFYPZ5hc5dazjXzB0iHg2jKWJZYMjITXYPBRQ/xc2Buw7H0BINknRTwURJ6IC6MEFpYbLvtgVb3qD+DwyuA==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
     dependencies:
@@ -5851,12 +5851,12 @@ packages:
       glob: 9.3.0
     dev: true
 
-  /rimraf/5.0.0:
-    resolution: {integrity: sha512-Jf9llaP+RvaEVS5nPShYFhtXIrb3LRKP281ib3So0KkeZKo2wIKyq0Re7TOSwanasA423PSr6CCIL4bP6T040g==}
+  /rimraf/5.0.1:
+    resolution: {integrity: sha512-OfFZdwtd3lZ+XZzYP/6gTACubwFcHdLRqS9UX3UwpU2dnGQYkPFISRwvM3w9IiB2w7bW5qGo/uAwE4SmXXSKvg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
-      glob: 10.2.2
+      glob: 10.2.5
     dev: true
 
   /run-async/2.4.1:

@@ -41,8 +41,8 @@ export interface PrometheusOptions {
    * @Controller()
    * class MyCustomController extends PrometheusController {
    *   @Get()
-   *   index(@Res() response: Response) {
-   *     super(response);
+   *   index(@Res({ passthrough: true }) response: Response) {
+   *     return super.index(response);
    *   }
    * }
    * ```

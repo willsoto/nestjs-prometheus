@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.1...v5.1.2) (2023-05-22)
+
+
+### Bug Fixes
+
+* add passthrough: true to make custom controllers work again with v5 ([#1739](https://github.com/willsoto/nestjs-prometheus/issues/1739)) ([5e83125](https://github.com/willsoto/nestjs-prometheus/commit/5e83125e30286bb3a61eb10a03d5d311f57c5d57))
+
 ## [5.1.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.0...v5.1.1) (2023-04-07)
 
 

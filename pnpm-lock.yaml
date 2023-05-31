@@ -63,8 +63,8 @@ devDependencies:
     specifier: 18.16.16
     version: 18.16.16
   '@types/prettier':
-    specifier: 2.7.2
-    version: 2.7.2
+    specifier: 2.7.3
+    version: 2.7.3
   '@types/rimraf':
     specifier: 3.0.2
     version: 3.0.2
@@ -1234,8 +1234,8 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
-  /@types/prettier@2.7.2:
-    resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
+  /@types/prettier@2.7.3:
+    resolution: {integrity: sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==}
     dev: true
 
   /@types/qs@6.9.7:

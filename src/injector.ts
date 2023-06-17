@@ -20,14 +20,6 @@ import { getToken } from "./metrics";
  * }
  * ```
  */
-export function InjectMetric(
-  name: string,
-): (
-  target: object,
-  key: string | symbol | undefined,
-  index?: number | undefined,
-) => void {
-  const token = getToken(name);
-
-  return Inject(token);
+export function InjectMetric(name: string) {
+  return Inject(getToken(name));
 }

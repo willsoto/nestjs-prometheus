@@ -4,10 +4,10 @@ import { expect } from "chai";
 import * as client from "prom-client";
 import { Counter, register } from "prom-client";
 import {
-  getToken,
   InjectMetric,
-  makeCounterProvider,
   PrometheusModule,
+  getToken,
+  makeCounterProvider,
 } from "../../src";
 
 describe("Counter", function () {

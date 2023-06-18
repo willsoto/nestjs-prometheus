@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.2...v5.2.0) (2023-06-18)
+
+
+### Features
+
+* remove explicit types from InjectMetric ([2b6f32f](https://github.com/willsoto/nestjs-prometheus/commit/2b6f32fe9b61e0a2002f8c767a32ce4e8f6ca81b)), closes [#1770](https://github.com/willsoto/nestjs-prometheus/issues/1770)
+
 ## [5.1.2](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.1...v5.1.2) (2023-05-22)
 
 

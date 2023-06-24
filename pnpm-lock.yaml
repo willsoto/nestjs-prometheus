@@ -6,11 +6,11 @@ settings:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: 17.6.5
-    version: 17.6.5
+    specifier: 17.6.6
+    version: 17.6.6
   '@commitlint/config-conventional':
-    specifier: 17.6.5
-    version: 17.6.5
+    specifier: 17.6.6
+    version: 17.6.6
   '@fastify/compress':
     specifier: 6.4.0
     version: 6.4.0
@@ -235,13 +235,13 @@ packages:
     dev: true
     optional: true
 
-  /@commitlint/cli@17.6.5:
-    resolution: {integrity: sha512-3PQrWr/uo6lzF5k7n5QuosCYnzaxP9qGBp3jhWP0Vmsa7XA6wrl9ccPqfQyXpSbQE3zBROVO3TDqgPKe4tfmLQ==}
+  /@commitlint/cli@17.6.6:
+    resolution: {integrity: sha512-sTKpr2i/Fjs9OmhU+beBxjPavpnLSqZaO6CzwKVq2Tc4UYVTMFgpKOslDhUBVlfAUBfjVO8ParxC/MXkIOevEA==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
-      '@commitlint/lint': 17.6.5
+      '@commitlint/lint': 17.6.6
       '@commitlint/load': 17.5.0
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
@@ -255,8 +255,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional@17.6.5:
-    resolution: {integrity: sha512-Xl9H9KLl86NZm5CYNTNF9dcz1xelE/EbvhWIWcYxG/rn3UWYWdWmmnX2q6ZduNdLFSGbOxzUpIx61j5zxbeXxg==}
+  /@commitlint/config-conventional@17.6.6:
+    resolution: {integrity: sha512-phqPz3BDhfj49FUYuuZIuDiw+7T6gNAEy7Yew1IBHqSohVUCWOK2FXMSAExzS2/9X+ET93g0Uz83KjiHDOOFag==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
@@ -295,19 +295,19 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@commitlint/is-ignored@17.6.5:
-    resolution: {integrity: sha512-CQvAPt9gX7cuUbMrIaIMKczfWJqqr6m8IlJs0F2zYwyyMTQ87QMHIj5jJ5HhOaOkaj6dvTMVGx8Dd1I4xgUuoQ==}
+  /@commitlint/is-ignored@17.6.6:
+    resolution: {integrity: sha512-4Fw875faAKO+2nILC04yW/2Vy/wlV3BOYCSQ4CEFzriPEprc1Td2LILmqmft6PDEK5Sr14dT9tEzeaZj0V56Gg==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
-      semver: 7.5.0
+      semver: 7.5.2
     dev: true
 
-  /@commitlint/lint@17.6.5:
-    resolution: {integrity: sha512-BSJMwkE4LWXrOsiP9KoHG+/heSDfvOL/Nd16+ojTS/DX8HZr8dNl8l3TfVr/d/9maWD8fSegRGtBtsyGuugFrw==}
+  /@commitlint/lint@17.6.6:
+    resolution: {integrity: sha512-5bN+dnHcRLkTvwCHYMS7Xpbr+9uNi0Kq5NR3v4+oPNx6pYXt8ACuw9luhM/yMgHYwW0ajIR20wkPAFkZLEMGmg==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/is-ignored': 17.6.5
+      '@commitlint/is-ignored': 17.6.6
       '@commitlint/parse': 17.6.5
       '@commitlint/rules': 17.6.5
       '@commitlint/types': 17.4.4
@@ -1055,7 +1055,7 @@ packages:
       read-pkg: 8.0.0
       registry-auth-token: 5.0.2
       semantic-release: 21.0.3
-      semver: 7.5.0
+      semver: 7.5.2
       tempy: 3.0.0
     dev: true
 
@@ -3345,7 +3345,7 @@ packages:
       minimatch: 3.1.2
       node-abort-controller: 3.0.1
       schema-utils: 3.3.0
-      semver: 7.5.0
+      semver: 7.5.2
       tapable: 2.2.1
       typescript: 5.1.3
       webpack: 5.87.0
@@ -4926,7 +4926,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       is-core-module: 2.9.0
-      semver: 7.5.0
+      semver: 7.5.2
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5953,7 +5953,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.5.0
+      semver: 7.5.2
     dev: true
 
   /semver-regex@4.0.5:
@@ -5981,6 +5981,14 @@ packages:
 
   /semver@7.5.0:
     resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
+  /semver@7.5.2:
+    resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:

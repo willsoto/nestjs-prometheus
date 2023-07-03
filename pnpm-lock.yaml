@@ -15,8 +15,8 @@ devDependencies:
     specifier: 6.4.0
     version: 6.4.0
   '@nestjs/cli':
-    specifier: 10.1.0
-    version: 10.1.0
+    specifier: 10.1.1
+    version: 10.1.1
   '@nestjs/common':
     specifier: 10.0.4
     version: 10.0.4(reflect-metadata@0.1.13)(rxjs@7.8.1)
@@ -624,8 +624,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@nestjs/cli@10.1.0:
-    resolution: {integrity: sha512-R/n+cFIvK3YbFSU9t7NFyBgXJRDK1biCZgz1VqYdpZj4JmIj8RmllA9Fp3YZUg98D8K7T4HoIuVFUAkEFSSLTg==}
+  /@nestjs/cli@10.1.1:
+    resolution: {integrity: sha512-DPQFtwFW8eTf/JYATsBiv715UP5w8eg5l6dUyvkQsZFaMAEOdffbpnStl+6ZPDw7hrmLNniGjap1tphZfYakhQ==}
     engines: {node: '>= 16'}
     hasBin: true
     peerDependencies:
@@ -1609,12 +1609,12 @@ packages:
       negotiator: 0.6.3
     dev: true
 
-  /acorn-import-assertions@1.9.0(acorn@8.8.0):
+  /acorn-import-assertions@1.9.0(acorn@8.9.0):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
     peerDependencies:
       acorn: ^8
     dependencies:
-      acorn: 8.8.0
+      acorn: 8.9.0
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.9.0):
@@ -6941,8 +6941,8 @@ packages:
       '@webassemblyjs/ast': 1.11.5
       '@webassemblyjs/wasm-edit': 1.11.5
       '@webassemblyjs/wasm-parser': 1.11.5
-      acorn: 8.8.0
-      acorn-import-assertions: 1.9.0(acorn@8.8.0)
+      acorn: 8.9.0
+      acorn-import-assertions: 1.9.0(acorn@8.9.0)
       browserslist: 4.21.2
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0

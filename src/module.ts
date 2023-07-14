@@ -29,7 +29,6 @@ export class PrometheusModule {
     const providers: Provider[] = [];
     if (options?.pushgateway !== undefined) {
       const { url, options: gatewayOptions, registry } = options.pushgateway;
-
       providers.push({
         provide: promClient.Pushgateway,
         useValue: PrometheusModule.configurePushgateway(
@@ -44,18 +43,20 @@ export class PrometheusModule {
       module: PrometheusModule,
       providers,
       controllers: [opts.controller],
+      exports: providers,
     };
   }
 
   public static registerAsync(options: PrometheusAsyncOptions): DynamicModule {
-    const asyncProviders = this.createAsyncProviders(options);
+    const providers = this.createAsyncProviders(options);
     const controller = options.controller ?? PrometheusController;
 
     return {
       module: PrometheusModule,
       controllers: [controller],
       imports: options.imports,
-      providers: [...asyncProviders],
+      providers: providers,
+      exports: providers,
     };
   }
 

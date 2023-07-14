@@ -27,10 +27,12 @@ export class PrometheusModule {
     PrometheusModule.configureServer(opts);
 
     const providers: Provider[] = [];
+    const moduleExtend: { exports: Provider[] } = {
+      exports: [],
+    };
     if (options?.pushgateway !== undefined) {
       const { url, options: gatewayOptions, registry } = options.pushgateway;
-
-      providers.push({
+      moduleExtend["exports"].push({
         provide: promClient.Pushgateway,
         useValue: PrometheusModule.configurePushgateway(
           url,
@@ -38,12 +40,14 @@ export class PrometheusModule {
           registry,
         ),
       });
+      providers.push(...moduleExtend["exports"]);
     }
 
     return {
       module: PrometheusModule,
       providers,
       controllers: [opts.controller],
+      ...moduleExtend,
     };
   }
 
@@ -56,6 +60,7 @@ export class PrometheusModule {
       controllers: [controller],
       imports: options.imports,
       providers: [...asyncProviders],
+      exports: [asyncProviders[asyncProviders.length - 1]],
     };
   }
 

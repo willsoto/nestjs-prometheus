@@ -73,7 +73,9 @@ describe("Pushgateway", function () {
       ],
       providers: [MockService],
     }).compile();
+
     const mockService = moduleRef.get<MockService>(MockService);
+
     expect(mockService.pushgateway).to.be.an.instanceOf(Pushgateway);
     expect(mockService.pushgateway).to.have.property(
       "gatewayUrl",
@@ -90,7 +92,9 @@ describe("Pushgateway", function () {
       ],
       providers: [MockService],
     }).compile();
+
     const mockService = moduleRef.get<MockService>(MockService);
+
     expect(mockService.pushgateway).to.be.an.instanceOf(Pushgateway);
     expect(mockService.pushgateway).to.have.property(
       "gatewayUrl",

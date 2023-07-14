@@ -1,3 +1,10 @@
+## [5.2.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.2.0...v5.2.1) (2023-07-14)
+
+
+### Bug Fixes
+
+* pushgateway injection ([#1810](https://github.com/willsoto/nestjs-prometheus/issues/1810)) ([64cc5ae](https://github.com/willsoto/nestjs-prometheus/commit/64cc5aef8106aceaa4bdf16775cdff25ad404afc)), closes [#1780](https://github.com/willsoto/nestjs-prometheus/issues/1780) [#1809](https://github.com/willsoto/nestjs-prometheus/issues/1809)
+
 # [5.2.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.1.2...v5.2.0) (2023-06-18)
 
 

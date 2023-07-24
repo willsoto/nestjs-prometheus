@@ -27,8 +27,8 @@ devDependencies:
     specifier: 10.1.0
     version: 10.1.0(@nestjs/common@10.1.0)(@nestjs/core@10.1.0)
   '@nestjs/platform-fastify':
-    specifier: 10.1.0
-    version: 10.1.0(@nestjs/common@10.1.0)(@nestjs/core@10.1.0)
+    specifier: 10.1.1
+    version: 10.1.1(@nestjs/common@10.1.0)(@nestjs/core@10.1.0)
   '@nestjs/schematics':
     specifier: 10.0.1
     version: 10.0.1(chokidar@3.5.3)(typescript@5.1.6)
@@ -734,8 +734,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nestjs/platform-fastify@10.1.0(@nestjs/common@10.1.0)(@nestjs/core@10.1.0):
-    resolution: {integrity: sha512-hFfsyitmODJFY28f9g0h1+StRiirGdA592z3lQHeLBblw8NO2AIHsT1FKuKP7Jazw5UXECkKDujg+QrYHq+r2g==}
+  /@nestjs/platform-fastify@10.1.1(@nestjs/common@10.1.0)(@nestjs/core@10.1.0):
+    resolution: {integrity: sha512-YwtYd5o+P5bfmev7mHnnRtYOkEqlTQfdWMpIZo2qqkSK1Ezc9qTASD5G2u3GXL5+fsHFFaTRzXw0J6gbNHwmqQ==}
     peerDependencies:
       '@fastify/static': ^6.0.0
       '@fastify/view': ^7.0.0 || ^8.0.0
@@ -752,7 +752,7 @@ packages:
       '@fastify/middie': 8.3.0
       '@nestjs/common': 10.1.0(reflect-metadata@0.1.13)(rxjs@7.8.1)
       '@nestjs/core': 10.1.0(@nestjs/common@10.1.0)(@nestjs/platform-express@10.1.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
-      fastify: 4.19.2
+      fastify: 4.20.0
       light-my-request: 5.10.0
       path-to-regexp: 3.2.0
       tslib: 2.6.0
@@ -3190,8 +3190,8 @@ packages:
     resolution: {integrity: sha512-hovKzEXZc2YgeuXn41/2EA/IaIOdRu1pB9WKgnzDBj3lhKSdDCEsckHa7I6LiT/LhflvAQX7ZY8IQ6eBX0htTg==}
     dev: true
 
-  /fastify@4.19.2:
-    resolution: {integrity: sha512-2unheeIRWFf9/Jjcz7djOpKuXCTzZjlyFfiBwKqpldkHMN2rfTLu/f9pYTdwlhzC9Cdj0S2H12zlug0Kd5uZ1w==}
+  /fastify@4.20.0:
+    resolution: {integrity: sha512-zWWi5KGAb1YZ6fyrnFnA1CA1EZHkGM6YuELgB3QpS3l4lLRy14W1cc16b4KGPH/zQ98WCSdS+T41JkHY3eq1oA==}
     dependencies:
       '@fastify/ajv-compiler': 3.5.0
       '@fastify/error': 3.2.0
@@ -3207,7 +3207,7 @@ packages:
       proxy-addr: 2.0.7
       rfdc: 1.3.0
       secure-json-parse: 2.5.0
-      semver: 7.5.2
+      semver: 7.5.4
       tiny-lru: 11.0.1
     transitivePeerDependencies:
       - supports-color

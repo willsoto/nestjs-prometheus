@@ -85,7 +85,7 @@
     "@nestjs/common": "10.1.0",
     "@nestjs/core": "10.1.0",
     "@nestjs/platform-express": "10.1.0",
-    "@nestjs/platform-fastify": "10.1.0",
+    "@nestjs/platform-fastify": "10.1.1",
     "@nestjs/schematics": "10.0.1",
     "@nestjs/testing": "10.1.0",
     "@semantic-release/changelog": "6.0.3",

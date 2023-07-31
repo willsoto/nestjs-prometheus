@@ -15,8 +15,8 @@ devDependencies:
     specifier: 6.4.0
     version: 6.4.0
   '@nestjs/cli':
-    specifier: 10.1.10
-    version: 10.1.10
+    specifier: 10.1.11
+    version: 10.1.11
   '@nestjs/common':
     specifier: 10.1.2
     version: 10.1.2(reflect-metadata@0.1.13)(rxjs@7.8.1)
@@ -629,8 +629,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@nestjs/cli@10.1.10:
-    resolution: {integrity: sha512-5adPl6m2X0uOrK4IPUbzBJUqZ//UKsKi9c7yAR3uCu+moSDMieG/YeKt+zGLnF2gaCdHdgeWWoxI0nfMVE5uCA==}
+  /@nestjs/cli@10.1.11:
+    resolution: {integrity: sha512-ORkpVFQvcPYtvkLfa0I9dMSPIppkqTOyLqPvJV0wiZofp8iR1+VEVzJVi+PMj53gOkly8TV9+6iy/dBA5Ssrog==}
     engines: {node: '>= 16'}
     hasBin: true
     peerDependencies:

@@ -12,12 +12,12 @@
     "typings"
   ],
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist coverage",
     "lint": "eslint . --fix",
     "prepare": "husky install",
-    "prerelease": "npm run build",
+    "prerelease": "pnpm run build",
     "release": "semantic-release",
     "test": "mocha",
     "test:coverage": "c8 mocha",

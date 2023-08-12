@@ -96,10 +96,7 @@ export interface PrometheusAsyncOptions
 
   /** {@inheritDoc PrometheusOptions.controller} */
   controller?: PrometheusOptions["controller"];
-  /**
-   * Not currently supported since there doesn't seem to be a way to get
-   * the result of the function during configuration.
-   */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  // useFactory?(...args: any[]): Promise<PrometheusOptions> | PrometheusOptions;
+  useFactory?(
+    ...args: unknown[]
+  ): Promise<PrometheusOptions> | PrometheusOptions;
 }

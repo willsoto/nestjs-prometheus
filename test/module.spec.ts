@@ -1,7 +1,12 @@
 import { Injectable, Module } from "@nestjs/common";
+import { TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
-import { register } from "prom-client";
-import { PrometheusModule, PrometheusOptionsFactory } from "../src";
+import { Pushgateway, register } from "prom-client";
+import {
+  PrometheusModule,
+  PrometheusOptions,
+  PrometheusOptionsFactory,
+} from "../src";
 import {
   Agent,
   App,
@@ -12,11 +17,17 @@ import {
 describe("PrometheusModule", function () {
   let agent: Agent;
   let app: App;
+  let testingModule: TestingModule;
 
   afterEach(async function () {
+    register.clear();
+
     if (app) {
-      register.clear();
       await app.close();
+    }
+
+    if (testingModule) {
+      await testingModule.close();
     }
   });
 
@@ -97,11 +108,6 @@ describe("PrometheusModule", function () {
         const response = await agent.get("/metrics");
 
         expect(response).to.have.property("status").to.eql(200);
-      });
-
-      it("collects default metrics", async function () {
-        const response = await agent.get("/metrics");
-
         expect(response)
           .to.have.property("text")
           .to.contain("process_cpu_user_seconds_total");
@@ -120,14 +126,55 @@ describe("PrometheusModule", function () {
         const response = await agent.get("/metrics");
 
         expect(response).to.have.property("status").to.eql(200);
-      });
-
-      it("collects default metrics", async function () {
-        const response = await agent.get("/metrics");
-
         expect(response)
           .to.have.property("text")
           .to.contain("process_cpu_user_seconds_total");
+      });
+    });
+
+    describe("useFactory", function () {
+      @Injectable()
+      class MyConfigService {
+        options(): PrometheusOptions {
+          return {
+            path: "/my/custom/path/metrics",
+            pushgateway: {
+              url: "http://127.0.0.1:9091",
+            },
+          };
+        }
+      }
+
+      @Module({
+        providers: [MyConfigService],
+        exports: [MyConfigService],
+      })
+      class MyConfigModule {}
+
+      beforeEach(async function () {
+        ({ agent, app, testingModule } = await createAsyncPrometheusModule({
+          imports: [MyConfigModule],
+          inject: [MyConfigService],
+          useFactory(config: MyConfigService) {
+            return config.options();
+          },
+        }));
+      });
+
+      it("registers a custom endpoint", async function () {
+        const response = await agent.get("/my/custom/path/metrics");
+
+        expect(response).to.have.property("status").to.eql(200);
+        expect(response)
+          .to.have.property("text")
+          .to.contain("process_cpu_user_seconds_total");
+      });
+
+      it("should register the push gateway", function () {
+        const gateway = testingModule.get(Pushgateway);
+
+        expect(gateway).to.be.instanceOf(Pushgateway);
+        expect(gateway).to.have.property("gatewayUrl", "http://127.0.0.1:9091");
       });
     });
   });

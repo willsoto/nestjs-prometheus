@@ -5,7 +5,7 @@ import {
   Provider,
 } from "@nestjs/common";
 import * as promClient from "prom-client";
-import { PROMETHEUS_OPTIONS } from "./constants";
+import { PROMETHEUS_OPTIONS, PROM_CLIENT } from "./constants";
 import { PrometheusController } from "./controller";
 import {
   PrometheusAsyncOptions,
@@ -55,15 +55,28 @@ export class PrometheusModule {
       module: PrometheusModule,
       controllers: [controller],
       imports: options.imports,
-      providers: providers,
-      exports: providers,
+      providers: [
+        ...providers,
+        {
+          provide: PROM_CLIENT,
+          inject: [PROMETHEUS_OPTIONS],
+          useFactory(userOptions: PrometheusOptions) {
+            const opts = PrometheusModule.makeDefaultOptions(userOptions);
+
+            PrometheusModule.configureServer(opts);
+
+            return promClient;
+          },
+        },
+      ],
+      exports: [...providers],
     };
   }
 
   public static createAsyncProviders(
     options: PrometheusAsyncOptions,
   ): Provider[] {
-    if (options.useExisting) {
+    if (options.useExisting || options.useFactory) {
       return [
         this.createAsyncOptionsProvider(options),
         PrometheusModule.createPushgatewayProvider(),
@@ -87,17 +100,14 @@ export class PrometheusModule {
   public static createAsyncOptionsProvider(
     options: PrometheusAsyncOptions,
   ): Provider {
-    /**
-     * Not currently supported since there doesn't seem to be a way to get
-     * the result of the function during configuration.
-     */
-    // if (options.useFactory) {
-    //   return {
-    //     provide: PROMETHEUS_OPTIONS,
-    //     useFactory: options.useFactory,
-    //     inject: options.inject || [],
-    //   };
-    // }
+    if (options.useFactory) {
+      return {
+        provide: PROMETHEUS_OPTIONS,
+        // eslint-disable-next-line @typescript-eslint/unbound-method
+        useFactory: options.useFactory,
+        inject: options.inject || [],
+      };
+    }
 
     const inject = options.useClass || options.useExisting;
 
@@ -112,12 +122,7 @@ export class PrometheusModule {
       async useFactory(
         optionsFactory: PrometheusOptionsFactory,
       ): Promise<PrometheusOptions> {
-        const userOptions = await optionsFactory.createPrometheusOptions();
-        const opts = PrometheusModule.makeDefaultOptions(userOptions);
-
-        PrometheusModule.configureServer(opts);
-
-        return opts;
+        return optionsFactory.createPrometheusOptions();
       },
       inject: [inject],
     };

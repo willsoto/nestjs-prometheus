@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.2.1...v5.3.0) (2023-08-12)
+
+
+### Features
+
+* support useFactory ([b4608da](https://github.com/willsoto/nestjs-prometheus/commit/b4608da57f70b3ce2ce765caf769de71a6376c18)), closes [#1776](https://github.com/willsoto/nestjs-prometheus/issues/1776)
+
 ## [5.2.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.2.0...v5.2.1) (2023-07-14)
 
 

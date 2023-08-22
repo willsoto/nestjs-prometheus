@@ -54,8 +54,8 @@ devDependencies:
     specifier: 4.17.17
     version: 4.17.17
   '@types/express-serve-static-core':
-    specifier: 4.17.35
-    version: 4.17.35
+    specifier: 4.17.36
+    version: 4.17.36
   '@types/mocha':
     specifier: 10.0.1
     version: 10.0.1
@@ -1210,8 +1210,8 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
-  /@types/express-serve-static-core@4.17.35:
-    resolution: {integrity: sha512-wALWQwrgiB2AWTT91CB62b6Yt0sNHpznUXeZEcnPU3DRdlDIz74x8Qg1UUYKSVFi+va5vKOLYRBI1bRKiLLKIg==}
+  /@types/express-serve-static-core@4.17.36:
+    resolution: {integrity: sha512-zbivROJ0ZqLAtMzgzIUC4oNqDG9iF0lSsAqpOD9kbs5xcIM3dTiyuHvBc7R8MtWBp3AAWGaovJa+wzWPjLYW7Q==}
     dependencies:
       '@types/node': 18.17.7
       '@types/qs': 6.9.7
@@ -1223,7 +1223,7 @@ packages:
     resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==}
     dependencies:
       '@types/body-parser': 1.19.2
-      '@types/express-serve-static-core': 4.17.35
+      '@types/express-serve-static-core': 4.17.36
       '@types/qs': 6.9.7
       '@types/serve-static': 1.13.10
     dev: true

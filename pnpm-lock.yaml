@@ -87,11 +87,11 @@ devDependencies:
     specifier: 8.0.1
     version: 8.0.1
   chai:
-    specifier: 4.3.7
-    version: 4.3.7
+    specifier: 4.3.8
+    version: 4.3.8
   chai-as-promised:
     specifier: 7.1.1
-    version: 7.1.1(chai@4.3.7)
+    version: 7.1.1(chai@4.3.8)
   eslint:
     specifier: 8.47.0
     version: 8.47.0
@@ -142,7 +142,7 @@ devDependencies:
     version: 15.2.0
   sinon-chai:
     specifier: 3.7.0
-    version: 3.7.0(chai@4.3.7)(sinon@15.2.0)
+    version: 3.7.0(chai@4.3.8)(sinon@15.2.0)
   standard-version:
     specifier: 9.5.0
     version: 9.5.0
@@ -2073,17 +2073,17 @@ packages:
       redeyed: 2.1.1
     dev: true
 
-  /chai-as-promised@7.1.1(chai@4.3.7):
+  /chai-as-promised@7.1.1(chai@4.3.8):
     resolution: {integrity: sha512-azL6xMoi+uxu6z4rhWQ1jbdUhOMhis2PvscD/xjLqNMkv3BPPp2JyyuTHOrf9BOosGpNQ11v6BKv/g57RXbiaA==}
     peerDependencies:
       chai: '>= 2.1.2 < 5'
     dependencies:
-      chai: 4.3.7
+      chai: 4.3.8
       check-error: 1.0.2
     dev: true
 
-  /chai@4.3.7:
-    resolution: {integrity: sha512-HLnAzZ2iupm25PlN0xFreAlBA5zaBSv3og0DdeGA4Ar6h6rJ3A0rolRUKJhSF2V10GZKDgWF/VmAEsNWjCRB+A==}
+  /chai@4.3.8:
+    resolution: {integrity: sha512-vX4YvVVtxlfSZ2VecZgFUTU5qPCYsobVI2O9FmwEXBhDigYGQA6jRXCycIs1yJnnWbZ6/+a2zNIF5DfVCcJBFQ==}
     engines: {node: '>=4'}
     dependencies:
       assertion-error: 1.1.0
@@ -6179,13 +6179,13 @@ packages:
       pkg-conf: 2.1.0
     dev: true
 
-  /sinon-chai@3.7.0(chai@4.3.7)(sinon@15.2.0):
+  /sinon-chai@3.7.0(chai@4.3.8)(sinon@15.2.0):
     resolution: {integrity: sha512-mf5NURdUaSdnatJx3uhoBOrY9dtL19fiOtAdT1Azxg3+lNJFiuN0uzaU3xX1LeAfL17kHQhTAJgpsfhbMJMY2g==}
     peerDependencies:
       chai: ^4.0.0
       sinon: '>=4.0.0'
     dependencies:
-      chai: 4.3.7
+      chai: 4.3.8
       sinon: 15.2.0
     dev: true
 

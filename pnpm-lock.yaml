@@ -111,17 +111,17 @@ devDependencies:
     specifier: 10.2.0
     version: 10.2.0
   prettier:
-    specifier: 3.0.2
-    version: 3.0.2
+    specifier: 3.0.3
+    version: 3.0.3
   prettier-package-json:
     specifier: 2.8.0
     version: 2.8.0
   prettier-plugin-organize-imports:
     specifier: 3.2.3
-    version: 3.2.3(prettier@3.0.2)(typescript@5.2.2)
+    version: 3.2.3(prettier@3.0.3)(typescript@5.2.2)
   prettier-plugin-packagejson:
     specifier: 2.4.5
-    version: 2.4.5(prettier@3.0.2)
+    version: 2.4.5(prettier@3.0.3)
   prom-client:
     specifier: 14.2.0
     version: 14.2.0
@@ -5542,7 +5542,7 @@ packages:
       sort-order: 1.0.1
     dev: true
 
-  /prettier-plugin-organize-imports@3.2.3(prettier@3.0.2)(typescript@5.2.2):
+  /prettier-plugin-organize-imports@3.2.3(prettier@3.0.3)(typescript@5.2.2):
     resolution: {integrity: sha512-KFvk8C/zGyvUaE3RvxN2MhCLwzV6OBbFSkwZ2OamCrs9ZY4i5L77jQ/w4UmUr+lqX8qbaqVq6bZZkApn+IgJSg==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -5555,11 +5555,11 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 3.0.2
+      prettier: 3.0.3
       typescript: 5.2.2
     dev: true
 
-  /prettier-plugin-packagejson@2.4.5(prettier@3.0.2):
+  /prettier-plugin-packagejson@2.4.5(prettier@3.0.3):
     resolution: {integrity: sha512-glG71jE1gO3y5+JNAhC8X+4yrlN28rub6Aj461SKbaPie9RgMiHKcInH2Moi2VGOfkTXaEHBhg4uVMBqa+kBUA==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -5567,13 +5567,13 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.0.2
+      prettier: 3.0.3
       sort-package-json: 2.5.1
       synckit: 0.8.5
     dev: true
 
-  /prettier@3.0.2:
-    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
+  /prettier@3.0.3:
+    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true

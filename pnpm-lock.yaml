@@ -42,8 +42,8 @@ devDependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@21.0.3)
   '@types/chai':
-    specifier: 4.3.5
-    version: 4.3.5
+    specifier: 4.3.6
+    version: 4.3.6
   '@types/chai-as-promised':
     specifier: 7.1.5
     version: 7.1.5
@@ -1190,11 +1190,11 @@ packages:
   /@types/chai-as-promised@7.1.5:
     resolution: {integrity: sha512-jStwss93SITGBwt/niYrkf2C+/1KTeZCZl1LaeezTlqppAKeoQC7jxyqYuP72sxBGKCIbw7oHgbYssIRzT5FCQ==}
     dependencies:
-      '@types/chai': 4.3.5
+      '@types/chai': 4.3.6
     dev: true
 
-  /@types/chai@4.3.5:
-    resolution: {integrity: sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==}
+  /@types/chai@4.3.6:
+    resolution: {integrity: sha512-VOVRLM1mBxIRxydiViqPcKn6MIxZytrbMpd6RJLIWKxUNr3zux8no0Oc7kJx0WAPIitgZ0gkrDS+btlqQpubpw==}
     dev: true
 
   /@types/connect@3.4.35:
@@ -1334,7 +1334,7 @@ packages:
   /@types/sinon-chai@3.2.9:
     resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
     dependencies:
-      '@types/chai': 4.3.5
+      '@types/chai': 4.3.6
       '@types/sinon': 10.0.16
     dev: true
 

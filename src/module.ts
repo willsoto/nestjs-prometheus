@@ -40,7 +40,7 @@ export class PrometheusModule {
     }
     providers.push({
       provide: PROM_CONFIG,
-      useValue: {prefix: options?.prefix},
+      useValue: {prefix: options?.prefix || ''},
     })
 
     return {
@@ -64,6 +64,14 @@ export class PrometheusModule {
       providers: [
         ...providers,
         {
+          provide: PROM_CONFIG,
+          inject: [PROMETHEUS_OPTIONS],
+          useFactory(userOptions: PrometheusOptions) {
+
+            return { prefix: userOptions?.prefix || ''};
+          },
+        },
+        {
           provide: PROM_CLIENT,
           inject: [PROMETHEUS_OPTIONS],
           useFactory(userOptions: PrometheusOptions) {
@@ -81,7 +89,7 @@ export class PrometheusModule {
           inject: [PROMETHEUS_OPTIONS],
           useFactory(userOptions: PrometheusOptions) {
 
-            return { prefix: userOptions?.prefix };
+            return { prefix: userOptions?.prefix || ''};
           },
         }
       ],

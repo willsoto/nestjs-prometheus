@@ -2,6 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
 import { getToken, makeSummaryProvider } from "../../src";
+import {PROM_CONFIG} from "../../src/constants";
 
 describe("Summary", function () {
   let testingModule: TestingModule;
@@ -14,6 +15,12 @@ describe("Summary", function () {
           name: "controller_summary",
           help: "controller_summary_help",
         }),
+        {
+          provide: PROM_CONFIG,
+          useValue: {
+            prefix: ""
+          }
+        },
       ],
     }).compile();
 

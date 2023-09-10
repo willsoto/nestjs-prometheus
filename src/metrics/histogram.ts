@@ -1,8 +1,8 @@
-import { Provider } from "@nestjs/common";
+import {Provider} from "@nestjs/common";
 import * as client from "prom-client";
-import { getOrCreateMetric, getToken } from "./utils";
-import {PrometheusOptions, PrometheusPrefix} from "../interfaces";
-import {PROM_CONFIG, PROMETHEUS_OPTIONS} from "../constants";
+import {getOrCreateMetric, getToken} from "./utils";
+import {PrometheusPrefix} from "../interfaces";
+import {PROM_CONFIG} from "../constants";
 
 /**
  * @public

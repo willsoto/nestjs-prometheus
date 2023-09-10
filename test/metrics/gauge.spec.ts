@@ -2,6 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
 import { getToken, makeGaugeProvider } from "../../src";
+import {PROM_CONFIG} from "../../src/constants";
 
 describe("Gauge", function () {
   let testingModule: TestingModule;
@@ -10,6 +11,12 @@ describe("Gauge", function () {
   beforeEach(async function () {
     testingModule = await Test.createTestingModule({
       providers: [
+        {
+          provide: PROM_CONFIG,
+          useValue: {
+            prefix: ""
+          }
+        },
         makeGaugeProvider({
           name: "controller_gauge",
           help: "controller_gauge_help",

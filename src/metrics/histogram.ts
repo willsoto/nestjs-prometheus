@@ -1,6 +1,8 @@
 import { Provider } from "@nestjs/common";
 import * as client from "prom-client";
 import { getOrCreateMetric, getToken } from "./utils";
+import {PrometheusOptions, PrometheusPrefix} from "../interfaces";
+import {PROM_CONFIG, PROMETHEUS_OPTIONS} from "../constants";
 
 /**
  * @public
@@ -10,8 +12,10 @@ export function makeHistogramProvider(
 ): Provider {
   return {
     provide: getToken(options.name),
-    useFactory(): client.Metric<string> {
+    useFactory(config: PrometheusPrefix): client.Metric<string> {
+      options.name = config.prefix.concat(options.name);
       return getOrCreateMetric("Histogram", options);
     },
+    inject: [PROM_CONFIG]
   };
 }

@@ -5,7 +5,7 @@ import {
   Provider,
 } from "@nestjs/common";
 import * as promClient from "prom-client";
-import { PROMETHEUS_OPTIONS, PROM_CLIENT } from "./constants";
+import {PROMETHEUS_OPTIONS, PROM_CLIENT, PROM_CONFIG} from "./constants";
 import { PrometheusController } from "./controller";
 import {
   PrometheusAsyncOptions,
@@ -38,8 +38,13 @@ export class PrometheusModule {
         ),
       });
     }
+    providers.push({
+      provide: PROM_CONFIG,
+      useValue: {prefix: options?.prefix},
+    })
 
     return {
+      global: true,
       module: PrometheusModule,
       providers,
       controllers: [opts.controller],
@@ -52,6 +57,7 @@ export class PrometheusModule {
     const controller = options.controller ?? PrometheusController;
 
     return {
+      global: true,
       module: PrometheusModule,
       controllers: [controller],
       imports: options.imports,
@@ -69,7 +75,16 @@ export class PrometheusModule {
           },
         },
       ],
-      exports: [...providers],
+      exports: [...providers,
+        {
+          provide: PROM_CONFIG,
+          inject: [PROMETHEUS_OPTIONS],
+          useFactory(userOptions: PrometheusOptions) {
+
+            return { prefix: userOptions?.prefix };
+          },
+        }
+      ],
     };
   }
 
@@ -176,6 +191,7 @@ export class PrometheusModule {
     options?: PrometheusOptions,
   ): PrometheusOptionsWithDefaults {
     return {
+      prefix: "",
       path: "/metrics",
       defaultMetrics: {
         enabled: true,

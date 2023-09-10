@@ -1,7 +1,7 @@
 {
   "name": "@willsoto/nestjs-prometheus",
-  "version": "5.3.0",
-  "description": "NestJS module for Prometheus",
+  "version": "5.3.1",
+  "description": "NestJS module for Prometheus ",
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
@@ -12,12 +12,12 @@
     "typings"
   ],
   "scripts": {
-    "prebuild": "pnpm run clean",
+    "prebuild": "npm run clean",
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist coverage",
     "lint": "eslint . --fix",
     "prepare": "husky install",
-    "prerelease": "pnpm run build",
+    "prerelease": "npm run build",
     "release": "semantic-release",
     "test": "mocha",
     "test:coverage": "c8 mocha",
@@ -133,9 +133,9 @@
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "prom-client": "^13.0.0 || ^14.0.0"
   },
-  "packageManager": "pnpm@8.7.4",
+  "packageManager": "npm@8.7.4",
   "volta": {
     "node": "18.17.1",
-    "pnpm": "8.7.4"
+    "npm": "8.7.4"
   }
 }

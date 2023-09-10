@@ -1,5 +1,7 @@
 import { Provider } from "@nestjs/common";
 import * as client from "prom-client";
+import { PROMETHEUS_OPTIONS } from "../constants";
+import { PrometheusOptions } from "../interfaces";
 import { getOrCreateMetric, getToken } from "./utils";
 
 /**
@@ -10,8 +12,9 @@ export function makeSummaryProvider(
 ): Provider {
   return {
     provide: getToken(options.name),
-    useFactory(): client.Metric<string> {
-      return getOrCreateMetric("Summary", options);
+    useFactory(config?: PrometheusOptions): client.Metric<string> {
+      return getOrCreateMetric("Summary", options, config);
     },
+    inject: [PROMETHEUS_OPTIONS],
   };
 }

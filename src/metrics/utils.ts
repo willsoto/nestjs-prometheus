@@ -1,4 +1,5 @@
 import * as client from "prom-client";
+import { PrometheusOptions } from "../interfaces";
 
 /**
  * @internal
@@ -20,24 +21,31 @@ export type Options =
 export function getOrCreateMetric(
   type: Metrics,
   options: Options,
+  prometheusOptions?: PrometheusOptions,
 ): client.Metric<string> {
-  const existingMetric = client.register.getSingleMetric(options.name);
+  const opts: Options = {
+    ...options,
+    name: prometheusOptions?.customMetricPrefix
+      ? prometheusOptions.customMetricPrefix.concat("_", options.name)
+      : options.name,
+  };
 
+  const existingMetric = client.register.getSingleMetric(opts.name);
   if (existingMetric) {
     return existingMetric;
   }
 
   switch (type) {
     case "Gauge":
-      return new client.Gauge(options as client.GaugeConfiguration<string>);
+      return new client.Gauge(opts as client.GaugeConfiguration<string>);
     case "Counter":
-      return new client.Counter(options as client.CounterConfiguration<string>);
+      return new client.Counter(opts as client.CounterConfiguration<string>);
     case "Histogram":
       return new client.Histogram(
-        options as client.HistogramConfiguration<string>,
+        opts as client.HistogramConfiguration<string>,
       );
     case "Summary":
-      return new client.Summary(options as client.SummaryConfiguration<string>);
+      return new client.Summary(opts as client.SummaryConfiguration<string>);
     default:
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Unknown type: ${type}`);

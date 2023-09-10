@@ -27,6 +27,15 @@ export interface PrometheusDefaultMetrics {
  */
 export interface PrometheusOptions {
   /**
+   * Similar to `defaultMetrics.prefix`, this will be applied to each custom
+   * metric created using the various providers. Will suffix the given prefix
+   * with `_`.
+   *
+   * For example, given a metric name of "my_metric" and a prefix of "app"
+   * would create a metric name of `app_my_metric`
+   * */
+  customMetricPrefix?: string;
+  /**
    * A custom controller to be used instead of the default one. Only needs to be
    * provided if you need to do any kind of customization on the route, eg Swagger.
    *
@@ -72,7 +81,7 @@ export interface PrometheusOptions {
 }
 
 export type PrometheusOptionsWithDefaults = Required<
-  Omit<PrometheusOptions, "pushgateway">
+  Omit<PrometheusOptions, "pushgateway" | "customMetricPrefix">
 >;
 
 /**

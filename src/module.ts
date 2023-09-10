@@ -26,7 +26,12 @@ export class PrometheusModule {
 
     PrometheusModule.configureServer(opts);
 
-    const providers: Provider[] = [];
+    const providers: Provider[] = [
+      {
+        provide: PROMETHEUS_OPTIONS,
+        useValue: options,
+      },
+    ];
     if (options?.pushgateway !== undefined) {
       const { url, options: gatewayOptions, registry } = options.pushgateway;
       providers.push({

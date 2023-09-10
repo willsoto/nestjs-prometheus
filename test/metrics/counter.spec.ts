@@ -2,7 +2,12 @@ import { Injectable } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
-import { Counter, register } from "prom-client";
+import {
+  Counter,
+  MetricObjectWithValues,
+  MetricValue,
+  register,
+} from "prom-client";
 import {
   InjectMetric,
   PrometheusModule,
@@ -55,5 +60,11 @@ describe("Counter", function () {
     const service = testingModule.get(MyService);
 
     expect(service.counter).to.be.instanceOf(Counter);
+  });
+
+  it(`name has no prefix besides "controller_counter"`, async function () {
+    const metricValues: MetricObjectWithValues<MetricValue<string>> =
+      await metric.get();
+    expect(metricValues.name).to.equal("controller_counter");
   });
 });

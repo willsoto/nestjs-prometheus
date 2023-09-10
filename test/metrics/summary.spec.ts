@@ -40,7 +40,7 @@ describe("Summary", function () {
     expect(metric.observe).to.be.a("function");
   });
 
-  it("name has the prefix of APP", async function () {
+  it("should prefix the metric if provided", async function () {
     const metricValues: MetricObjectWithValues<MetricValue<string>> =
       await metric.get();
 

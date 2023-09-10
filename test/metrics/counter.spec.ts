@@ -62,7 +62,7 @@ describe("Counter", function () {
     expect(service.counter).to.be.instanceOf(Counter);
   });
 
-  it(`name has no prefix besides "controller_counter"`, async function () {
+  it("should not prefix the metric if not provided", async function () {
     const metricValues: MetricObjectWithValues<MetricValue<string>> =
       await metric.get();
     expect(metricValues.name).to.equal("controller_counter");

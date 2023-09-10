@@ -2,7 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
 import { getToken, makeHistogramProvider } from "../../src";
-import {PROM_CONFIG} from "../../src/constants";
+import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
 describe("Histogram", function () {
   let testingModule: TestingModule;
@@ -16,10 +16,10 @@ describe("Histogram", function () {
           help: "controller_histogram_help",
         }),
         {
-          provide: PROM_CONFIG,
+          provide: PROMETHEUS_OPTIONS,
           useValue: {
-            prefix: ""
-          }
+            prefix: "",
+          },
         },
       ],
     }).compile();

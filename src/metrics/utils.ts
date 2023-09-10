@@ -1,4 +1,5 @@
 import * as client from "prom-client";
+import { PrometheusOptions } from "../interfaces";
 
 /**
  * @internal
@@ -20,12 +21,17 @@ export type Options =
 export function getOrCreateMetric(
   type: Metrics,
   options: Options,
+  prometheusOptions?: PrometheusOptions,
 ): client.Metric<string> {
   const existingMetric = client.register.getSingleMetric(options.name);
 
   if (existingMetric) {
     return existingMetric;
   }
+
+  options.name = prometheusOptions?.prefix
+    ? prometheusOptions?.prefix.concat(options.name)
+    : options.name;
 
   switch (type) {
     case "Gauge":

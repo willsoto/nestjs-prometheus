@@ -1,7 +1,7 @@
 {
   "name": "@willsoto/nestjs-prometheus",
-  "version": "5.3.1",
-  "description": "NestJS module for Prometheus ",
+  "version": "5.3.0",
+  "description": "NestJS module for Prometheus",
   "repository": "git://github.com/willsoto/nestjs-prometheus.git",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",
@@ -12,12 +12,12 @@
     "typings"
   ],
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist coverage",
     "lint": "eslint . --fix",
     "prepare": "husky install",
-    "prerelease": "npm run build",
+    "prerelease": "pnpm run build",
     "release": "semantic-release",
     "test": "mocha",
     "test:coverage": "c8 mocha",
@@ -34,7 +34,7 @@
       "prettier --write"
     ],
     "*.{ts,js}": [
-      "npm run lint",
+      "pnpm run lint",
       "prettier --write"
     ],
     "README.md": [
@@ -50,7 +50,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
-      "@semantic-release/npm",
+      "@semantic-release/pnpm",
       "@semantic-release/changelog",
       "@semantic-release/git"
     ]
@@ -133,9 +133,9 @@
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "prom-client": "^13.0.0 || ^14.0.0"
   },
-  "packageManager": "npm@8.7.4",
+  "packageManager": "pnpm@8.7.4",
   "volta": {
     "node": "18.17.1",
-    "npm": "8.7.4"
+    "pnpm": "8.7.4"
   }
 }

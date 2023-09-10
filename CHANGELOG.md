@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.3.0...v5.4.0) (2023-09-10)
+
+
+### Features
+
+* add prefix to all injected metrics ([2375e42](https://github.com/willsoto/nestjs-prometheus/commit/2375e42c4b40203e9d09917ce6dd91390bb913b8))
+
 # [5.3.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.2.1...v5.3.0) (2023-08-12)
 
 

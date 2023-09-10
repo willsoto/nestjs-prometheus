@@ -34,7 +34,7 @@
       "prettier --write"
     ],
     "*.{ts,js}": [
-      "pnpm run lint",
+      "npm run lint",
       "prettier --write"
     ],
     "README.md": [
@@ -50,7 +50,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
-      "@semantic-release/pnpm",
+      "@semantic-release/npm",
       "@semantic-release/changelog",
       "@semantic-release/git"
     ]

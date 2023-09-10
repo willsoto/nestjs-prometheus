@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { expect } from "chai";
 import * as client from "prom-client";
-import * as sinon from "sinon";
+import { MetricObjectWithValues, MetricValue } from "prom-client";
 import { getToken, makeGaugeProvider } from "../../src";
 import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
@@ -14,7 +14,9 @@ describe("Gauge", function () {
       providers: [
         {
           provide: PROMETHEUS_OPTIONS,
-          useValue: sinon.stub(),
+          useValue: {
+            prefix: "APP",
+          },
         },
         makeGaugeProvider({
           name: "controller_gauge",
@@ -40,5 +42,11 @@ describe("Gauge", function () {
 
   it("has the appropriate methods (dec)", function () {
     expect(metric.dec).to.be.a("function");
+  });
+
+  it("name has the prefix of APP", async function () {
+    const metricValues: MetricObjectWithValues<MetricValue<string>> =
+      await metric.get();
+    expect(metricValues.name).to.contain("APP");
   });
 });

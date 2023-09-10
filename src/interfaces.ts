@@ -27,6 +27,10 @@ export interface PrometheusDefaultMetrics {
  */
 export interface PrometheusOptions {
   /**
+   * A custom prefix to all injected metrics
+   * */
+  prefix?: string;
+  /**
    * A custom controller to be used instead of the default one. Only needs to be
    * provided if you need to do any kind of customization on the route, eg Swagger.
    *
@@ -69,10 +73,6 @@ export interface PrometheusOptions {
     options?: unknown;
     registry?: client.Registry;
   };
-  /**
-   * A custom prefix to all injected metrics
-   * */
-  prefix?: string;
 }
 
 export type PrometheusOptionsWithDefaults = Required<
@@ -103,8 +103,4 @@ export interface PrometheusAsyncOptions
   useFactory?(
     ...args: unknown[]
   ): Promise<PrometheusOptions> | PrometheusOptions;
-}
-
-export interface PrometheusPrefix {
-  prefix: string;
 }

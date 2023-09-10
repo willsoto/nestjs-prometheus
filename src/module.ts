@@ -44,7 +44,6 @@ export class PrometheusModule {
     });
 
     return {
-      global: true,
       module: PrometheusModule,
       providers,
       controllers: [opts.controller],
@@ -57,7 +56,6 @@ export class PrometheusModule {
     const controller = options.controller ?? PrometheusController;
 
     return {
-      global: true,
       module: PrometheusModule,
       controllers: [controller],
       imports: options.imports,

@@ -23,27 +23,38 @@ export function getOrCreateMetric(
   options: Options,
   prometheusOptions?: PrometheusOptions,
 ): client.Metric<string> {
-  const existingMetric = client.register.getSingleMetric(options.name);
+  const optionsWithPrefix: Options = { ...options };
+  if (prometheusOptions?.prefix) {
+    optionsWithPrefix.name = prometheusOptions?.prefix.concat(
+      "_",
+      options.name,
+    );
+  }
 
+  const existingMetric = client.register.getSingleMetric(
+    optionsWithPrefix.name,
+  );
   if (existingMetric) {
     return existingMetric;
   }
 
-  options.name = prometheusOptions?.prefix
-    ? prometheusOptions?.prefix.concat(options.name)
-    : options.name;
-
   switch (type) {
     case "Gauge":
-      return new client.Gauge(options as client.GaugeConfiguration<string>);
+      return new client.Gauge(
+        optionsWithPrefix as client.GaugeConfiguration<string>,
+      );
     case "Counter":
-      return new client.Counter(options as client.CounterConfiguration<string>);
+      return new client.Counter(
+        optionsWithPrefix as client.CounterConfiguration<string>,
+      );
     case "Histogram":
       return new client.Histogram(
-        options as client.HistogramConfiguration<string>,
+        optionsWithPrefix as client.HistogramConfiguration<string>,
       );
     case "Summary":
-      return new client.Summary(options as client.SummaryConfiguration<string>);
+      return new client.Summary(
+        optionsWithPrefix as client.SummaryConfiguration<string>,
+      );
     default:
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Unknown type: ${type}`);

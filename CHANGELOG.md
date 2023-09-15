@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.4.0...v5.5.0) (2023-09-15)
+
+
+### Features
+
+* allow the module to be registered as global ([113c02a](https://github.com/willsoto/nestjs-prometheus/commit/113c02abd155a4b91d7ab9367b3158dcda3604a3))
+
 # [5.4.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.3.0...v5.4.0) (2023-09-10)
 
 

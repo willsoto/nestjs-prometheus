@@ -27,6 +27,10 @@ export interface PrometheusDefaultMetrics {
  */
 export interface PrometheusOptions {
   /**
+   * Make the module global when set to true
+   * */
+  global?: boolean;
+  /**
    * Similar to `defaultMetrics.prefix`, this will be applied to each custom
    * metric created using the various providers. Will suffix the given prefix
    * with `_`.
@@ -98,6 +102,8 @@ export interface PrometheusOptionsFactory {
  */
 export interface PrometheusAsyncOptions
   extends Pick<ModuleMetadata, "imports"> {
+  global?: boolean;
+
   useExisting?: Type<PrometheusOptionsFactory>;
   useClass?: Type<PrometheusOptionsFactory>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

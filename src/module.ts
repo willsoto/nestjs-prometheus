@@ -46,6 +46,7 @@ export class PrometheusModule {
 
     return {
       module: PrometheusModule,
+      global: opts.global,
       providers,
       controllers: [opts.controller],
       exports: providers,
@@ -58,6 +59,7 @@ export class PrometheusModule {
 
     return {
       module: PrometheusModule,
+      global: options.global,
       controllers: [controller],
       imports: options.imports,
       providers: [
@@ -181,6 +183,7 @@ export class PrometheusModule {
     options?: PrometheusOptions,
   ): PrometheusOptionsWithDefaults {
     return {
+      global: false,
       path: "/metrics",
       defaultMetrics: {
         enabled: true,

@@ -121,7 +121,7 @@
     "reflect-metadata": "0.1.13",
     "rimraf": "5.0.1",
     "rxjs": "7.8.1",
-    "semantic-release": "21.1.2",
+    "semantic-release": "22.0.0",
     "sinon": "16.0.0",
     "sinon-chai": "3.7.0",
     "standard-version": "9.5.0",

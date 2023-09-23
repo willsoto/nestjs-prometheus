@@ -11,6 +11,9 @@
   - [Configuring the default metrics](#configuring-the-default-metrics)
 - [Injecting individual metrics](#injecting-individual-metrics)
 - [Setting default labels](#setting-default-labels)
+- [Prefixing custom metrics](#prefixing-custom-metrics)
+  - [Option 1 (recommended)](#option-1-recommended)
+  - [Option 2 (not recommended)](#option-2-not-recommended)
 - [Available metrics](#available-metrics)
   - [Counter](#counter)
   - [Gauge](#gauge)
@@ -125,8 +128,8 @@ export class AppModule {}
 ```typescript
 // service.ts
 import { Injectable } from "@nestjs/common";
-import { Counter } from "prom-client";
 import { InjectMetric } from "@willsoto/nestjs-prometheus";
+import { Counter } from "prom-client";
 
 @Injectable()
 export class Service {
@@ -154,8 +157,27 @@ export class AppModule {}
 
 See the [docs](https://github.com/siimon/prom-client#default-labels-segmented-by-registry) for more information.
 
+## Prefixing custom metrics
+
+You can add a custom prefix to all custom metrics by providing the `customMetricPrefix` option to the module configuration.
+
+Some caveats:
+
+In order to have the custom metrics registered in different modules from where the `PrometheusModule` was registered, you must do one of a few things:
+
+### Option 1 (recommended)
+
+1. Add the `PrometheusModule` to the `exports` of the registering `Module`. It may be useful to create a `CommonModule` that registers and exports the `PrometheusModule`.
+2. Import that module into whatever module you are creating the custom metrics.
+
+### Option 2 (not recommended)
+
+1. Mark the `PrometheusModule` as `global`
+
 ## Available metrics
 
+<!-- Prettier will delete these imports as they are unused. So we ignore these blocks. -->
+<!-- prettier-ignore-start -->
 #### [Counter](https://github.com/siimon/prom-client#counter)
 
 ```typescript
@@ -179,6 +201,7 @@ import { makeHistogramProvider } from "@willsoto/nestjs-prometheus";
 ```typescript
 import { makeSummaryProvider } from "@willsoto/nestjs-prometheus";
 ```
+<!-- prettier-ignore-end -->
 
 ## Providing a custom controller
 
@@ -189,8 +212,8 @@ Here is a basic example which should be enough to extend or customize in any way
 
 ```typescript
 // my-custom-controller.ts
-import { PrometheusController } from "@willsoto/nestjs-prometheus";
 import { Controller, Get, Res } from "@nestjs/common";
+import { PrometheusController } from "@willsoto/nestjs-prometheus";
 import { Response } from "express";
 
 @Controller()
@@ -238,7 +261,7 @@ export class AppModule {}
 ```
 
 ```typescript
-import { Injectable, Inject } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import * as client from "prom-client";
 
 @Injectable()

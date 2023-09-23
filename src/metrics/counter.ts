@@ -15,6 +15,11 @@ export function makeCounterProvider(
     useFactory(config?: PrometheusOptions): client.Metric<string> {
       return getOrCreateMetric("Counter", options, config);
     },
-    inject: [PROMETHEUS_OPTIONS],
+    inject: [
+      {
+        token: PROMETHEUS_OPTIONS,
+        optional: true,
+      },
+    ],
   };
 }

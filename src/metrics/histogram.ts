@@ -15,6 +15,11 @@ export function makeHistogramProvider(
     useFactory(config?: PrometheusOptions): client.Metric<string> {
       return getOrCreateMetric("Histogram", options, config);
     },
-    inject: [PROMETHEUS_OPTIONS],
+    inject: [
+      {
+        token: PROMETHEUS_OPTIONS,
+        optional: true,
+      },
+    ],
   };
 }

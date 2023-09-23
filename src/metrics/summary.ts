@@ -15,6 +15,11 @@ export function makeSummaryProvider(
     useFactory(config?: PrometheusOptions): client.Metric<string> {
       return getOrCreateMetric("Summary", options, config);
     },
-    inject: [PROMETHEUS_OPTIONS],
+    inject: [
+      {
+        token: PROMETHEUS_OPTIONS,
+        optional: true,
+      },
+    ],
   };
 }

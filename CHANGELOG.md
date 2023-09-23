@@ -1,3 +1,10 @@
+## [5.5.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.5.0...v5.5.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* **metrics:** mark PROMETHEUS_OPTIONS as optional ([ba6b75b](https://github.com/willsoto/nestjs-prometheus/commit/ba6b75b2d2fa43cb154ff11cd3576f6c68b34001)), closes [#1900](https://github.com/willsoto/nestjs-prometheus/issues/1900)
+
 # [5.5.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.4.0...v5.5.0) (2023-09-15)
 
 

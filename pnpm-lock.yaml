@@ -72,8 +72,8 @@ devDependencies:
     specifier: 10.0.17
     version: 10.0.17
   '@types/sinon-chai':
-    specifier: 3.2.9
-    version: 3.2.9
+    specifier: 3.2.10
+    version: 3.2.10
   '@types/supertest':
     specifier: 2.0.12
     version: 2.0.12
@@ -1320,8 +1320,8 @@ packages:
       '@types/node': 18.17.19
     dev: true
 
-  /@types/sinon-chai@3.2.9:
-    resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
+  /@types/sinon-chai@3.2.10:
+    resolution: {integrity: sha512-D+VFqUjMqeku/FGl4Ioo+fDeWOaIfbZ6Oj+glgFUgz5m5RJ4kgCER3FdV1uvhmEt0A+FRz+juPdybFlg5Hxfow==}
     dependencies:
       '@types/chai': 4.3.6
       '@types/sinon': 10.0.17

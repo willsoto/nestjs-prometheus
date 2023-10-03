@@ -99,7 +99,7 @@
     "@types/node": "18.18.3",
     "@types/prettier": "2.7.3",
     "@types/rimraf": "3.0.2",
-    "@types/sinon": "10.0.17",
+    "@types/sinon": "10.0.18",
     "@types/sinon-chai": "3.2.10",
     "@types/supertest": "2.0.13",
     "@typescript-eslint/eslint-plugin": "6.7.4",

@@ -69,8 +69,8 @@ devDependencies:
     specifier: 3.0.2
     version: 3.0.2
   '@types/sinon':
-    specifier: 10.0.18
-    version: 10.0.18
+    specifier: 10.0.19
+    version: 10.0.19
   '@types/sinon-chai':
     specifier: 3.2.10
     version: 3.2.10
@@ -1324,11 +1324,11 @@ packages:
     resolution: {integrity: sha512-D+VFqUjMqeku/FGl4Ioo+fDeWOaIfbZ6Oj+glgFUgz5m5RJ4kgCER3FdV1uvhmEt0A+FRz+juPdybFlg5Hxfow==}
     dependencies:
       '@types/chai': 4.3.6
-      '@types/sinon': 10.0.18
+      '@types/sinon': 10.0.19
     dev: true
 
-  /@types/sinon@10.0.18:
-    resolution: {integrity: sha512-OpQC9ug8BcnNxue2WF5aTruMaDRFn6NyfaE4DmAKOlQMn54b7CnCvDFV3wj5fk/HbSSTYmOYs2bTb5ShANjyQg==}
+  /@types/sinon@10.0.19:
+    resolution: {integrity: sha512-MWZNGPSchIdDfb5FL+VFi4zHsHbNOTQEgjqFQk7HazXSXwUU9PAX3z9XBqb3AJGYr9YwrtCtaSMsT3brYsN/jQ==}
     dependencies:
       '@types/sinonjs__fake-timers': 8.1.2
     dev: true

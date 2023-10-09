@@ -5,6 +5,7 @@ import {
   Provider,
 } from "@nestjs/common";
 import * as promClient from "prom-client";
+import { RegistryContentType } from "prom-client";
 import { PROMETHEUS_OPTIONS, PROM_CLIENT } from "./constants";
 import { PrometheusController } from "./controller";
 import {
@@ -21,7 +22,9 @@ import {
  */
 @Module({})
 export class PrometheusModule {
-  public static register(options?: PrometheusOptions): DynamicModule {
+  public static register<T extends RegistryContentType>(
+    options?: PrometheusOptions<T>,
+  ): DynamicModule {
     const opts = PrometheusModule.makeDefaultOptions(options);
 
     PrometheusModule.configureServer(opts);
@@ -53,7 +56,9 @@ export class PrometheusModule {
     };
   }
 
-  public static registerAsync(options: PrometheusAsyncOptions): DynamicModule {
+  public static registerAsync<T extends RegistryContentType>(
+    options: PrometheusAsyncOptions<T>,
+  ): DynamicModule {
     const providers = this.createAsyncProviders(options);
     const controller = options.controller ?? PrometheusController;
 
@@ -67,7 +72,9 @@ export class PrometheusModule {
         {
           provide: PROM_CLIENT,
           inject: [PROMETHEUS_OPTIONS],
-          useFactory(userOptions: PrometheusOptions) {
+          useFactory<T extends RegistryContentType>(
+            userOptions: PrometheusOptions<T>,
+          ) {
             const opts = PrometheusModule.makeDefaultOptions(userOptions);
 
             PrometheusModule.configureServer(opts);
@@ -80,8 +87,8 @@ export class PrometheusModule {
     };
   }
 
-  public static createAsyncProviders(
-    options: PrometheusAsyncOptions,
+  public static createAsyncProviders<T extends RegistryContentType>(
+    options: PrometheusAsyncOptions<T>,
   ): Provider[] {
     if (options.useExisting || options.useFactory) {
       return [
@@ -104,8 +111,8 @@ export class PrometheusModule {
     ];
   }
 
-  public static createAsyncOptionsProvider(
-    options: PrometheusAsyncOptions,
+  public static createAsyncOptionsProvider<T extends RegistryContentType>(
+    options: PrometheusAsyncOptions<T>,
   ): Provider {
     if (options.useFactory) {
       return {
@@ -126,16 +133,18 @@ export class PrometheusModule {
 
     return {
       provide: PROMETHEUS_OPTIONS,
-      async useFactory(
-        optionsFactory: PrometheusOptionsFactory,
-      ): Promise<PrometheusOptions> {
+      async useFactory<T extends RegistryContentType>(
+        optionsFactory: PrometheusOptionsFactory<T>,
+      ): Promise<PrometheusOptions<T>> {
         return optionsFactory.createPrometheusOptions();
       },
       inject: [inject],
     };
   }
 
-  private static configureServer(options: PrometheusOptionsWithDefaults): void {
+  private static configureServer<T extends RegistryContentType>(
+    options: PrometheusOptionsWithDefaults<T>,
+  ): void {
     if (options.defaultMetrics.enabled) {
       promClient.collectDefaultMetrics(options.defaultMetrics.config);
     }
@@ -147,11 +156,11 @@ export class PrometheusModule {
     Reflect.defineMetadata("path", options.path, options.controller);
   }
 
-  private static configurePushgateway(
+  private static configurePushgateway<T extends RegistryContentType>(
     url: string,
     options?: unknown,
     registry?: promClient.Registry,
-  ): promClient.Pushgateway {
+  ): promClient.Pushgateway<T> {
     return new promClient.Pushgateway(url, options, registry);
   }
 
@@ -159,7 +168,7 @@ export class PrometheusModule {
     return {
       provide: promClient.Pushgateway,
       inject: [PROMETHEUS_OPTIONS],
-      useFactory(options: PrometheusOptions) {
+      useFactory<T extends RegistryContentType>(options: PrometheusOptions<T>) {
         if (options?.pushgateway !== undefined) {
           const {
             url,
@@ -179,9 +188,9 @@ export class PrometheusModule {
     };
   }
 
-  private static makeDefaultOptions(
-    options?: PrometheusOptions,
-  ): PrometheusOptionsWithDefaults {
+  private static makeDefaultOptions<T extends RegistryContentType>(
+    options?: PrometheusOptions<T>,
+  ): PrometheusOptionsWithDefaults<T> {
     return {
       global: false,
       path: "/metrics",

@@ -1,7 +1,7 @@
 import { Injectable, Module } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import { expect } from "chai";
-import { Pushgateway, register } from "prom-client";
+import { PrometheusContentType, Pushgateway, register } from "prom-client";
 import {
   PrometheusModule,
   PrometheusOptions,
@@ -23,7 +23,9 @@ describe("Pushgateway", function () {
 
   @Injectable()
   class MockService {
-    constructor(public readonly pushgateway: Pushgateway) {}
+    constructor(
+      public readonly pushgateway: Pushgateway<PrometheusContentType>,
+    ) {}
   }
 
   @Module({

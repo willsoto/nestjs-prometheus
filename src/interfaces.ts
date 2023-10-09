@@ -1,13 +1,16 @@
 import { Type } from "@nestjs/common";
 import { ModuleMetadata } from "@nestjs/common/interfaces";
 import * as client from "prom-client";
+import { PrometheusContentType, RegistryContentType } from "prom-client";
 
 /**
  * Configuration for the defaultMetrics collected by `prom-client`.
  *
  * @public
  */
-export interface PrometheusDefaultMetrics {
+export interface PrometheusDefaultMetrics<
+  T extends RegistryContentType = PrometheusContentType,
+> {
   /**
    * Whether or not default metrics are collected.
    *
@@ -17,7 +20,7 @@ export interface PrometheusDefaultMetrics {
   /**
    * {@link https://github.com/siimon/prom-client#default-metrics | Default Metrics}
    */
-  config?: client.DefaultMetricsCollectorConfiguration;
+  config?: client.DefaultMetricsCollectorConfiguration<T>;
 }
 
 /**
@@ -25,7 +28,9 @@ export interface PrometheusDefaultMetrics {
  *
  * @public
  */
-export interface PrometheusOptions {
+export interface PrometheusOptions<
+  T extends RegistryContentType = PrometheusContentType,
+> {
   /**
    * Make the module global when set to true
    * */
@@ -68,7 +73,7 @@ export interface PrometheusOptions {
    */
   path?: string;
   /** {@inheritDoc PrometheusDefaultMetrics} */
-  defaultMetrics?: PrometheusDefaultMetrics;
+  defaultMetrics?: PrometheusDefaultMetrics<T>;
   /**
    * Will be passed into `setDefaultLabels`
    *
@@ -84,15 +89,19 @@ export interface PrometheusOptions {
   };
 }
 
-export type PrometheusOptionsWithDefaults = Required<
-  Omit<PrometheusOptions, "pushgateway" | "customMetricPrefix">
->;
+export type PrometheusOptionsWithDefaults<
+  T extends RegistryContentType = PrometheusContentType,
+> = Required<Omit<PrometheusOptions<T>, "pushgateway" | "customMetricPrefix">>;
 
 /**
  * @internal
  */
-export interface PrometheusOptionsFactory {
-  createPrometheusOptions(): Promise<PrometheusOptions> | PrometheusOptions;
+export interface PrometheusOptionsFactory<
+  T extends RegistryContentType = PrometheusContentType,
+> {
+  createPrometheusOptions():
+    | Promise<PrometheusOptions<T>>
+    | PrometheusOptions<T>;
 }
 
 /**
@@ -100,18 +109,19 @@ export interface PrometheusOptionsFactory {
  *
  * @public
  */
-export interface PrometheusAsyncOptions
-  extends Pick<ModuleMetadata, "imports"> {
+export interface PrometheusAsyncOptions<
+  T extends RegistryContentType = PrometheusContentType,
+> extends Pick<ModuleMetadata, "imports"> {
   global?: boolean;
 
-  useExisting?: Type<PrometheusOptionsFactory>;
-  useClass?: Type<PrometheusOptionsFactory>;
+  useExisting?: Type<PrometheusOptionsFactory<T>>;
+  useClass?: Type<PrometheusOptionsFactory<T>>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   inject?: any[];
 
   /** {@inheritDoc PrometheusOptions.controller} */
-  controller?: PrometheusOptions["controller"];
+  controller?: PrometheusOptions<T>["controller"];
   useFactory?(
     ...args: unknown[]
-  ): Promise<PrometheusOptions> | PrometheusOptions;
+  ): Promise<PrometheusOptions<T>> | PrometheusOptions<T>;
 }

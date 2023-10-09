@@ -1,4 +1,5 @@
 import * as client from "prom-client";
+import { PrometheusContentType, RegistryContentType } from "prom-client";
 import { PrometheusOptions } from "../interfaces";
 
 /**
@@ -18,10 +19,12 @@ export type Options =
 /**
  * @internal
  */
-export function getOrCreateMetric(
+export function getOrCreateMetric<
+  T extends RegistryContentType = PrometheusContentType,
+>(
   type: Metrics,
   options: Options,
-  prometheusOptions?: PrometheusOptions,
+  prometheusOptions?: PrometheusOptions<T>,
 ): client.Metric<string> {
   const opts: Options = {
     ...options,

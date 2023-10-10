@@ -1,3 +1,17 @@
+# [6.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.5.1...v6.0.0) (2023-10-10)
+
+
+### Features
+
+* support prom-client v15 ([cd62351](https://github.com/willsoto/nestjs-prometheus/commit/cd62351247255121b3f690f1c4072ac2dbddab8a))
+
+
+### BREAKING CHANGES
+
+* dropped support for clients less than v15
+
+Signed-off-by: Will Soto <willsoto@users.noreply.github.com>
+
 ## [5.5.1](https://github.com/willsoto/nestjs-prometheus/compare/v5.5.0...v5.5.1) (2023-09-23)
 
 

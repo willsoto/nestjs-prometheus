@@ -92,7 +92,7 @@
     "@semantic-release/git": "10.0.1",
     "@types/chai": "4.3.7",
     "@types/chai-as-promised": "7.1.6",
-    "@types/eslint": "8.44.3",
+    "@types/eslint": "8.44.4",
     "@types/express": "4.17.18",
     "@types/express-serve-static-core": "4.17.37",
     "@types/mocha": "10.0.2",

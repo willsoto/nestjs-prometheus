@@ -78,7 +78,7 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "18.1.0",
+    "@commitlint/cli": "18.2.0",
     "@commitlint/config-conventional": "18.1.0",
     "@fastify/compress": "6.5.0",
     "@nestjs/cli": "10.2.1",

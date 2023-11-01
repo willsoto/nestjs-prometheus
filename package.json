@@ -121,7 +121,7 @@
     "rimraf": "5.0.5",
     "rxjs": "7.8.1",
     "semantic-release": "22.0.6",
-    "sinon": "17.0.0",
+    "sinon": "17.0.1",
     "sinon-chai": "3.7.0",
     "standard-version": "9.5.0",
     "supertest": "6.3.3",

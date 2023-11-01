@@ -132,10 +132,10 @@
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "prom-client": "^15.0.0"
   },
-  "packageManager": "pnpm@8.10.0",
+  "packageManager": "pnpm@8.10.2",
   "volta": {
     "node": "20.9.0",
-    "pnpm": "8.10.0"
+    "pnpm": "8.10.2"
   },
   "pnpm": {
     "peerDependencyRules": {

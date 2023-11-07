@@ -45,8 +45,8 @@ devDependencies:
     specifier: 4.3.9
     version: 4.3.9
   '@types/chai-as-promised':
-    specifier: 7.1.7
-    version: 7.1.7
+    specifier: 7.1.8
+    version: 7.1.8
   '@types/eslint':
     specifier: 8.44.6
     version: 8.44.6
@@ -1196,8 +1196,8 @@ packages:
       '@types/node': 20.8.10
     dev: true
 
-  /@types/chai-as-promised@7.1.7:
-    resolution: {integrity: sha512-APucaP5rlmTRYKtRA6FE5QPP87x76ejw5t5guRJ4y5OgMnwtsvigw7HHhKZlx2MGXLeZd6R/GNZR/IqDHcbtQw==}
+  /@types/chai-as-promised@7.1.8:
+    resolution: {integrity: sha512-ThlRVIJhr69FLlh6IctTXFkmhtP3NpMZ2QGq69StYLyKZFp/HOp1VdKZj7RvfNWYYcJ1xlbLGLLWj1UvP5u/Gw==}
     dependencies:
       '@types/chai': 4.3.9
     dev: true

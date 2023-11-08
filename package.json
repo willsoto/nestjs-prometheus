@@ -100,7 +100,7 @@
     "@types/prettier": "2.7.3",
     "@types/rimraf": "3.0.2",
     "@types/sinon": "17.0.1",
-    "@types/sinon-chai": "3.2.11",
+    "@types/sinon-chai": "3.2.12",
     "@types/supertest": "2.0.15",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",

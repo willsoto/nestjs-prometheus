@@ -87,11 +87,11 @@ devDependencies:
     specifier: 9.0.0
     version: 9.0.0
   chai:
-    specifier: 4.3.10
-    version: 4.3.10
+    specifier: 4.4.0
+    version: 4.4.0
   chai-as-promised:
     specifier: 7.1.1
-    version: 7.1.1(chai@4.3.10)
+    version: 7.1.1(chai@4.4.0)
   eslint:
     specifier: 8.56.0
     version: 8.56.0
@@ -139,7 +139,7 @@ devDependencies:
     version: 17.0.1
   sinon-chai:
     specifier: 3.7.0
-    version: 3.7.0(chai@4.3.10)(sinon@17.0.1)
+    version: 3.7.0(chai@4.4.0)(sinon@17.0.1)
   standard-version:
     specifier: 9.5.0
     version: 9.5.0
@@ -2083,17 +2083,17 @@ packages:
       redeyed: 2.1.1
     dev: true
 
-  /chai-as-promised@7.1.1(chai@4.3.10):
+  /chai-as-promised@7.1.1(chai@4.4.0):
     resolution: {integrity: sha512-azL6xMoi+uxu6z4rhWQ1jbdUhOMhis2PvscD/xjLqNMkv3BPPp2JyyuTHOrf9BOosGpNQ11v6BKv/g57RXbiaA==}
     peerDependencies:
       chai: '>= 2.1.2 < 5'
     dependencies:
-      chai: 4.3.10
+      chai: 4.4.0
       check-error: 1.0.2
     dev: true
 
-  /chai@4.3.10:
-    resolution: {integrity: sha512-0UXG04VuVbruMUYbJ6JctvH0YnC/4q3/AkT18q4NaITo91CUm0liMS9VqzT9vZhVQ/1eqPanMWjBM+Juhfb/9g==}
+  /chai@4.4.0:
+    resolution: {integrity: sha512-x9cHNq1uvkCdU+5xTkNh5WtgD4e4yDFCsp9jVc7N7qVeKeftv3gO/ZrviX5d+3ZfxdYnZXZYujjRInu1RogU6A==}
     engines: {node: '>=4'}
     dependencies:
       assertion-error: 1.1.0
@@ -4658,6 +4658,7 @@ packages:
 
   /loupe@2.3.6:
     resolution: {integrity: sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==}
+    deprecated: Please upgrade to 2.3.7 which fixes GHSA-4q6p-r6v2-jvc5
     dependencies:
       get-func-name: 2.0.2
     dev: true
@@ -6259,13 +6260,13 @@ packages:
       pkg-conf: 2.1.0
     dev: true
 
-  /sinon-chai@3.7.0(chai@4.3.10)(sinon@17.0.1):
+  /sinon-chai@3.7.0(chai@4.4.0)(sinon@17.0.1):
     resolution: {integrity: sha512-mf5NURdUaSdnatJx3uhoBOrY9dtL19fiOtAdT1Azxg3+lNJFiuN0uzaU3xX1LeAfL17kHQhTAJgpsfhbMJMY2g==}
     peerDependencies:
       chai: ^4.0.0
       sinon: '>=4.0.0'
     dependencies:
-      chai: 4.3.10
+      chai: 4.4.0
       sinon: 17.0.1
     dev: true
 

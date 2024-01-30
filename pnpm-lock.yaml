@@ -12,8 +12,8 @@ devDependencies:
     specifier: 18.6.0
     version: 18.6.0
   '@fastify/compress':
-    specifier: 6.5.0
-    version: 6.5.0
+    specifier: 7.0.0
+    version: 7.0.0
   '@nestjs/cli':
     specifier: 10.3.0
     version: 10.3.0
@@ -460,8 +460,8 @@ packages:
       fast-uri: 2.1.0
     dev: true
 
-  /@fastify/compress@6.5.0:
-    resolution: {integrity: sha512-AqUOK714jY7qkzbQbS4zyI4yNFgnRoOJ3eH/oV1T9f5fFdPDRdrFxm5de1ya5n+as4bvitjwU9EY7zvtT9pI2A==}
+  /@fastify/compress@7.0.0:
+    resolution: {integrity: sha512-jo/NaBVHP1OXIf8Kmr3bZyYQB0gAIgcy5c8rRKTPjhklHO7lRs/6ZFckUVT0NtbKSvrTuIcmSkxYpjyv3FNHXA==}
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       fastify-plugin: 4.5.1
@@ -3672,7 +3672,7 @@ packages:
       foreground-child: 3.1.1
       jackspeak: 2.1.0
       minimatch: 9.0.3
-      minipass: 6.0.2
+      minipass: 7.0.4
       path-scurry: 1.10.1
     dev: true
 
@@ -4874,11 +4874,6 @@ packages:
   /minipass@4.2.5:
     resolution: {integrity: sha512-+yQl7SX3bIT83Lhb4BVorMAHVuqsskxRdlmO9kTpyukp8vsm2Sn/fUOV9xlnG8/a5JsypJzap21lz/y3FBMJ8Q==}
     engines: {node: '>=8'}
-    dev: true
-
-  /minipass@6.0.2:
-    resolution: {integrity: sha512-MzWSV5nYVT7mVyWCwn2o7JH13w2TBRmmSqSRCKzTw+lmft9X4z+3wjvs06Tzijo5z4W/kahUCDpRXTF+ZrmF/w==}
-    engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
   /minipass@7.0.4:

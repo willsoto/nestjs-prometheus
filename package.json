@@ -134,7 +134,7 @@
   },
   "packageManager": "pnpm@8.15.2",
   "volta": {
-    "node": "20.11.0",
+    "node": "20.11.1",
     "pnpm": "8.15.2"
   },
   "pnpm": {

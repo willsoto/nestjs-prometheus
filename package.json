@@ -90,7 +90,7 @@
     "@nestjs/testing": "10.3.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/chai": "4.3.11",
+    "@types/chai": "4.3.12",
     "@types/chai-as-promised": "7.1.8",
     "@types/eslint": "8.56.3",
     "@types/express": "4.17.21",

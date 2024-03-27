@@ -12,8 +12,8 @@ devDependencies:
     specifier: 19.1.0
     version: 19.1.0
   '@fastify/compress':
-    specifier: 7.0.0
-    version: 7.0.0
+    specifier: 7.0.1
+    version: 7.0.1
   '@nestjs/cli':
     specifier: 10.3.2
     version: 10.3.2
@@ -459,8 +459,8 @@ packages:
       fast-uri: 2.1.0
     dev: true
 
-  /@fastify/compress@7.0.0:
-    resolution: {integrity: sha512-jo/NaBVHP1OXIf8Kmr3bZyYQB0gAIgcy5c8rRKTPjhklHO7lRs/6ZFckUVT0NtbKSvrTuIcmSkxYpjyv3FNHXA==}
+  /@fastify/compress@7.0.1:
+    resolution: {integrity: sha512-Vj7DyXxdVRJD84Z/MxFz+lBWnFL1y892grSw8tdBFKZiPY+oM1LqjTjLzgwVqkviNhUsiE4xxVtiRDz6IrnL6w==}
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       fastify-plugin: 4.5.1

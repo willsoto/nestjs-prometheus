@@ -96,7 +96,7 @@
     "@types/express": "4.17.21",
     "@types/express-serve-static-core": "4.17.43",
     "@types/mocha": "10.0.6",
-    "@types/node": "20.12.2",
+    "@types/node": "20.12.3",
     "@types/prettier": "3.0.0",
     "@types/rimraf": "4.0.5",
     "@types/sinon": "17.0.3",

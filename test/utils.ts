@@ -1,4 +1,5 @@
 import { INestApplication } from "@nestjs/common";
+import { NestExpressApplication } from "@nestjs/platform-express";
 import { Test, TestingModule } from "@nestjs/testing";
 import * as request from "supertest";
 import {
@@ -6,8 +7,9 @@ import {
   PrometheusModule,
   PrometheusOptions,
 } from "../src";
+import TestAgent = require("supertest/lib/agent");
 
-export type Agent = request.SuperTest<request.Test>;
+export type Agent = TestAgent<request.Test>;
 export type App = INestApplication;
 
 export interface TestHarness {
@@ -23,7 +25,7 @@ export async function createPrometheusModule(
     imports: [PrometheusModule.register(options)],
   }).compile();
 
-  const app = testingModule.createNestApplication();
+  const app = testingModule.createNestApplication<NestExpressApplication>();
   await app.init();
 
   const agent = request(app.getHttpServer());
@@ -42,7 +44,7 @@ export async function createAsyncPrometheusModule(
     imports: [PrometheusModule.registerAsync(options)],
   }).compile();
 
-  const app = testingModule.createNestApplication();
+  const app = testingModule.createNestApplication<NestExpressApplication>();
   await app.init();
 
   const agent = request(app.getHttpServer());

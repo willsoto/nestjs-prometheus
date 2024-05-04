@@ -1,4 +1,4 @@
-import { INestApplication } from "@nestjs/common";
+import { NestExpressApplication } from "@nestjs/platform-express";
 import { Test } from "@nestjs/testing";
 import { expect } from "chai";
 import { register } from "prom-client";
@@ -8,7 +8,7 @@ import { CoreModule } from "./fixtures/core.module";
 import { ResourceController } from "./fixtures/resource.controller";
 
 describe("End-to-end", function () {
-  let app: INestApplication;
+  let app: NestExpressApplication;
 
   after(async function () {
     register.clear();
@@ -22,7 +22,7 @@ describe("End-to-end", function () {
         controllers: [ResourceController],
       }).compile();
 
-      app = testingModule.createNestApplication();
+      app = testingModule.createNestApplication<NestExpressApplication>();
       await app.init();
     });
 

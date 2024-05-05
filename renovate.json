@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:base", "group:typescript-eslintMonorepo"],
   "automerge": true,
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "ignoreDeps": ["chai"]
 }

@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.0...v6.0.1) (2024-06-06)
+
+
+### Bug Fixes
+
+* don't allow controller to be declared on options ([6924ffa](https://github.com/willsoto/nestjs-prometheus/commit/6924ffa79f3bac84255263659c7d1c253fc9dfa2)), closes [#2279](https://github.com/willsoto/nestjs-prometheus/issues/2279)
+
 # [6.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v5.5.1...v6.0.0) (2023-10-10)
 
 

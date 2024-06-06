@@ -94,7 +94,7 @@ export type PrometheusOptionsWithDefaults<
 > = Required<Omit<PrometheusOptions<T>, "pushgateway" | "customMetricPrefix">>;
 
 /**
- * @internal
+ * @private
  */
 export interface PrometheusOptionsFactory<
   T extends RegistryContentType = PrometheusContentType,
@@ -103,6 +103,13 @@ export interface PrometheusOptionsFactory<
     | Promise<PrometheusOptions<T>>
     | PrometheusOptions<T>;
 }
+
+/**
+ * @private
+ */
+export type PrometheusUseFactoryOptions<
+  T extends RegistryContentType = PrometheusContentType,
+> = Omit<PrometheusOptions<T>, "controller">;
 
 /**
  * Options for configuring a dynamic provider
@@ -123,5 +130,5 @@ export interface PrometheusAsyncOptions<
   controller?: PrometheusOptions<T>["controller"];
   useFactory?(
     ...args: unknown[]
-  ): Promise<PrometheusOptions<T>> | PrometheusOptions<T>;
+  ): Promise<PrometheusUseFactoryOptions<T>> | PrometheusUseFactoryOptions<T>;
 }

@@ -8,5 +8,5 @@
   "automerge": true,
   "semanticCommits": "enabled",
   "ignoreDeps": ["chai"],
-  "schedule": ["schedule:automergeWeekly"]
+  "schedule": ["schedule:automergeEarlyMondays"]
 }

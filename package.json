@@ -107,7 +107,7 @@
     "chai-as-promised": "7.1.2",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "husky": "9.0.11",
+    "husky": "9.1.1",
     "lint-staged": "15.2.7",
     "markdown-toc": "1.2.0",
     "mocha": "10.7.0",

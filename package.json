@@ -16,7 +16,7 @@
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist coverage",
     "lint": "eslint . --fix",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prerelease": "pnpm run build",
     "release": "semantic-release",
     "test": "mocha",

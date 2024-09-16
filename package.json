@@ -78,8 +78,8 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "19.4.1",
-    "@commitlint/config-conventional": "19.4.1",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@fastify/compress": "7.0.3",
     "@nestjs/cli": "10.4.5",
     "@nestjs/common": "10.4.1",
@@ -95,7 +95,7 @@
     "@types/eslint": "9.6.1",
     "@types/express": "4.17.21",
     "@types/express-serve-static-core": "4.19.5",
-    "@types/mocha": "10.0.7",
+    "@types/mocha": "10.0.8",
     "@types/node": "20.16.5",
     "@types/sinon": "17.0.3",
     "@types/sinon-chai": "3.2.12",
@@ -107,7 +107,7 @@
     "chai-as-promised": "7.1.2",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "markdown-toc": "1.2.0",
     "mocha": "10.7.3",
@@ -118,22 +118,22 @@
     "reflect-metadata": "0.2.2",
     "rimraf": "6.0.1",
     "rxjs": "7.8.1",
-    "semantic-release": "24.1.0",
-    "sinon": "18.0.0",
+    "semantic-release": "24.1.1",
+    "sinon": "18.0.1",
     "sinon-chai": "3.7.0",
     "standard-version": "9.5.0",
     "supertest": "7.0.0",
     "ts-node": "10.9.2",
-    "typescript": "5.5.4"
+    "typescript": "5.6.2"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "prom-client": "^15.0.0"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "volta": {
     "node": "20.17.0",
-    "pnpm": "9.9.0"
+    "pnpm": "9.10.0"
   },
   "pnpm": {
     "peerDependencyRules": {

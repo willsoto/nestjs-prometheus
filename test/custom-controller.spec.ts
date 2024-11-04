@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { Get, Res } from "@nestjs/common";
 import { expect } from "chai";
 import { Response } from "express";

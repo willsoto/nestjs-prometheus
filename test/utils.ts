@@ -7,6 +7,7 @@ import {
   PrometheusModule,
   PrometheusOptions,
 } from "../src";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 import TestAgent = require("supertest/lib/agent");
 
 export type Agent = TestAgent<request.Test>;

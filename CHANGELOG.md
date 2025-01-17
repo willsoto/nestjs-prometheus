@@ -1,3 +1,10 @@
+## [6.0.2](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.1...v6.0.2) (2025-01-17)
+
+
+### Bug Fixes
+
+* allow nestjs 11 ([45a0ddf](https://github.com/willsoto/nestjs-prometheus/commit/45a0ddffda84f6974837b2b6cfb6598e701c6da4))
+
 ## [6.0.1](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.0...v6.0.1) (2024-06-06)
 
 

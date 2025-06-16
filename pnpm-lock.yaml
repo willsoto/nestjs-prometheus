@@ -141,11 +141,11 @@ importers:
         specifier: 24.2.5
         version: 24.2.5(typescript@5.8.3)
       sinon:
-        specifier: 20.0.0
-        version: 20.0.0
+        specifier: 21.0.0
+        version: 21.0.0
       sinon-chai:
         specifier: 3.7.0
-        version: 3.7.0(chai@4.4.1)(sinon@20.0.0)
+        version: 3.7.0(chai@4.4.1)(sinon@21.0.0)
       standard-version:
         specifier: 9.5.0
         version: 9.5.0
@@ -3759,8 +3759,8 @@ packages:
       chai: ^4.0.0
       sinon: '>=4.0.0'
 
-  sinon@20.0.0:
-    resolution: {integrity: sha512-+FXOAbdnj94AQIxH0w1v8gzNxkawVvNqE3jUzRLptR71Oykeu2RrQXXl/VQjKay+Qnh73fDt/oDfMo6xMeDQbQ==}
+  sinon@21.0.0:
+    resolution: {integrity: sha512-TOgRcwFPbfGtpqvZw+hyqJDvqfapr1qUlOizROIk4bBLjlsjlB00Pg6wMFXNtJRpu+eCZuVOaLatG7M8105kAw==}
 
   skin-tone@2.0.0:
     resolution: {integrity: sha512-kUMbT1oBJCpgrnKoSr0o6wPtvRWT9W9UKvGLwfJYO2WuahZRHOpEyL1ckyMGgMWh0UdpmaoFqKKD29WTomNEGA==}
@@ -8186,12 +8186,12 @@ snapshots:
       figures: 2.0.0
       pkg-conf: 2.1.0
 
-  sinon-chai@3.7.0(chai@4.4.1)(sinon@20.0.0):
+  sinon-chai@3.7.0(chai@4.4.1)(sinon@21.0.0):
     dependencies:
       chai: 4.4.1
-      sinon: 20.0.0
+      sinon: 21.0.0
 
-  sinon@20.0.0:
+  sinon@21.0.0:
     dependencies:
       '@sinonjs/commons': 3.0.1
       '@sinonjs/fake-timers': 13.0.5

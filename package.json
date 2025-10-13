@@ -78,17 +78,17 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "20.0.0",
+    "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.37.0",
     "@fastify/compress": "8.1.0",
     "@nestjs/cli": "11.0.10",
     "@nestjs/common": "11.1.6",
     "@nestjs/core": "11.1.6",
     "@nestjs/platform-express": "11.1.6",
     "@nestjs/platform-fastify": "11.1.6",
-    "@nestjs/schematics": "11.0.7",
+    "@nestjs/schematics": "11.0.8",
     "@nestjs/testing": "11.1.6",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
@@ -98,12 +98,12 @@
     "@types/express": "5.0.3",
     "@types/express-serve-static-core": "5.0.7",
     "@types/mocha": "10.0.10",
-    "@types/node": "22.18.6",
+    "@types/node": "22.18.8",
     "@types/sinon": "17.0.4",
     "@types/sinon-chai": "3.2.12",
     "@types/supertest": "6.0.3",
-    "@typescript-eslint/eslint-plugin": "8.44.1",
-    "@typescript-eslint/parser": "8.44.1",
+    "@typescript-eslint/eslint-plugin": "8.45.0",
+    "@typescript-eslint/parser": "8.45.0",
     "c8": "10.1.3",
     "chai": "4.4.1",
     "chai-as-promised": "7.1.2",
@@ -113,7 +113,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.2.3",
     "markdown-toc": "1.2.0",
-    "mocha": "11.7.2",
+    "mocha": "11.7.4",
     "prettier": "3.6.2",
     "prettier-plugin-organize-imports": "4.3.0",
     "prettier-plugin-packagejson": "2.5.19",
@@ -127,16 +127,16 @@
     "standard-version": "9.5.0",
     "supertest": "7.1.4",
     "ts-node": "10.9.2",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
     "prom-client": "^15.0.0"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "volta": {
     "node": "22.20.0",
-    "pnpm": "10.17.1"
+    "pnpm": "10.18.0"
   },
   "pnpm": {
     "peerDependencyRules": {

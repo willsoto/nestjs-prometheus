@@ -1,11 +1,7 @@
-import {
-  DynamicModule,
-  FactoryProvider,
-  Module,
-  Provider,
-} from "@nestjs/common";
+import { DynamicModule, FactoryProvider, Module, Provider } from "@nestjs/common";
 import * as promClient from "prom-client";
 import { RegistryContentType } from "prom-client";
+
 import { PROMETHEUS_OPTIONS, PROM_CLIENT } from "./constants";
 import { PrometheusController } from "./controller";
 import {
@@ -39,11 +35,7 @@ export class PrometheusModule {
       const { url, options: gatewayOptions, registry } = options.pushgateway;
       providers.push({
         provide: promClient.Pushgateway,
-        useValue: PrometheusModule.configurePushgateway(
-          url,
-          gatewayOptions,
-          registry,
-        ),
+        useValue: PrometheusModule.configurePushgateway(url, gatewayOptions, registry),
       });
     }
 
@@ -72,9 +64,7 @@ export class PrometheusModule {
         {
           provide: PROM_CLIENT,
           inject: [PROMETHEUS_OPTIONS],
-          useFactory<T extends RegistryContentType>(
-            userOptions: PrometheusOptions<T>,
-          ) {
+          useFactory<T extends RegistryContentType>(userOptions: PrometheusOptions<T>) {
             const opts = PrometheusModule.makeDefaultOptions(userOptions);
 
             PrometheusModule.configureServer(opts);
@@ -96,9 +86,7 @@ export class PrometheusModule {
         PrometheusModule.createPushgatewayProvider(),
       ];
     } else if (!options.useClass) {
-      throw new Error(
-        "Invalid configuration. Must provide useClass or useExisting",
-      );
+      throw new Error("Invalid configuration. Must provide useClass or useExisting");
     }
 
     return [
@@ -126,9 +114,7 @@ export class PrometheusModule {
     const inject = options.useClass || options.useExisting;
 
     if (!inject) {
-      throw new Error(
-        "Invalid configuration. Must provide useClass or useExisting",
-      );
+      throw new Error("Invalid configuration. Must provide useClass or useExisting");
     }
 
     return {
@@ -170,17 +156,9 @@ export class PrometheusModule {
       inject: [PROMETHEUS_OPTIONS],
       useFactory<T extends RegistryContentType>(options: PrometheusOptions<T>) {
         if (options?.pushgateway !== undefined) {
-          const {
-            url,
-            options: gatewayOptions,
-            registry,
-          } = options.pushgateway;
+          const { url, options: gatewayOptions, registry } = options.pushgateway;
 
-          return PrometheusModule.configurePushgateway(
-            url,
-            gatewayOptions,
-            registry,
-          );
+          return PrometheusModule.configurePushgateway(url, gatewayOptions, registry);
         }
 
         return null;

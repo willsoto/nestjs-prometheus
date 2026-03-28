@@ -3,6 +3,7 @@ import { Test } from "@nestjs/testing";
 import { register } from "prom-client";
 import request from "supertest";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
+
 import { CorePrefixModule } from "./fixtures/core-prefix.module";
 import { CoreModule } from "./fixtures/core.module";
 import { ResourceController } from "./fixtures/resource.controller";
@@ -38,9 +39,7 @@ describe("End-to-end", function () {
     });
 
     it("should be able to incremement the counter", async function () {
-      const response = await request(app.getHttpServer()).get(
-        "/resource/counter",
-      );
+      const response = await request(app.getHttpServer()).get("/resource/counter");
 
       expect(response.status).toEqual(200);
       expect(response.text).toBe(
@@ -55,9 +54,7 @@ describe("End-to-end", function () {
     });
 
     it("should be able to incremement the gauge", async function () {
-      const response = await request(app.getHttpServer()).get(
-        "/resource/gauge",
-      );
+      const response = await request(app.getHttpServer()).get("/resource/gauge");
 
       expect(response.status).toEqual(200);
       expect(response.text).toBe(
@@ -95,9 +92,7 @@ describe("End-to-end", function () {
     });
 
     it("should be able to incremement the counter", async function () {
-      const response = await request(app.getHttpServer()).get(
-        "/resource/counter",
-      );
+      const response = await request(app.getHttpServer()).get("/resource/counter");
 
       expect(response.status).toEqual(200);
       expect(response.text).toBe(
@@ -112,9 +107,7 @@ describe("End-to-end", function () {
     });
 
     it("should be able to incremement the gauge", async function () {
-      const response = await request(app.getHttpServer()).get(
-        "/resource/gauge",
-      );
+      const response = await request(app.getHttpServer()).get("/resource/gauge");
 
       expect(response.status).toEqual(200);
       expect(response.text).toBe(

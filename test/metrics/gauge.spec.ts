@@ -2,6 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import * as client from "prom-client";
 import { MetricObjectWithValues, MetricValue } from "prom-client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
+
 import { getToken, makeGaugeProvider } from "../../src";
 import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
@@ -46,8 +47,7 @@ describe("Gauge", function () {
   });
 
   it("should prefix the metric if provided", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
 
     expect(metricValues.name).toBe("app_controller_gauge");
   });
@@ -93,8 +93,7 @@ describe("Gauge with inject", function () {
   });
 
   it("passes injected dependencies to collect", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
 
     expect(metricValues.values).toHaveLength(1);
     expect(metricValues.values[0].value).toBe(42);

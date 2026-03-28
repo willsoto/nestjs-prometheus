@@ -8,9 +8,7 @@ import { PrometheusContentType, RegistryContentType } from "prom-client";
  *
  * @public
  */
-export interface PrometheusDefaultMetrics<
-  T extends RegistryContentType = PrometheusContentType,
-> {
+export interface PrometheusDefaultMetrics<T extends RegistryContentType = PrometheusContentType> {
   /**
    * Whether or not default metrics are collected.
    *
@@ -28,9 +26,7 @@ export interface PrometheusDefaultMetrics<
  *
  * @public
  */
-export interface PrometheusOptions<
-  T extends RegistryContentType = PrometheusContentType,
-> {
+export interface PrometheusOptions<T extends RegistryContentType = PrometheusContentType> {
   /**
    * Make the module global when set to true
    * */
@@ -88,27 +84,21 @@ export interface PrometheusOptions<
   };
 }
 
-export type PrometheusOptionsWithDefaults<
-  T extends RegistryContentType = PrometheusContentType,
-> = Required<Omit<PrometheusOptions<T>, "pushgateway" | "customMetricPrefix">>;
+export type PrometheusOptionsWithDefaults<T extends RegistryContentType = PrometheusContentType> =
+  Required<Omit<PrometheusOptions<T>, "pushgateway" | "customMetricPrefix">>;
 
 /**
  * @private
  */
-export interface PrometheusOptionsFactory<
-  T extends RegistryContentType = PrometheusContentType,
-> {
-  createPrometheusOptions():
-    | Promise<PrometheusOptions<T>>
-    | PrometheusOptions<T>;
+export interface PrometheusOptionsFactory<T extends RegistryContentType = PrometheusContentType> {
+  createPrometheusOptions(): Promise<PrometheusOptions<T>> | PrometheusOptions<T>;
 }
 
 /**
  * @private
  */
-export type PrometheusUseFactoryOptions<
-  T extends RegistryContentType = PrometheusContentType,
-> = Omit<PrometheusOptions<T>, "controller">;
+export type PrometheusUseFactoryOptions<T extends RegistryContentType = PrometheusContentType> =
+  Omit<PrometheusOptions<T>, "controller">;
 
 /**
  * Options for configuring a dynamic provider

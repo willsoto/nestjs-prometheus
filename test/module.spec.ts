@@ -2,17 +2,9 @@ import { Injectable, Module } from "@nestjs/common";
 import { TestingModule } from "@nestjs/testing";
 import { Pushgateway, register } from "prom-client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import {
-  PrometheusModule,
-  PrometheusOptions,
-  PrometheusOptionsFactory,
-} from "../src";
-import {
-  Agent,
-  App,
-  createAsyncPrometheusModule,
-  createPrometheusModule,
-} from "./utils";
+
+import { PrometheusModule, PrometheusOptions, PrometheusOptionsFactory } from "../src";
+import { Agent, App, createAsyncPrometheusModule, createPrometheusModule } from "./utils";
 
 describe("PrometheusModule", function () {
   let agent: Agent;

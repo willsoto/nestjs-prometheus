@@ -1,11 +1,9 @@
 import compression from "@fastify/compress";
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from "@nestjs/platform-fastify";
+import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
 import { Test } from "@nestjs/testing";
 import { register } from "prom-client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
+
 import { PrometheusModule } from "../src";
 
 describe("Fastify integration", () => {
@@ -16,9 +14,7 @@ describe("Fastify integration", () => {
       imports: [PrometheusModule.register()],
     }).compile();
 
-    app = testingModule.createNestApplication<NestFastifyApplication>(
-      new FastifyAdapter(),
-    );
+    app = testingModule.createNestApplication<NestFastifyApplication>(new FastifyAdapter());
   });
 
   afterEach(async () => {

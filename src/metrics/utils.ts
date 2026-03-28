@@ -2,6 +2,7 @@ import { InjectionToken } from "@nestjs/common/interfaces";
 import { OptionalFactoryDependency } from "@nestjs/common/interfaces/modules/optional-factory-dependency.interface";
 import * as client from "prom-client";
 import { PrometheusContentType, RegistryContentType } from "prom-client";
+
 import { PrometheusOptions } from "../interfaces";
 
 /**
@@ -21,9 +22,7 @@ export type Options =
 /**
  * @internal
  */
-export function getOrCreateMetric<
-  T extends RegistryContentType = PrometheusContentType,
->(
+export function getOrCreateMetric<T extends RegistryContentType = PrometheusContentType>(
   type: Metrics,
   options: Options,
   prometheusOptions?: PrometheusOptions<T>,
@@ -46,9 +45,7 @@ export function getOrCreateMetric<
     case "Counter":
       return new client.Counter(opts as client.CounterConfiguration<string>);
     case "Histogram":
-      return new client.Histogram(
-        opts as client.HistogramConfiguration<string>,
-      );
+      return new client.Histogram(opts as client.HistogramConfiguration<string>);
     case "Summary":
       return new client.Summary(opts as client.SummaryConfiguration<string>);
     default:
@@ -60,9 +57,7 @@ export function getOrCreateMetric<
 /**
  * @public
  */
-export type MetricProviderInject = Array<
-  InjectionToken | OptionalFactoryDependency
->;
+export type MetricProviderInject = Array<InjectionToken | OptionalFactoryDependency>;
 
 /**
  * Additional options for metric providers that support dependency injection

@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "group:typescript-eslintMonorepo",
-    "group:allNonMajor"
-  ],
+  "extends": ["config:recommended", "group:typescript-eslintMonorepo", "group:allNonMajor"],
   "automerge": true,
   "semanticCommits": "enabled",
   "ignoreDeps": ["chai"],

@@ -2,11 +2,8 @@ import { Injectable, Module } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import { PrometheusContentType, Pushgateway, register } from "prom-client";
 import { afterEach, describe, expect, it } from "vitest";
-import {
-  PrometheusModule,
-  PrometheusOptions,
-  PrometheusOptionsFactory,
-} from "../src";
+
+import { PrometheusModule, PrometheusOptions, PrometheusOptionsFactory } from "../src";
 import { createAsyncPrometheusModule, createPrometheusModule } from "./utils";
 
 describe("Pushgateway", function () {
@@ -23,9 +20,7 @@ describe("Pushgateway", function () {
 
   @Injectable()
   class MockService {
-    constructor(
-      public readonly pushgateway: Pushgateway<PrometheusContentType>,
-    ) {}
+    constructor(public readonly pushgateway: Pushgateway<PrometheusContentType>) {}
   }
 
   @Module({
@@ -79,10 +74,7 @@ describe("Pushgateway", function () {
     const mockService = moduleRef.get<MockService>(MockService);
 
     expect(mockService.pushgateway).toBeInstanceOf(Pushgateway);
-    expect(mockService.pushgateway).toHaveProperty(
-      "gatewayUrl",
-      "http://127.0.0.1:9091",
-    );
+    expect(mockService.pushgateway).toHaveProperty("gatewayUrl", "http://127.0.0.1:9091");
   });
 
   it("should be injected in another provider for async", async function () {
@@ -98,9 +90,6 @@ describe("Pushgateway", function () {
     const mockService = moduleRef.get<MockService>(MockService);
 
     expect(mockService.pushgateway).toBeInstanceOf(Pushgateway);
-    expect(mockService.pushgateway).toHaveProperty(
-      "gatewayUrl",
-      "http://127.0.0.1:9091",
-    );
+    expect(mockService.pushgateway).toHaveProperty("gatewayUrl", "http://127.0.0.1:9091");
   });
 });

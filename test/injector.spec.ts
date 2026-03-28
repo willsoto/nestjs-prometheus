@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+
 import { InjectMetric } from "../src";
 
 describe("InjectMetric", function () {

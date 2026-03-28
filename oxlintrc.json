@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "plugins": ["typescript"],
+  "ignorePatterns": ["node_modules", "dist", "coverage", "typings"],
+  "rules": {
+    "eqeqeq": "error",
+    "array-callback-return": "error",
+    "no-fallthrough": "error",
+    "no-self-compare": "error",
+    "require-await": "warn",
+    "no-constructor-return": "error",
+    "no-promise-executor-return": "error",
+    "no-new-wrappers": "error"
+  },
+  "overrides": [
+    {
+      "files": ["test/**/*.ts"],
+      "rules": {
+        "typescript/no-unbound-method": "off"
+      }
+    }
+  ]
+}

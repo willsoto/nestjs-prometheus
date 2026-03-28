@@ -6,7 +6,7 @@ pre-commit:
       stage_fixed: true
     lint:
       glob: "*.{ts,js}"
-      run: pnpm run lint
+      run: pnpm exec oxlint {staged_files}
     prettier-code:
       glob: "*.{ts,js}"
       run: pnpm exec prettier --write {staged_files}

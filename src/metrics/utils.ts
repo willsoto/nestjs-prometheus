@@ -1,3 +1,5 @@
+import { InjectionToken } from "@nestjs/common/interfaces";
+import { OptionalFactoryDependency } from "@nestjs/common/interfaces/modules/optional-factory-dependency.interface";
 import * as client from "prom-client";
 import { PrometheusContentType, RegistryContentType } from "prom-client";
 import { PrometheusOptions } from "../interfaces";
@@ -53,6 +55,25 @@ export function getOrCreateMetric<
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       throw new Error(`Unknown type: ${type}`);
   }
+}
+
+/**
+ * @public
+ */
+export type MetricProviderInject = Array<
+  InjectionToken | OptionalFactoryDependency
+>;
+
+/**
+ * Additional options for metric providers that support dependency injection
+ * into the `collect` function.
+ *
+ * @public
+ */
+export interface MetricProviderInjectable<T> {
+  inject?: MetricProviderInject;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  collect?: (this: T, ...args: any[]) => void | Promise<void>;
 }
 
 /**

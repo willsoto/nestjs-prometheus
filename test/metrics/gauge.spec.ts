@@ -29,6 +29,7 @@ describe("Gauge", function () {
   });
 
   afterEach(async function () {
+    client.register.clear();
     await testingModule.close();
   });
 
@@ -49,5 +50,53 @@ describe("Gauge", function () {
       await metric.get();
 
     expect(metricValues.name).to.eq("app_controller_gauge");
+  });
+});
+
+describe("Gauge with inject", function () {
+  const QUEUE_TOKEN = "QUEUE_SERVICE";
+
+  let testingModule: TestingModule;
+  let metric: client.Gauge<string>;
+
+  beforeEach(async function () {
+    testingModule = await Test.createTestingModule({
+      providers: [
+        {
+          provide: QUEUE_TOKEN,
+          useValue: {
+            getWaitingCount: () => 42,
+          },
+        },
+        makeGaugeProvider({
+          name: "queue_size",
+          help: "queue_size_help",
+          inject: [QUEUE_TOKEN],
+          collect(queue: { getWaitingCount(): number }) {
+            const value = queue.getWaitingCount();
+            this.set(value);
+          },
+        }),
+      ],
+    }).compile();
+
+    metric = testingModule.get(getToken("queue_size"));
+  });
+
+  afterEach(async function () {
+    client.register.clear();
+    await testingModule.close();
+  });
+
+  it("creates a Gauge", function () {
+    expect(metric).to.be.instanceOf(client.Gauge);
+  });
+
+  it("passes injected dependencies to collect", async function () {
+    const metricValues: MetricObjectWithValues<MetricValue<string>> =
+      await metric.get();
+
+    expect(metricValues.values).to.have.lengthOf(1);
+    expect(metricValues.values[0].value).to.eq(42);
   });
 });

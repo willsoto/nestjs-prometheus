@@ -1,0 +1,22 @@
+pre-commit:
+  commands:
+    prettier-docs:
+      glob: "*.{md,yaml,yml,json}"
+      run: pnpm exec prettier --write {staged_files}
+      stage_fixed: true
+    lint:
+      glob: "*.{ts,js}"
+      run: pnpm run lint
+    prettier-code:
+      glob: "*.{ts,js}"
+      run: pnpm exec prettier --write {staged_files}
+      stage_fixed: true
+    markdown-toc:
+      glob: "README.md"
+      run: pnpm exec markdown-toc -i {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm exec commitlint --edit {1}

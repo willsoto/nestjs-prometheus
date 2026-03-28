@@ -19,6 +19,7 @@
   - [Gauge](#gauge)
   - [Histogram](#histogram)
   - [Summary](#summary)
+- [Injecting dependencies into `collect`](#injecting-dependencies-into-collect)
 - [Providing a custom controller](#providing-a-custom-controller)
 - [Pushgateway](#pushgateway)
 
@@ -202,6 +203,36 @@ import { makeHistogramProvider } from "@willsoto/nestjs-prometheus";
 import { makeSummaryProvider } from "@willsoto/nestjs-prometheus";
 ```
 <!-- prettier-ignore-end -->
+
+## Injecting dependencies into `collect`
+
+All metric providers support an optional `inject` array, which lets you inject NestJS dependencies into the `collect` callback. The injected dependencies are passed as arguments to your `collect` function.
+
+```typescript
+import { Module } from "@nestjs/common";
+import {
+  PrometheusModule,
+  makeGaugeProvider,
+} from "@willsoto/nestjs-prometheus";
+
+@Module({
+  imports: [PrometheusModule.register()],
+  providers: [
+    makeGaugeProvider({
+      name: "queue_size",
+      help: "Number of waiting items in the queue",
+      inject: [getQueueToken("scheduledQueue")],
+      collect(queue) {
+        const value = await queue.getWaitingCount();
+        this.set(value);
+      },
+    }),
+  ],
+})
+export class AppModule {}
+```
+
+This works with all metric types (`makeCounterProvider`, `makeGaugeProvider`, `makeHistogramProvider`, `makeSummaryProvider`).
 
 ## Providing a custom controller
 

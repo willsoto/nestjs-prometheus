@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.2...v6.1.0) (2026-03-28)
+
+
+### Features
+
+* support dependency injection in metric collect functions ([7d49e53](https://github.com/willsoto/nestjs-prometheus/commit/7d49e53c768dca40789871ef12c442234e359c1f)), closes [#1837](https://github.com/willsoto/nestjs-prometheus/issues/1837)
+
 ## [6.0.2](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.1...v6.0.2) (2025-01-17)
 
 

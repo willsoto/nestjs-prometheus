@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import { expect } from "chai";
 import * as client from "prom-client";
 import { MetricObjectWithValues, MetricValue } from "prom-client";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { getToken, makeHistogramProvider } from "../../src";
 import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
@@ -33,17 +33,64 @@ describe("Histogram", function () {
   });
 
   it("creates a Histogram", function () {
-    expect(metric).to.be.instanceOf(client.Histogram);
+    expect(metric).toBeInstanceOf(client.Histogram);
   });
 
   it("has the appropriate methods (observe)", function () {
-    expect(metric.observe).to.be.a("function");
+    expect(typeof metric.observe).toBe("function");
   });
 
   it("should prefix the metric if provided", async function () {
     const metricValues: MetricObjectWithValues<MetricValue<string>> =
       await metric.get();
 
-    expect(metricValues.name).to.eq("app_controller_histogram");
+    expect(metricValues.name).toBe("app_controller_histogram");
+  });
+});
+
+describe("Histogram with inject", function () {
+  const LATENCY_TOKEN = "LATENCY_SERVICE";
+
+  let testingModule: TestingModule;
+  let metric: client.Histogram<string>;
+
+  beforeEach(async function () {
+    testingModule = await Test.createTestingModule({
+      providers: [
+        {
+          provide: LATENCY_TOKEN,
+          useValue: {
+            getLatency: () => 0.5,
+          },
+        },
+        makeHistogramProvider({
+          name: "injected_histogram",
+          help: "injected_histogram_help",
+          inject: [LATENCY_TOKEN],
+          collect(service: { getLatency(): number }) {
+            const value = service.getLatency();
+            this.observe(value);
+          },
+        }),
+      ],
+    }).compile();
+
+    metric = testingModule.get(getToken("injected_histogram"));
+  });
+
+  afterEach(async function () {
+    client.register.clear();
+    await testingModule.close();
+  });
+
+  it("creates a Histogram", function () {
+    expect(metric).toBeInstanceOf(client.Histogram);
+  });
+
+  it("passes injected dependencies to collect", async function () {
+    const metricValues: MetricObjectWithValues<MetricValue<string>> =
+      await metric.get();
+
+    expect(metricValues.values.length).toBeGreaterThan(0);
   });
 });

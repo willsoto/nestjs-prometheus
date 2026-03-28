@@ -1,7 +1,7 @@
 import { Injectable, Module } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { expect } from "chai";
 import { PrometheusContentType, Pushgateway, register } from "prom-client";
+import { afterEach, describe, expect, it } from "vitest";
 import {
   PrometheusModule,
   PrometheusOptions,
@@ -46,7 +46,7 @@ describe("Pushgateway", function () {
     });
     const gateway = testingModule.get(Pushgateway);
 
-    expect(gateway).to.be.instanceOf(Pushgateway);
+    expect(gateway).toBeInstanceOf(Pushgateway);
 
     await app.close();
   });
@@ -59,7 +59,7 @@ describe("Pushgateway", function () {
     });
     const gateway = testingModule.get(Pushgateway);
 
-    expect(gateway).to.be.instanceOf(Pushgateway);
+    expect(gateway).toBeInstanceOf(Pushgateway);
 
     await app.close();
   });
@@ -78,8 +78,8 @@ describe("Pushgateway", function () {
 
     const mockService = moduleRef.get<MockService>(MockService);
 
-    expect(mockService.pushgateway).to.be.an.instanceOf(Pushgateway);
-    expect(mockService.pushgateway).to.have.property(
+    expect(mockService.pushgateway).toBeInstanceOf(Pushgateway);
+    expect(mockService.pushgateway).toHaveProperty(
       "gatewayUrl",
       "http://127.0.0.1:9091",
     );
@@ -97,8 +97,8 @@ describe("Pushgateway", function () {
 
     const mockService = moduleRef.get<MockService>(MockService);
 
-    expect(mockService.pushgateway).to.be.an.instanceOf(Pushgateway);
-    expect(mockService.pushgateway).to.have.property(
+    expect(mockService.pushgateway).toBeInstanceOf(Pushgateway);
+    expect(mockService.pushgateway).toHaveProperty(
       "gatewayUrl",
       "http://127.0.0.1:9091",
     );

@@ -19,9 +19,9 @@
     "prepare": "lefthook install",
     "prerelease": "pnpm run build",
     "release": "semantic-release",
-    "test": "mocha",
-    "test:coverage": "c8 mocha",
-    "test:watch": "mocha --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
     "typecheck": "tsc --project tsconfig.lint.json --noEmit"
   },
   "commitlint": {
@@ -42,28 +42,6 @@
       "@semantic-release/git"
     ]
   },
-  "mocha": {
-    "extension": [
-      "ts"
-    ],
-    "file": "./ad-hocs/mocha/plugins.ts",
-    "recursive": true,
-    "require": [
-      "ts-node/register",
-      "./ad-hocs/mocha/hooks.ts"
-    ],
-    "sort": true,
-    "watch-files": [
-      "src/**/*.ts",
-      "test/**/*.ts"
-    ]
-  },
-  "c8": {
-    "all": true,
-    "include": [
-      "src/**/*.ts"
-    ]
-  },
   "devDependencies": {
     "@commitlint/cli": "20.4.0",
     "@commitlint/config-conventional": "20.4.0",
@@ -79,27 +57,19 @@
     "@nestjs/testing": "11.1.12",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/chai": "5.2.3",
-    "@types/chai-as-promised": "7.1.8",
     "@types/eslint": "9.6.1",
     "@types/express": "5.0.6",
     "@types/express-serve-static-core": "5.1.1",
-    "@types/mocha": "10.0.10",
     "@types/node": "24.10.9",
-    "@types/sinon": "21.0.0",
-    "@types/sinon-chai": "3.2.12",
     "@types/supertest": "6.0.3",
     "@typescript-eslint/eslint-plugin": "8.54.0",
     "@typescript-eslint/parser": "8.54.0",
-    "c8": "10.1.3",
-    "chai": "4.4.1",
-    "chai-as-promised": "7.1.2",
+    "@vitest/coverage-v8": "4.1.2",
     "eslint": "8.57.1",
     "eslint-config-prettier": "10.1.8",
     "globals": "17.3.0",
     "lefthook": "2.1.4",
     "markdown-toc": "1.2.0",
-    "mocha": "11.7.5",
     "prettier": "3.8.1",
     "prettier-plugin-organize-imports": "4.3.0",
     "prettier-plugin-packagejson": "3.0.0",
@@ -108,12 +78,10 @@
     "rimraf": "6.1.2",
     "rxjs": "7.8.2",
     "semantic-release": "25.0.3",
-    "sinon": "21.0.1",
-    "sinon-chai": "3.7.0",
     "standard-version": "9.5.0",
     "supertest": "7.2.2",
-    "ts-node": "10.9.2",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vitest": "4.1.2"
   },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",

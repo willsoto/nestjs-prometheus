@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import { expect } from "chai";
 import * as client from "prom-client";
 import { MetricObjectWithValues, MetricValue } from "prom-client";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { getToken, makeGaugeProvider } from "../../src";
 import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
@@ -34,22 +34,22 @@ describe("Gauge", function () {
   });
 
   it("creates a Gauge", function () {
-    expect(metric).to.be.instanceOf(client.Gauge);
+    expect(metric).toBeInstanceOf(client.Gauge);
   });
 
   it("has the appropriate methods (inc)", function () {
-    expect(metric.inc).to.be.a("function");
+    expect(typeof metric.inc).toBe("function");
   });
 
   it("has the appropriate methods (dec)", function () {
-    expect(metric.dec).to.be.a("function");
+    expect(typeof metric.dec).toBe("function");
   });
 
   it("should prefix the metric if provided", async function () {
     const metricValues: MetricObjectWithValues<MetricValue<string>> =
       await metric.get();
 
-    expect(metricValues.name).to.eq("app_controller_gauge");
+    expect(metricValues.name).toBe("app_controller_gauge");
   });
 });
 
@@ -89,14 +89,14 @@ describe("Gauge with inject", function () {
   });
 
   it("creates a Gauge", function () {
-    expect(metric).to.be.instanceOf(client.Gauge);
+    expect(metric).toBeInstanceOf(client.Gauge);
   });
 
   it("passes injected dependencies to collect", async function () {
     const metricValues: MetricObjectWithValues<MetricValue<string>> =
       await metric.get();
 
-    expect(metricValues.values).to.have.lengthOf(1);
-    expect(metricValues.values[0].value).to.eq(42);
+    expect(metricValues.values).toHaveLength(1);
+    expect(metricValues.values[0].value).toBe(42);
   });
 });

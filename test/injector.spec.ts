@@ -1,10 +1,10 @@
-import { expect } from "chai";
+import { describe, expect, it } from "vitest";
 import { InjectMetric } from "../src";
 
 describe("InjectMetric", function () {
   it("returns a function", function () {
     const result = InjectMetric("controller");
 
-    expect(result).to.be.a("function");
+    expect(typeof result).toBe("function");
   });
 });

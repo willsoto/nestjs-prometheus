@@ -1,7 +1,7 @@
 import { Injectable, Module } from "@nestjs/common";
 import { TestingModule } from "@nestjs/testing";
-import { expect } from "chai";
 import { Pushgateway, register } from "prom-client";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import {
   PrometheusModule,
   PrometheusOptions,
@@ -32,6 +32,23 @@ describe("PrometheusModule", function () {
   });
 
   describe("#register", function () {
+    describe("with defaultLabels", function () {
+      beforeEach(async function () {
+        ({ agent, app } = await createPrometheusModule({
+          defaultLabels: {
+            app: "test",
+          },
+        }));
+      });
+
+      it("applies default labels to metrics", async function () {
+        const response = await agent.get("/metrics");
+
+        expect(response).toHaveProperty("status", 200);
+        expect(response.text).toContain('app="test"');
+      });
+    });
+
     describe("with all defaults", function () {
       beforeEach(async function () {
         ({ agent, app } = await createPrometheusModule());
@@ -40,15 +57,13 @@ describe("PrometheusModule", function () {
       it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response).to.have.property("status").to.eql(200);
+        expect(response).toHaveProperty("status", 200);
       });
 
       it("collects default metrics", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response)
-          .to.have.property("text")
-          .to.contain("process_cpu_user_seconds_total");
+        expect(response.text).toContain("process_cpu_user_seconds_total");
       });
     });
 
@@ -62,21 +77,19 @@ describe("PrometheusModule", function () {
       it("does not register the default endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response).to.have.property("status").to.eql(404);
+        expect(response).toHaveProperty("status", 404);
       });
 
       it("registers the custom endpoint", async function () {
         const response = await agent.get("/my-custom-endpoint");
 
-        expect(response).to.have.property("status").to.eql(200);
+        expect(response).toHaveProperty("status", 200);
       });
 
       it("collects default metrics", async function () {
         const response = await agent.get("/my-custom-endpoint");
 
-        expect(response)
-          .to.have.property("text")
-          .to.contain("process_cpu_user_seconds_total");
+        expect(response.text).toContain("process_cpu_user_seconds_total");
       });
     });
   });
@@ -107,10 +120,8 @@ describe("PrometheusModule", function () {
       it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response).to.have.property("status").to.eql(200);
-        expect(response)
-          .to.have.property("text")
-          .to.contain("process_cpu_user_seconds_total");
+        expect(response).toHaveProperty("status", 200);
+        expect(response.text).toContain("process_cpu_user_seconds_total");
       });
     });
 
@@ -125,10 +136,8 @@ describe("PrometheusModule", function () {
       it("registers a /metrics endpoint", async function () {
         const response = await agent.get("/metrics");
 
-        expect(response).to.have.property("status").to.eql(200);
-        expect(response)
-          .to.have.property("text")
-          .to.contain("process_cpu_user_seconds_total");
+        expect(response).toHaveProperty("status", 200);
+        expect(response.text).toContain("process_cpu_user_seconds_total");
       });
     });
 
@@ -164,17 +173,15 @@ describe("PrometheusModule", function () {
       it("registers a custom endpoint", async function () {
         const response = await agent.get("/my/custom/path/metrics");
 
-        expect(response).to.have.property("status").to.eql(200);
-        expect(response)
-          .to.have.property("text")
-          .to.contain("process_cpu_user_seconds_total");
+        expect(response).toHaveProperty("status", 200);
+        expect(response.text).toContain("process_cpu_user_seconds_total");
       });
 
       it("should register the push gateway", function () {
         const gateway = testingModule.get(Pushgateway);
 
-        expect(gateway).to.be.instanceOf(Pushgateway);
-        expect(gateway).to.have.property("gatewayUrl", "http://127.0.0.1:9091");
+        expect(gateway).toBeInstanceOf(Pushgateway);
+        expect(gateway).toHaveProperty("gatewayUrl", "http://127.0.0.1:9091");
       });
     });
   });
@@ -183,9 +190,7 @@ describe("PrometheusModule", function () {
     it("throws an error if useClass or useExisting are not provided", function () {
       expect(() => {
         PrometheusModule.createAsyncProviders({});
-      }).to.throw(
-        "Invalid configuration. Must provide useClass or useExisting",
-      );
+      }).toThrow("Invalid configuration. Must provide useClass or useExisting");
     });
   });
 
@@ -193,9 +198,7 @@ describe("PrometheusModule", function () {
     it("throws an error if useClass or useExisting are not provided", function () {
       expect(() => {
         PrometheusModule.createAsyncOptionsProvider({});
-      }).to.throw(
-        "Invalid configuration. Must provide useClass or useExisting",
-      );
+      }).toThrow("Invalid configuration. Must provide useClass or useExisting");
     });
   });
 });

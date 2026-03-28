@@ -1,19 +1,10 @@
 import { Injectable } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
 import * as client from "prom-client";
-import {
-  Counter,
-  MetricObjectWithValues,
-  MetricValue,
-  register,
-} from "prom-client";
+import { Counter, MetricObjectWithValues, MetricValue, register } from "prom-client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import {
-  InjectMetric,
-  PrometheusModule,
-  getToken,
-  makeCounterProvider,
-} from "../../src";
+
+import { InjectMetric, PrometheusModule, getToken, makeCounterProvider } from "../../src";
 import { getOrCreateMetric, type Metrics } from "../../src/metrics/utils";
 
 describe("Counter", function () {
@@ -22,9 +13,7 @@ describe("Counter", function () {
 
   @Injectable()
   class MyService {
-    constructor(
-      @InjectMetric("controller_counter") public counter: Counter<string>,
-    ) {}
+    constructor(@InjectMetric("controller_counter") public counter: Counter<string>) {}
   }
 
   beforeEach(async function () {
@@ -64,8 +53,7 @@ describe("Counter", function () {
   });
 
   it("should not prefix the metric if not provided", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
     expect(metricValues.name).toBe("controller_counter");
   });
 });
@@ -110,8 +98,7 @@ describe("Counter with inject", function () {
   });
 
   it("passes injected dependencies to collect", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
 
     expect(metricValues.values).toHaveLength(1);
     expect(metricValues.values[0].value).toBe(5);

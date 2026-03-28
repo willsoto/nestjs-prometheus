@@ -2,11 +2,8 @@ import { INestApplication } from "@nestjs/common";
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { Test, TestingModule } from "@nestjs/testing";
 import request from "supertest";
-import {
-  PrometheusAsyncOptions,
-  PrometheusModule,
-  PrometheusOptions,
-} from "../src";
+
+import { PrometheusAsyncOptions, PrometheusModule, PrometheusOptions } from "../src";
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import TestAgent = require("supertest/lib/agent");
 
@@ -19,9 +16,7 @@ export interface TestHarness {
   agent: Agent;
 }
 
-export async function createPrometheusModule(
-  options?: PrometheusOptions,
-): Promise<TestHarness> {
+export async function createPrometheusModule(options?: PrometheusOptions): Promise<TestHarness> {
   const testingModule = await Test.createTestingModule({
     imports: [PrometheusModule.register(options)],
   }).compile();

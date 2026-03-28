@@ -6,7 +6,7 @@
     "perf": "warn"
   },
   "plugins": ["typescript"],
-  "ignorePatterns": ["node_modules", "dist", "coverage", "typings"],
+  "ignorePatterns": ["node_modules", "dist", "coverage", "CHANGELOG.md"],
   "rules": {
     "eqeqeq": "error",
     "array-callback-return": "error",

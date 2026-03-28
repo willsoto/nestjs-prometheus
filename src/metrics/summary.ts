@@ -1,6 +1,7 @@
 import { Provider } from "@nestjs/common";
 import * as client from "prom-client";
 import { PrometheusContentType, RegistryContentType } from "prom-client";
+
 import { PROMETHEUS_OPTIONS } from "../constants";
 import { PrometheusOptions } from "../interfaces";
 import { MetricProviderInjectable, getOrCreateMetric, getToken } from "./utils";

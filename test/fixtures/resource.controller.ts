@@ -1,5 +1,6 @@
 import { Controller, Get } from "@nestjs/common";
 import { Counter, Gauge } from "prom-client";
+
 import { InjectMetric } from "../../src";
 
 @Controller("/resource")

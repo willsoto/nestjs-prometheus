@@ -2,6 +2,7 @@ import { Test, TestingModule } from "@nestjs/testing";
 import * as client from "prom-client";
 import { MetricObjectWithValues, MetricValue } from "prom-client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
+
 import { getToken, makeSummaryProvider } from "../../src";
 import { PROMETHEUS_OPTIONS } from "../../src/constants";
 
@@ -41,8 +42,7 @@ describe("Summary", function () {
   });
 
   it("should prefix the metric if provided", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
 
     expect(metricValues.name).toBe("app_controller_summary");
   });
@@ -88,8 +88,7 @@ describe("Summary with inject", function () {
   });
 
   it("passes injected dependencies to collect", async function () {
-    const metricValues: MetricObjectWithValues<MetricValue<string>> =
-      await metric.get();
+    const metricValues: MetricObjectWithValues<MetricValue<string>> = await metric.get();
 
     expect(metricValues.values.length).toBeGreaterThan(0);
   });

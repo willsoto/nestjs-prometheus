@@ -6,19 +6,19 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Changing the metrics http endpoint](#changing-the-metrics-http-endpoint)
-  - [Disabling default metrics collection](#disabling-default-metrics-collection)
-  - [Configuring the default metrics](#configuring-the-default-metrics)
+  * [Changing the metrics http endpoint](#changing-the-metrics-http-endpoint)
+  * [Disabling default metrics collection](#disabling-default-metrics-collection)
+  * [Configuring the default metrics](#configuring-the-default-metrics)
 - [Injecting individual metrics](#injecting-individual-metrics)
 - [Setting default labels](#setting-default-labels)
 - [Prefixing custom metrics](#prefixing-custom-metrics)
-  - [Option 1 (recommended)](#option-1-recommended)
-  - [Option 2 (not recommended)](#option-2-not-recommended)
+  * [Option 1 (recommended)](#option-1-recommended)
+  * [Option 2 (not recommended)](#option-2-not-recommended)
 - [Available metrics](#available-metrics)
-  - [Counter](#counter)
-  - [Gauge](#gauge)
-  - [Histogram](#histogram)
-  - [Summary](#summary)
+    + [Counter](#counter)
+    + [Gauge](#gauge)
+    + [Histogram](#histogram)
+    + [Summary](#summary)
 - [Injecting dependencies into `collect`](#injecting-dependencies-into-collect)
 - [Providing a custom controller](#providing-a-custom-controller)
 - [Pushgateway](#pushgateway)
@@ -107,10 +107,7 @@ export class AppModule {}
 ```typescript
 // module.ts
 import { Module } from "@nestjs/common";
-import {
-  PrometheusModule,
-  makeCounterProvider,
-} from "@willsoto/nestjs-prometheus";
+import { PrometheusModule, makeCounterProvider } from "@willsoto/nestjs-prometheus";
 import { Service } from "./service";
 
 @Module({
@@ -210,10 +207,7 @@ All metric providers support an optional `inject` array, which lets you inject N
 
 ```typescript
 import { Module } from "@nestjs/common";
-import {
-  PrometheusModule,
-  makeGaugeProvider,
-} from "@willsoto/nestjs-prometheus";
+import { PrometheusModule, makeGaugeProvider } from "@willsoto/nestjs-prometheus";
 
 @Module({
   imports: [PrometheusModule.register()],

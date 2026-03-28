@@ -2,13 +2,9 @@ import { Get, Res } from "@nestjs/common";
 import type { Response } from "express";
 import { register } from "prom-client";
 import { afterEach, describe, expect, it, vi } from "vitest";
+
 import { PrometheusController } from "../src";
-import {
-  Agent,
-  App,
-  createAsyncPrometheusModule,
-  createPrometheusModule,
-} from "./utils";
+import { Agent, App, createAsyncPrometheusModule, createPrometheusModule } from "./utils";
 
 describe("PrometheusModule with a custom controller", function () {
   let agent: Agent;

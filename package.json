@@ -16,7 +16,7 @@
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist coverage",
     "lint": "eslint . --fix",
-    "prepare": "husky",
+    "prepare": "lefthook install",
     "prerelease": "pnpm run build",
     "release": "semantic-release",
     "test": "mocha",
@@ -27,19 +27,6 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{md,yaml,yml,json}": [
-      "prettier --write"
-    ],
-    "*.{ts,js}": [
-      "npm run lint",
-      "prettier --write"
-    ],
-    "README.md": [
-      "markdown-toc -i",
-      "prettier --write"
     ]
   },
   "release": {
@@ -110,8 +97,7 @@
     "eslint": "8.57.1",
     "eslint-config-prettier": "10.1.8",
     "globals": "17.3.0",
-    "husky": "9.1.7",
-    "lint-staged": "16.2.7",
+    "lefthook": "2.1.4",
     "markdown-toc": "1.2.0",
     "mocha": "11.7.5",
     "prettier": "3.8.1",

@@ -1,8 +1,8 @@
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { Test } from "@nestjs/testing";
-import { expect } from "chai";
 import { register } from "prom-client";
-import * as request from "supertest";
+import request from "supertest";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { CorePrefixModule } from "./fixtures/core-prefix.module";
 import { CoreModule } from "./fixtures/core.module";
 import { ResourceController } from "./fixtures/resource.controller";
@@ -10,13 +10,13 @@ import { ResourceController } from "./fixtures/resource.controller";
 describe("End-to-end", function () {
   let app: NestExpressApplication;
 
-  after(async function () {
+  afterAll(async function () {
     register.clear();
     await app.close();
   });
 
   describe("when all metrics are not prefixed", function () {
-    before(async function () {
+    beforeAll(async function () {
       const testingModule = await Test.createTestingModule({
         imports: [CoreModule],
         controllers: [ResourceController],
@@ -29,12 +29,12 @@ describe("End-to-end", function () {
     it("should return metrics", async function () {
       const response = await request(app.getHttpServer()).get("/metrics");
 
-      expect(response.status).to.eql(200);
+      expect(response.status).toEqual(200);
 
-      expect(response.text).to.contain("counter");
-      expect(response.text).to.contain("gauge");
-      expect(response.text).to.contain("histogram");
-      expect(response.text).to.contain("summary");
+      expect(response.text).toContain("counter");
+      expect(response.text).toContain("gauge");
+      expect(response.text).toContain("histogram");
+      expect(response.text).toContain("summary");
     });
 
     it("should be able to incremement the counter", async function () {
@@ -42,8 +42,8 @@ describe("End-to-end", function () {
         "/resource/counter",
       );
 
-      expect(response.status).to.eql(200);
-      expect(response.text).to.eq(
+      expect(response.status).toEqual(200);
+      expect(response.text).toBe(
         JSON.stringify({
           help: "counter helper",
           name: "counter",
@@ -59,8 +59,8 @@ describe("End-to-end", function () {
         "/resource/gauge",
       );
 
-      expect(response.status).to.eql(200);
-      expect(response.text).to.eq(
+      expect(response.status).toEqual(200);
+      expect(response.text).toBe(
         JSON.stringify({
           help: "gauge helper",
           name: "gauge",
@@ -73,7 +73,7 @@ describe("End-to-end", function () {
   });
 
   describe("when all metrics are prefixed", function () {
-    before(async function () {
+    beforeAll(async function () {
       const testingModule = await Test.createTestingModule({
         imports: [CorePrefixModule],
         controllers: [ResourceController],
@@ -86,12 +86,12 @@ describe("End-to-end", function () {
     it("should return metrics", async function () {
       const response = await request(app.getHttpServer()).get("/metrics");
 
-      expect(response.status).to.eql(200);
+      expect(response.status).toEqual(200);
 
-      expect(response.text).to.contain("app_counter");
-      expect(response.text).to.contain("app_gauge");
-      expect(response.text).to.contain("app_histogram");
-      expect(response.text).to.contain("app_summary");
+      expect(response.text).toContain("app_counter");
+      expect(response.text).toContain("app_gauge");
+      expect(response.text).toContain("app_histogram");
+      expect(response.text).toContain("app_summary");
     });
 
     it("should be able to incremement the counter", async function () {
@@ -99,8 +99,8 @@ describe("End-to-end", function () {
         "/resource/counter",
       );
 
-      expect(response.status).to.eql(200);
-      expect(response.text).to.eq(
+      expect(response.status).toEqual(200);
+      expect(response.text).toBe(
         JSON.stringify({
           help: "counter helper",
           name: "app_counter",
@@ -116,8 +116,8 @@ describe("End-to-end", function () {
         "/resource/gauge",
       );
 
-      expect(response.status).to.eql(200);
-      expect(response.text).to.eq(
+      expect(response.status).toEqual(200);
+      expect(response.text).toBe(
         JSON.stringify({
           help: "gauge helper",
           name: "app_gauge",

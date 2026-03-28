@@ -4,9 +4,8 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 import { Test } from "@nestjs/testing";
-import { expect } from "chai";
-import { afterEach, beforeEach } from "mocha";
 import { register } from "prom-client";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { PrometheusModule } from "../src";
 
 describe("Fastify integration", () => {
@@ -38,8 +37,8 @@ describe("Fastify integration", () => {
         url: "/metrics",
       });
 
-      expect(response).to.have.property("statusCode").to.eql(200);
-      expect(response.body).to.be.a("string");
+      expect(response).toHaveProperty("statusCode", 200);
+      expect(typeof response.body).toBe("string");
     });
   });
 
@@ -55,8 +54,8 @@ describe("Fastify integration", () => {
         url: "/metrics",
       });
 
-      expect(response).to.have.property("statusCode").to.eql(200);
-      expect(response.body).to.be.a("string");
+      expect(response).toHaveProperty("statusCode", 200);
+      expect(typeof response.body).toBe("string");
     });
   });
 });

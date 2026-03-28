@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { Get, Res } from "@nestjs/common";
-import { expect } from "chai";
-import { Response } from "express";
+import type { Response } from "express";
 import { register } from "prom-client";
-import * as sinon from "sinon";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { PrometheusController } from "../src";
 import {
   Agent,
@@ -15,7 +13,7 @@ import {
 describe("PrometheusModule with a custom controller", function () {
   let agent: Agent;
   let app: App;
-  let fake: sinon.SinonSpy;
+  let fake: ReturnType<typeof vi.fn<() => void>>;
 
   afterEach(async function () {
     register.clear();
@@ -23,7 +21,7 @@ describe("PrometheusModule with a custom controller", function () {
   });
 
   it("registers a /metrics endpoint (sync)", async function () {
-    fake = sinon.fake();
+    fake = vi.fn();
 
     class CustomController extends PrometheusController {
       @Get()
@@ -39,16 +37,14 @@ describe("PrometheusModule with a custom controller", function () {
 
     const response = await agent.get("/metrics");
 
-    expect(response).to.have.property("status").to.eql(200);
-    expect(fake).to.have.been.calledOnce;
+    expect(response).toHaveProperty("status", 200);
+    expect(fake).toHaveBeenCalledTimes(1);
 
-    expect(response)
-      .to.have.property("text")
-      .to.contain("process_cpu_user_seconds_total");
+    expect(response.text).toContain("process_cpu_user_seconds_total");
   });
 
   it("registers a /metrics endpoint (async)", async function () {
-    fake = sinon.fake();
+    fake = vi.fn();
 
     class CustomController extends PrometheusController {
       @Get()
@@ -67,11 +63,9 @@ describe("PrometheusModule with a custom controller", function () {
 
     const response = await agent.get("/metrics");
 
-    expect(response).to.have.property("status").to.eql(200);
-    expect(fake).to.have.been.calledOnce;
+    expect(response).toHaveProperty("status", 200);
+    expect(fake).toHaveBeenCalledTimes(1);
 
-    expect(response)
-      .to.have.property("text")
-      .to.contain("process_cpu_user_seconds_total");
+    expect(response.text).toContain("process_cpu_user_seconds_total");
   });
 });

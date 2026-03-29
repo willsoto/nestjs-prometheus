@@ -76,12 +76,5 @@
       "@semantic-release/git"
     ]
   },
-  "packageManager": "pnpm@10.32.1",
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowAny": [
-        "marked"
-      ]
-    }
-  }
+  "packageManager": "pnpm@10.32.1"
 }

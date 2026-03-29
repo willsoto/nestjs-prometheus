@@ -1,0 +1,8 @@
+onlyBuiltDependencies: []
+
+peerDependencyRules:
+  allowAny:
+    - marked
+
+registrySupportsTimeField: true
+minimumReleaseAge: 10080

@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: "willsoto/actions/.github/workflows/node-release.yml@4.0.0"
+    secrets:
+      RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

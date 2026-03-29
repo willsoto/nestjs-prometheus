@@ -37,8 +37,6 @@
     "@nestjs/platform-fastify": "11.1.17",
     "@nestjs/schematics": "11.0.9",
     "@nestjs/testing": "11.1.17",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
     "@types/express": "5.0.6",
     "@types/express-serve-static-core": "5.1.1",
     "@types/node": "24.12.0",
@@ -52,8 +50,6 @@
     "reflect-metadata": "0.2.2",
     "rimraf": "6.1.3",
     "rxjs": "7.8.2",
-    "semantic-release": "25.0.3",
-    "standard-version": "9.5.0",
     "supertest": "7.2.2",
     "typescript": "5.9.3",
     "vitest": "4.1.2"

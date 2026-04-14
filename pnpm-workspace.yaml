@@ -4,5 +4,5 @@ peerDependencyRules:
   allowAny:
     - marked
 
-registrySupportsTimeField: true
+registrySupportsTimeField: false
 minimumReleaseAge: 10080

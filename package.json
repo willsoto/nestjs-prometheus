@@ -27,8 +27,8 @@
     "typecheck": "tsc --project tsconfig.lint.json --noEmit"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.5.3",
-    "@commitlint/config-conventional": "20.5.3",
+    "@commitlint/cli": "21.0.0",
+    "@commitlint/config-conventional": "21.0.0",
     "@fastify/compress": "8.3.1",
     "@nestjs/cli": "11.0.21",
     "@nestjs/common": "11.1.19",

@@ -29,7 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "21.0.2",
     "@commitlint/config-conventional": "21.0.2",
-    "@fastify/compress": "8.3.1",
+    "@fastify/compress": "9.0.0",
     "@nestjs/cli": "11.0.23",
     "@nestjs/common": "11.1.26",
     "@nestjs/core": "11.1.26",

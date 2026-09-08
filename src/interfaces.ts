@@ -1,5 +1,4 @@
-import { Type } from "@nestjs/common";
-import { ModuleMetadata } from "@nestjs/common/interfaces";
+import { ModuleMetadata, Type } from "@nestjs/common";
 import * as client from "prom-client";
 import { PrometheusContentType, RegistryContentType } from "prom-client";
 

@@ -4,6 +4,13 @@
 
 - support dependency injection in metric collect functions ([7d49e53](https://github.com/willsoto/nestjs-prometheus/commit/7d49e53c768dca40789871ef12c442234e359c1f)), closes [#1837](https://github.com/willsoto/nestjs-prometheus/issues/1837)
 
+## [6.1.1](https://github.com/willsoto/nestjs-prometheus/compare/v6.1.0...v6.1.1) (2026-09-08)
+
+
+### Bug Fixes
+
+* import nest types from package root ([8845cd5](https://github.com/willsoto/nestjs-prometheus/commit/8845cd5a48a9ef791dd35381693b2e91a0750c7c))
+
 ## [6.0.2](https://github.com/willsoto/nestjs-prometheus/compare/v6.0.1...v6.0.2) (2025-01-17)
 
 ### Bug Fixes

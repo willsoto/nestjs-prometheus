@@ -1,6 +1,6 @@
 {
   "name": "@willsoto/nestjs-prometheus",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "NestJS module for Prometheus",
   "license": "Apache-2.0",
   "author": "Will Soto <willsoto@users.noreply.github.com> (https://github.com/willsoto)",

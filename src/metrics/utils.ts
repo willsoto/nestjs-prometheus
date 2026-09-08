@@ -1,5 +1,4 @@
-import { InjectionToken } from "@nestjs/common/interfaces";
-import { OptionalFactoryDependency } from "@nestjs/common/interfaces/modules/optional-factory-dependency.interface";
+import { InjectionToken, OptionalFactoryDependency } from "@nestjs/common";
 import * as client from "prom-client";
 import { PrometheusContentType, RegistryContentType } from "prom-client";
 

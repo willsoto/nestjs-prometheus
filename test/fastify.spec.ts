@@ -1,7 +1,7 @@
 import compression from "@fastify/compress";
 import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
 import { Test } from "@nestjs/testing";
-import { register } from "prom-client";
+import { register } from "@prometheus-io/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import { PrometheusModule } from "../src";

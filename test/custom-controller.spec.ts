@@ -1,6 +1,6 @@
 import { Get, Res } from "@nestjs/common";
+import { register } from "@prometheus-io/client";
 import type { Response } from "express";
-import { register } from "prom-client";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { PrometheusController } from "../src";

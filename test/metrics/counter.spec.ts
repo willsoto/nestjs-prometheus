@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
-import * as client from "prom-client";
-import { Counter, MetricObjectWithValues, MetricValue, register } from "prom-client";
+import * as client from "@prometheus-io/client";
+import { Counter, MetricObjectWithValues, MetricValue, register } from "@prometheus-io/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import { InjectMetric, PrometheusModule, getToken, makeCounterProvider } from "../../src";

@@ -1,6 +1,6 @@
 import { NestExpressApplication } from "@nestjs/platform-express";
 import { Test } from "@nestjs/testing";
-import { register } from "prom-client";
+import { register } from "@prometheus-io/client";
 import request from "supertest";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 

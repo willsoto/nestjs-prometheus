@@ -12,7 +12,7 @@ import { getToken } from "./metrics";
  * like so:
  * ```
  * import { Injectable } from "@nestjs/common";
- * import { Counter } from "prom-client";
+ * import { Counter } from "@prometheus-io/client";
  * import { InjectMetric } from "@willsoto/nestjs-prometheus";
  *
  * @Injectable()

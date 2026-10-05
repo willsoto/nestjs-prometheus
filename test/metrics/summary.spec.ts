@@ -1,6 +1,6 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import * as client from "prom-client";
-import { MetricObjectWithValues, MetricValue } from "prom-client";
+import * as client from "@prometheus-io/client";
+import { MetricObjectWithValues, MetricValue } from "@prometheus-io/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import { getToken, makeSummaryProvider } from "../../src";

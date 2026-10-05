@@ -1,9 +1,9 @@
 import { ModuleMetadata, Type } from "@nestjs/common";
-import * as client from "prom-client";
-import { PrometheusContentType, RegistryContentType } from "prom-client";
+import * as client from "@prometheus-io/client";
+import { PrometheusContentType, RegistryContentType } from "@prometheus-io/client";
 
 /**
- * Configuration for the defaultMetrics collected by `prom-client`.
+ * Configuration for the defaultMetrics collected by `@prometheus-io/client`.
  *
  * @public
  */
@@ -15,7 +15,7 @@ export interface PrometheusDefaultMetrics<T extends RegistryContentType = Promet
    */
   enabled: boolean;
   /**
-   * {@link https://github.com/siimon/prom-client#default-metrics | Default Metrics}
+   * {@link https://github.com/prometheus/client_js#default-metrics | Default Metrics}
    */
   config?: client.DefaultMetricsCollectorConfiguration<T>;
 }
@@ -72,13 +72,13 @@ export interface PrometheusOptions<T extends RegistryContentType = PrometheusCon
   /**
    * Will be passed into `setDefaultLabels`
    *
-   * {@link https://github.com/siimon/prom-client#default-labels-segmented-by-registry}
+   * {@link https://github.com/prometheus/client_js#default-labels-segmented-by-registry}
    */
-  // Using this type to match what prom-client specifies.
+  // Using this type to match what @prometheus-io/client specifies.
   defaultLabels?: object;
   pushgateway?: {
     url: string;
-    options?: unknown;
+    options?: client.Pushgateway.Options;
     registry?: client.Registry;
   };
 }

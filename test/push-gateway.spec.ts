@@ -1,6 +1,6 @@
 import { Injectable, Module } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { PrometheusContentType, Pushgateway, register } from "prom-client";
+import { PrometheusContentType, Pushgateway, register } from "@prometheus-io/client";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { PrometheusModule, PrometheusOptions, PrometheusOptionsFactory } from "../src";

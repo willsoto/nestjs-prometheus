@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Controller, Get, Res } from "@nestjs/common";
-import * as client from "prom-client";
+import * as client from "@prometheus-io/client";
 
 /**
  * @public

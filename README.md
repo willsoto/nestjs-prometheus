@@ -28,11 +28,11 @@
 ## Installation
 
 ```bash
-yarn add @willsoto/nestjs-prometheus prom-client
+yarn add @willsoto/nestjs-prometheus @prometheus-io/client
 ```
 
 ```bash
-npm install @willsoto/nestjs-prometheus prom-client
+npm install @willsoto/nestjs-prometheus @prometheus-io/client
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ import { PrometheusModule } from "@willsoto/nestjs-prometheus";
 export class AppModule {}
 ```
 
-By default, this will register a `/metrics` endpoint that will return the [default metrics](https://github.com/siimon/prom-client#default-metrics).
+By default, this will register a `/metrics` endpoint that will return the [default metrics](https://github.com/prometheus/client_js#default-metrics).
 
 ### Changing the metrics http endpoint
 
@@ -93,7 +93,7 @@ import { PrometheusModule } from "@willsoto/nestjs-prometheus";
   imports: [
     PrometheusModule.register({
       defaultMetrics: {
-        // See https://github.com/siimon/prom-client#configuration
+        // See https://github.com/prometheus/client_js#configuration
         config: {},
       },
     }),
@@ -127,7 +127,7 @@ export class AppModule {}
 // service.ts
 import { Injectable } from "@nestjs/common";
 import { InjectMetric } from "@willsoto/nestjs-prometheus";
-import { Counter } from "prom-client";
+import { Counter } from "@prometheus-io/client";
 
 @Injectable()
 export class Service {
@@ -153,7 +153,7 @@ import { PrometheusModule } from "@willsoto/nestjs-prometheus";
 export class AppModule {}
 ```
 
-See the [docs](https://github.com/siimon/prom-client#default-labels-segmented-by-registry) for more information.
+See the [docs](https://github.com/prometheus/client_js#default-labels-segmented-by-registry) for more information.
 
 ## Prefixing custom metrics
 
@@ -176,25 +176,25 @@ In order to have the custom metrics registered in different modules from where t
 
 <!-- Prettier will delete these imports as they are unused. So we ignore these blocks. -->
 <!-- prettier-ignore-start -->
-#### [Counter](https://github.com/siimon/prom-client#counter)
+#### [Counter](https://github.com/prometheus/client_js#counter)
 
 ```typescript
 import { makeCounterProvider } from "@willsoto/nestjs-prometheus";
 ```
 
-#### [Gauge](https://github.com/siimon/prom-client#gauge)
+#### [Gauge](https://github.com/prometheus/client_js#gauge)
 
 ```typescript
 import { makeGaugeProvider } from "@willsoto/nestjs-prometheus";
 ```
 
-#### [Histogram](https://github.com/siimon/prom-client#histogram)
+#### [Histogram](https://github.com/prometheus/client_js#histogram)
 
 ```typescript
 import { makeHistogramProvider } from "@willsoto/nestjs-prometheus";
 ```
 
-#### [Summary](https://github.com/siimon/prom-client#summary)
+#### [Summary](https://github.com/prometheus/client_js#summary)
 
 ```typescript
 import { makeSummaryProvider } from "@willsoto/nestjs-prometheus";
@@ -287,7 +287,7 @@ export class AppModule {}
 
 ```typescript
 import { Injectable } from "@nestjs/common";
-import * as client from "prom-client";
+import * as client from "@prometheus-io/client";
 
 @Injectable()
 export class Service {

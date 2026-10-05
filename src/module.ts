@@ -1,6 +1,6 @@
 import { DynamicModule, FactoryProvider, Module, Provider } from "@nestjs/common";
-import * as promClient from "prom-client";
-import { RegistryContentType } from "prom-client";
+import * as promClient from "@prometheus-io/client";
+import { RegistryContentType } from "@prometheus-io/client";
 
 import { PROMETHEUS_OPTIONS, PROM_CLIENT } from "./constants";
 import { PrometheusController } from "./controller";
@@ -144,7 +144,7 @@ export class PrometheusModule {
 
   private static configurePushgateway<T extends RegistryContentType>(
     url: string,
-    options?: unknown,
+    options?: promClient.Pushgateway.Options,
     registry?: promClient.Registry,
   ): promClient.Pushgateway<T> {
     return new promClient.Pushgateway(url, options, registry);

@@ -1,6 +1,6 @@
 import { Provider } from "@nestjs/common";
-import * as client from "prom-client";
-import { PrometheusContentType, RegistryContentType } from "prom-client";
+import * as client from "@prometheus-io/client";
+import { PrometheusContentType, RegistryContentType } from "@prometheus-io/client";
 
 import { PROMETHEUS_OPTIONS } from "../constants";
 import { PrometheusOptions } from "../interfaces";

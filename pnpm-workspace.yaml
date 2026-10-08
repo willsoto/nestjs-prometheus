@@ -1,4 +1,5 @@
-onlyBuiltDependencies: []
+allowBuilds:
+  lefthook: true
 
 peerDependencyRules:
   allowAny:

@@ -73,5 +73,5 @@
       "@semantic-release/git"
     ]
   },
-  "packageManager": "pnpm@10.34.5"
+  "packageManager": "pnpm@12.8.2"
 }

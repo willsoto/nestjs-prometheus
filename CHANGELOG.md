@@ -4,6 +4,17 @@
 
 - support dependency injection in metric collect functions ([7d49e53](https://github.com/willsoto/nestjs-prometheus/commit/7d49e53c768dca40789871ef12c442234e359c1f)), closes [#1837](https://github.com/willsoto/nestjs-prometheus/issues/1837)
 
+## [7.0.0](https://github.com/willsoto/nestjs-prometheus/compare/v6.1.1...v7.0.0) (2026-10-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* prom-client is replaced by @prometheus-io/client. Consumers must uninstall prom-client and install @prometheus-io/client (^0.16.0) to satisfy the peer dependency, and update their own imports from "prom-client" to "@prometheus-io/client".
+
+### Features
+
+* replace prom-client with @prometheus-io/client ([c7623fe](https://github.com/willsoto/nestjs-prometheus/commit/c7623fe235ac96762a9f21d5c32e51ed8e4b08ff))
+
 ## [6.1.1](https://github.com/willsoto/nestjs-prometheus/compare/v6.1.0...v6.1.1) (2026-09-08)
 
 

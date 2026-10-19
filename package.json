@@ -29,7 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
-    "@fastify/compress": "9.2.0",
+    "@fastify/compress": "9.2.1",
     "@nestjs/common": "12.1.2",
     "@nestjs/core": "12.1.2",
     "@nestjs/platform-express": "12.1.2",
@@ -37,13 +37,13 @@
     "@nestjs/testing": "12.1.2",
     "@prometheus-io/client": "0.16.1",
     "@types/express": "5.0.6",
-    "@types/node": "24.19.1",
+    "@types/node": "24.19.2",
     "@types/supertest": "7.2.1",
     "@vitest/coverage-v8": "5.0.3",
-    "lefthook": "2.1.16",
+    "lefthook": "2.2.1",
     "markdown-toc": "1.2.0",
-    "oxfmt": "0.71.0",
-    "oxlint": "1.86.0",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
     "reflect-metadata": "0.2.2",
     "rimraf": "6.1.3",
     "rxjs": "7.8.2",
@@ -73,5 +73,5 @@
       "@semantic-release/git"
     ]
   },
-  "packageManager": "pnpm@12.9.1"
+  "packageManager": "pnpm@12.12.0"
 }

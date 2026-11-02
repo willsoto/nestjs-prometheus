@@ -27,14 +27,14 @@
     "typecheck": "tsc --project tsconfig.lint.json --noEmit"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.2.3",
-    "@commitlint/config-conventional": "21.2.3",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@fastify/compress": "9.2.2",
-    "@nestjs/common": "12.1.3",
-    "@nestjs/core": "12.1.3",
-    "@nestjs/platform-express": "12.1.3",
-    "@nestjs/platform-fastify": "12.1.3",
-    "@nestjs/testing": "12.1.3",
+    "@nestjs/common": "12.2.0",
+    "@nestjs/core": "12.2.0",
+    "@nestjs/platform-express": "12.2.0",
+    "@nestjs/platform-fastify": "12.2.0",
+    "@nestjs/testing": "12.2.0",
     "@prometheus-io/client": "0.16.1",
     "@types/express": "5.0.6",
     "@types/node": "24.19.2",
@@ -42,8 +42,8 @@
     "@vitest/coverage-v8": "5.0.5",
     "lefthook": "2.2.2",
     "markdown-toc": "1.2.0",
-    "oxfmt": "0.73.0",
-    "oxlint": "1.88.0",
+    "oxfmt": "0.74.0",
+    "oxlint": "1.89.0",
     "reflect-metadata": "0.2.2",
     "rimraf": "6.1.3",
     "rxjs": "7.8.2",
@@ -73,5 +73,5 @@
       "@semantic-release/git"
     ]
   },
-  "packageManager": "pnpm@12.14.0"
+  "packageManager": "pnpm@12.15.0"
 }
